@@ -263,7 +263,7 @@
 |235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
 |237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
-|238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
+|238| [클래스 컴포넌트에 정의해야 하는 메서드는 무엇인가?](#클래스-컴포넌트에-정의해야-하는-메서드는-무엇인가)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
 |240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
@@ -4213,8 +4213,10 @@
 
      ![stacktrace](images/error_boundary.png)
 
-33.  ### What is the required method to be defined for a class component?
-     The render() method is the only required method in a class component. i.e, All methods other than render method are optional for a class component.
+33.  ### 클래스 컴포넌트에 정의해야 하는 메서드는 무엇인가?
+
+     render() 메서드는 클래스 컴포넌트에서 유일하게 필요로하는 메서드이다. 즉, render 메서드 외 모든 메서드는 클래스 컴포넌트에서 선택사항이다.
+
 34.  ### What are the possible return types of render method?
      Below are the list of following types used and return from render method,
      1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as `<div/>` and user defined elements.
