@@ -4210,7 +4210,7 @@
      2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
 32.  ### 에러 바운더리에서 컴포넌트 스택 추적의 장점은?
 
-     에러 메시지와 자바스크림트 스택와 별개로, React16은 에러 바운더리 개념을 사용하여 파일 이름과 행 번호를 포함한 컴포넌트 스택 추적을 표시한다. 예를 들어, BuggyCounter 컴포넌트는 아래와 같이 컴포넌트 스택 추적을 표시한다.
+     에러 메시지, 자바스크립트 스택 별개로, React16은 에러 바운더리 개념을 사용하여 파일 이름과 행 번호를 포함한 컴포넌트 스택 추적을 표시한다. 예를 들어, BuggyCounter 컴포넌트는 아래와 같이 컴포넌트 스택 추적을 표시한다.
 
      ![stacktrace](images/error_boundary.png)
 
