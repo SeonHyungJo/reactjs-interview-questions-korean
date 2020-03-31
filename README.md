@@ -262,7 +262,7 @@
 |234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
 |235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
-|237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
+|237| [에러 바운더리에서 컴포넌트 스택 추적의 장점은?](#에러-바운더리에서-컴포넌트-스택-추적의-장점은)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
 |240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
