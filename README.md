@@ -265,7 +265,7 @@
 |237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
-|240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
+|240| [constructor의 주요 목적은?](#constructor의-주요-목적은)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
 |242| [What are default props?](#what-are-default-props)|
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
@@ -4223,11 +4223,15 @@
      4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
      5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
 
-35.  ### What is the main purpose of constructor?
-     The constructor is mainly used for two purposes,
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instance
-     For example, the below code covers both the above cases,
+35.  ### constructor의 주요 목적은?
+
+     constructor는 주로 두 가지 목적으로 사용된다.
+
+     1. this.state에 객체를 할당하여 로컬 상태를 초기화하기 위해서
+     2. 이벤트 핸들러 메서드를 인스턴스에 바인딩하기 위해서 
+     
+     예를 들어 아래의 코드는 두 가지 경우를 모두 다루고 있다.
+     
      ```javascript
      constructor(props) {
        super(props);
@@ -4236,6 +4240,7 @@
        this.handleClick = this.handleClick.bind(this);
      }
      ```
+
 36.  ### Is it mandatory to define constructor for React component?
      No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
 37.  ### What are default props?
