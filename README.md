@@ -268,7 +268,7 @@
 |240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
 |242| [What are default props?](#what-are-default-props)|
-|243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
+|243| [componentWillUnmount에서 setState를 호출하면 안되는 이유는?](#componentWillUnmount에서-setState를-호출하면-안되는-이유는)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
 |245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
@@ -4267,8 +4267,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-243. ### Why should not call setState in componentWillUnmount?
-     You should not call setState() in componentWillUnmount() because Once a component instance is unmounted, it will never be mounted again.
+243. ### componentWillUnmount에서 setState를 호출하면 안되는 이유는?
+
+     컴포넌트 인스턴스가 마운트 해제되면 다시 마운트될 수 없음으로, componentWillUnmount()에서 setState()를 호출하면 안 된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
