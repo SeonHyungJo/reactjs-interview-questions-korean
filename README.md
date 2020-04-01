@@ -274,7 +274,7 @@
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
-|249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)|
+|249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
 |250| [What is code-splitting?](#what-is-code-splitting)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
@@ -4342,9 +4342,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-249. ### What is the purpose of unmountComponentAtNode method?
-     This method is available from react-dom package and it removes a mounted React component from the DOM and clean up its event handlers and state. If no component was mounted in the container, calling this function does nothing. Returns true if a component was unmounted and false if there was no component to unmount.
-     The method signature would be as follows,
+249. ### unmountComponentAtNode 메서드의 목적은?
+
+     이 메서드는 react-dom 패키지에서 사용 가능하며, DOM에 마운트된 React 컴포넌트를 제거하고 이벤트 핸들러와 state를 정리한다. 컨테이너에 컴포넌트가 마운트되지 않은 경우 이 함수를 호출하면 아무 작업도 하지 않는다. 컴포넌트가 마운트 해제된 경우 true, 마운트 해제할 컴포넌트가 없는 경우 false를 반환한다. 메서드 사용법은 다음과 같다.
+
      ```javascript
      ReactDOM.unmountComponentAtNode(container)
      ```
