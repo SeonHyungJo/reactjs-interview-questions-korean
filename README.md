@@ -4280,7 +4280,7 @@
      static getDerivedStateFromError(error)
      ```
 
-     위의 라이프사이클 메서드를 사용하여 오류 바운더리 사용 사례를 예시 목적으로 사용하겠습니다.
+     위의 라이프사이클 메서드를 사용하여 오류 바운더리 사용 사례를 데모 목적으로 사용하겠습니다.
 
      ```javascript
      class ErrorBoundary extends React.Component {
