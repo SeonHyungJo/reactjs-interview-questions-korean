@@ -262,12 +262,12 @@
 |234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
 |235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
-|237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
+|237| [에러 바운더리에서 컴포넌트 스택 추적의 장점은?](#에러-바운더리에서-컴포넌트-스택-추적의-장점은)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
-|240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
+|240| [constructor의 주요 목적은?](#constructor의-주요-목적은)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
-|242| [What are default props?](#what-are-default-props)|
+|242| [default props란?](#default-props란)|
 |243| [componentWillUnmount에서 setState를 호출하면 안되는 이유는?](#componentWillUnmount에서-setState를-호출하면-안되는-이유는)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
 |245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
@@ -4211,8 +4211,9 @@
      The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
      1. You can wrap top-level route components to display a generic error message for the entire application.
      2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
-32.  ### What is the benefit of component stack trace from error boundary?
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below,
+32.  ### 에러 바운더리에서 컴포넌트 스택 추적의 장점은?
+
+     에러 메시지, 자바스크립트 스택과 별개로, React16은 에러 바운더리 개념을 사용하여 파일 이름과 행 번호를 포함한 컴포넌트 스택 추적을 표시한다. 예를 들어, BuggyCounter 컴포넌트는 아래와 같이 컴포넌트 스택 추적을 표시한다.
 
      ![stacktrace](images/error_boundary.png)
 
@@ -4226,11 +4227,15 @@
      4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
      5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
 
-35.  ### What is the main purpose of constructor?
-     The constructor is mainly used for two purposes,
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instance
-     For example, the below code covers both the above cases,
+35.  ### constructor의 주요 목적은?
+
+     constructor는 주로 두 가지 목적으로 사용된다.
+
+     1. this.state에 객체를 할당하여 로컬 상태를 초기화하기 위해서
+     2. 이벤트 핸들러 메서드를 인스턴스에 바인딩하기 위해서 
+     
+     예를 들어 아래의 코드는 두 가지 경우를 모두 다루고 있다.
+     
      ```javascript
      constructor(props) {
        super(props);
@@ -4239,13 +4244,16 @@
        this.handleClick = this.handleClick.bind(this);
      }
      ```
+
 241. ### Is it mandatory to define constructor for React component?
      No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-242. ### What are default props?
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props. For example, let us create color default prop for the button component,
+242. ### default props란?
+
+     defaultProps는 컴포넌트 클래스의 속성이며 클래스의 기본 props를 설정한다. undefined props에 사용되지만, null props에는 사용되지 않는다. 예를 들어, 버튼 컴포넌트의 색상 default prop 만들어보자.
+
      ```javascript
      class MyButton extends React.Component {
        // ...
@@ -4257,13 +4265,14 @@
 
      ```
 
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
+     props.color가 없다면 기본값은 '빨간색'으로 설정된다. 즉, color props에 접근하려고 할 때마다 기본값이 사용된다.
+
      ```javascript
      render() {
         return <MyButton /> ; // props.color will be set to red
       }
      ```
-     **Note:** If you provide null value then it remains null value.
+     **Note:** null 값을 제공하면 null 값이 유지된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
