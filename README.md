@@ -269,7 +269,7 @@
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
 |242| [What are default props?](#what-are-default-props)|
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
-|244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
+|244| [getDerivedStateFromError의 목적은?](#getDerivedStateFromError의-목적은)|
 |245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
@@ -4272,12 +4272,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-244. ### What is the purpose of getDerivedStateFromError?
-     This lifecycle method is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state. The signature of the lifecycle method is as follows,
+244. ### getDerivedStateFromError의 목적은?
+
+     이 라이프사이클 메서드는 하위 컴포넌트가 오류를 발생한 후 호출된다. 매개 변수로 오류를 수신하고 state를 업데이트하기 위한 값을 반환한다. 라이프사이클 메서드의 사용법은 아래와 같다.
+
      ```javascript
      static getDerivedStateFromError(error)
      ```
-     Let us take error boundary use case with the above lifecycle method for demonistration purpose,
+
+     위의 라이프사이클 메서드를 사용하여 오류 바운더리 사용 사례를 예시 목적으로 사용하겠습니다.
+
      ```javascript
      class ErrorBoundary extends React.Component {
        constructor(props) {
