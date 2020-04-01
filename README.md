@@ -266,7 +266,7 @@
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
 |240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
-|241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
+|241| [React 컴포넌트의 생성자를 정의해야 하나?](#React-컴포넌트의-생성자를-정의해야-하나)|
 |242| [What are default props?](#what-are-default-props)|
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
@@ -4239,8 +4239,9 @@
        this.handleClick = this.handleClick.bind(this);
      }
      ```
-241. ### Is it mandatory to define constructor for React component?
-     No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
+241. ### React 컴포넌트의 생성자를 정의해야 하나?
+     
+     필수는 아니다. 즉, state를 초기화 하지않고, 메서드를 바인딩하지 않는다면, React 컴포넌트에 생성자를 구현할 필요없다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
