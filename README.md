@@ -4219,7 +4219,7 @@
 
 33.  ### 클래스 컴포넌트에 정의해야 하는 메서드는 무엇인가?
 
-     render() 메서드는 클래스 컴포넌트에서 유일하게 필요로하는 메서드이다. 즉, render 메서드 외 모든 메서드는 클래스 컴포넌트에서 선택사항이다.
+     render() 메서드는 클래스 컴포넌트에서 유일하게 필요한 메서드이다. 즉, render 메서드를 제외한 모든 메서드는 클래스 컴포넌트에서 선택사항이다.
 
 34.  ### What are the possible return types of render method?
      Below are the list of following types used and return from render method,
