@@ -270,7 +270,7 @@
 |242| [default props란?](#default-props란)|
 |243| [componentWillUnmount에서 setState를 호출하면 안되는 이유는?](#componentWillUnmount에서-setState를-호출하면-안되는-이유는)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
-|245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
+|245| [리렌더링할 때 메서드의 순서는?](#리렌더링할-때-메서드의-순서는)|
 |246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
@@ -4316,8 +4316,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-245. ### What is the methods order when component re-rendered?
-     An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
+245. ### 리렌더링할 때 메서드의 순서는?
+
+     props 또는 state의 변경으로 업데이트가 발생할 수 있다. 아래의 메서드는 컴포넌트를 리렌더링할 때 호출되는 순서이다.
+     
      1. static getDerivedStateFromProps()
      2. shouldComponentUpdate()
      3. render()
