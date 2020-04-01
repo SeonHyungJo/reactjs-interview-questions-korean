@@ -4219,7 +4219,7 @@
 
      아래는 render 메서드에서 사용되거나 return 되는 리스트입니다.
 
-     1. **React elements:** React가 DOM 노드를 렌더링하도록 지시하는 Elements. `<div/>` 와 같은 html elements와 사용자 정의 elements가 포함된다.
+     1. **React elements:** React가 DOM 노드를 렌더링하도록 지시하는 Elements다. `<div/>` 와 같은 html elements와 사용자 정의 elements가 포함된다.
      2. **Arrays and fragments:** 여러 elements를 렌더링하기 위해 이를 감싼 배열과 Fragments를 반환한다.
      3. **Portals:** 자식은 다른 DOM 하위 트리로 렌더링한다.
      4. **String and numbers:** DOM에서 문자열과 숫자를 모두 텍스트 노드로 렌더링한다.
