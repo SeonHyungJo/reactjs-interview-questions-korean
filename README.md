@@ -262,7 +262,7 @@
 |234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
 |235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
 |236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
-|237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
+|237| [에러 바운더리에서 컴포넌트 스택 추적의 장점은?](#에러-바운더리에서-컴포넌트-스택-추적의-장점은)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
 |240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
@@ -4211,8 +4211,9 @@
      The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
      1. You can wrap top-level route components to display a generic error message for the entire application.
      2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
-32.  ### What is the benefit of component stack trace from error boundary?
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below,
+32.  ### 에러 바운더리에서 컴포넌트 스택 추적의 장점은?
+
+     에러 메시지, 자바스크립트 스택과 별개로, React16은 에러 바운더리 개념을 사용하여 파일 이름과 행 번호를 포함한 컴포넌트 스택 추적을 표시한다. 예를 들어, BuggyCounter 컴포넌트는 아래와 같이 컴포넌트 스택 추적을 표시한다.
 
      ![stacktrace](images/error_boundary.png)
 
