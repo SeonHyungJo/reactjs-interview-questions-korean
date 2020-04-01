@@ -271,7 +271,7 @@
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
 |245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
-|246| [What are the methods invoked during error handling?](#what-are-the-methods-invoked-during-error-handling)|
+|246| [에러 핸들링 중 호출되는 메서드는?](#에러-핸들링-중-호출되는-메서드는)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
 |249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)|
@@ -4314,8 +4314,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-246. ### What are the methods invoked during error handling?
-     Below methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+246. ### 에러 핸들링 중 호출되는 메서드는?
+     
+     아래는 메서드는 렌더링 도중 라이프사이클 메서드 또는 하위 컴포넌트의 생성자에서 오류가 발생하면 호출된다.
+     
      1. static getDerivedStateFromError()
      2. componentDidCatch()
 
