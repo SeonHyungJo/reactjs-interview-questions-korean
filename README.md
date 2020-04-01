@@ -261,16 +261,16 @@
 |233| [이벤트 핸들러에 에러 바운더리가 필요하지 않은 이유는?](#이벤트-핸들러에-에러-바운더리가-필요하지-않은-이유는)|
 |234| [try catch 블록과 에러 바운더리의 차이점은?](#try-catch-블록과-에러-바운더리의-차이점은)|
 |235| [react 16에서 잡히지 않는 오류의 동작은?](#react-16에서-잡히지-않는-오류의-동작은)|
-|236| [What is the proper placement for error boundaries?](#what-is-the-proper-placement-for-error-boundaries)|
-|237| [What is the benefit of component stack trace from error boundary?](#what-is-the-benefit-of-component-stack-trace-from-error-boundary)|
+|236| [에러 바운더리의 적절한 위치는?](#에러-바운더리의-적절한-위치는)|
+|237| [에러 바운더리에서 컴포넌트 스택 추적의 장점은?](#에러-바운더리에서-컴포넌트-스택-추적의-장점은)|
 |238| [What is the required method to be defined for a class component?](#what-is-the-required-method-to-be-defined-for-a-class-component)|
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
-|240| [What is the main purpose of constructor?](#what-is-the-main-purpose-of-constructor)|
+|240| [constructor의 주요 목적은?](#constructor의-주요-목적은)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
-|242| [What are default props?](#what-are-default-props)|
-|243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
+|242| [default props란?](#default-props란)|
+|243| [componentWillUnmount에서 setState를 호출하면 안되는 이유는?](#componentWillUnmount에서-setState를-호출하면-안되는-이유는)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
-|245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
+|245| [리렌더링할 때 메서드의 순서는?](#리렌더링할-때-메서드의-순서는)|
 |246| [에러 핸들링 중 호출되는 메서드는?](#에러-핸들링-중-호출되는-메서드는)|
 |247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
@@ -4207,12 +4207,16 @@
 
 30.  ### react 16에서 잡히지 않는 오류의 동작은?
      React 16에서 에러 바운더리에 잡히지 않는 오류는 React 컴포넌트 tree를 마운트 해제한다. 이렇게 되는 이유는 손상된 UI를 완전히 제거하는 것보다 손상된 UI를 그대로 두는 것이 더 안 좋기 때문이다. 예를 들어, 결제 앱이 잘못된 금액을 표기하는 것보다 렌더링하지 않는 것이 낫다.
-31.  ### What is the proper placement for error boundaries?
-     The granularity of error boundaries usage is up to the developer based on project needs. You can follow either of these approaches,
-     1. You can wrap top-level route components to display a generic error message for the entire application.
-     2. You can also wrap individual components in an error boundary to protect them from crashing the rest of the application.
-32.  ### What is the benefit of component stack trace from error boundary?
-     Apart from error messages and javascript stack, React16 will display the component stack trace with file names and line numbers using error boundary concept. For example, BuggyCounter component displays the component stack trace as below,
+
+31.  ### 에러 바운더리의 적절한 위치는?
+     에러 바운더리의 세분화는 프로젝트 필요에 따라 개발자에 따라 달라질 수 있다. 아래와 같은 접근법을 시행할 수 있다.
+
+     1. 최상위 라우트 컴포넌트를 감싸서 전체 응용 프로그램에 대한 일반적인 에러 메시지를 표시할 수 있다.
+     2. 각각의 컴포넌트를 에러 바운더리로 감싸서 나머지 응용 프로그램이 충돌하지 않도록 보호할 수 있다.
+
+32.  ### 에러 바운더리에서 컴포넌트 스택 추적의 장점은?
+
+     에러 메시지, 자바스크립트 스택과 별개로, React16은 에러 바운더리 개념을 사용하여 파일 이름과 행 번호를 포함한 컴포넌트 스택 추적을 표시한다. 예를 들어, BuggyCounter 컴포넌트는 아래와 같이 컴포넌트 스택 추적을 표시한다.
 
      ![stacktrace](images/error_boundary.png)
 
@@ -4226,11 +4230,15 @@
      4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
      5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
 
-35.  ### What is the main purpose of constructor?
-     The constructor is mainly used for two purposes,
-     1. To initialize local state by assigning object to this.state
-     2. For binding event handler methods to the instance
-     For example, the below code covers both the above cases,
+35.  ### constructor의 주요 목적은?
+
+     constructor는 주로 두 가지 목적으로 사용된다.
+
+     1. this.state에 객체를 할당하여 로컬 상태를 초기화하기 위해서
+     2. 이벤트 핸들러 메서드를 인스턴스에 바인딩하기 위해서 
+     
+     예를 들어 아래의 코드는 두 가지 경우를 모두 다루고 있다.
+     
      ```javascript
      constructor(props) {
        super(props);
@@ -4239,13 +4247,16 @@
        this.handleClick = this.handleClick.bind(this);
      }
      ```
+
 241. ### Is it mandatory to define constructor for React component?
      No, it is not mandatory. i.e, If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your React component.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-242. ### What are default props?
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props. For example, let us create color default prop for the button component,
+242. ### default props란?
+
+     defaultProps는 컴포넌트 클래스의 속성이며 클래스의 기본 props를 설정한다. undefined props에 사용되지만, null props에는 사용되지 않는다. 예를 들어, 버튼 컴포넌트의 색상 default prop 만들어보자.
+
      ```javascript
      class MyButton extends React.Component {
        // ...
@@ -4257,18 +4268,20 @@
 
      ```
 
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
+     props.color가 없다면 기본값은 '빨간색'으로 설정된다. 즉, color props에 접근하려고 할 때마다 기본값이 사용된다.
+
      ```javascript
      render() {
         return <MyButton /> ; // props.color will be set to red
       }
      ```
-     **Note:** If you provide null value then it remains null value.
+     **Note:** null 값을 제공하면 null 값이 유지된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-243. ### Why should not call setState in componentWillUnmount?
-     You should not call setState() in componentWillUnmount() because Once a component instance is unmounted, it will never be mounted again.
+243. ### componentWillUnmount에서 setState를 호출하면 안되는 이유는?
+
+     컴포넌트 인스턴스가 마운트 해제되면 다시 마운트될 수 없음으로, componentWillUnmount()에서 setState()를 호출하면 안 된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4303,8 +4316,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-245. ### What is the methods order when component re-rendered?
-     An update can be caused by changes to props or state. The below methods are called in the following order when a component is being re-rendered.
+245. ### 리렌더링할 때 메서드의 순서는?
+
+     props 또는 state의 변경으로 업데이트가 발생할 수 있다. 아래의 메서드는 컴포넌트를 리렌더링할 때 호출되는 순서이다.
+     
      1. static getDerivedStateFromProps()
      2. shouldComponentUpdate()
      3. render()
