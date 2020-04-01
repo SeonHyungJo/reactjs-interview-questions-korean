@@ -4223,7 +4223,7 @@
      2. **Arrays and fragments:** 여러 elements를 렌더링하기 위해 여러 elements 감싼 배열과 Fragments를 반환한다.
      3. **Portals:** 자식은 다른 DOM 하위 트리로 렌더링한다.
      4. **String and numbers:** DOM에서 문자열과 숫자를 모두 텍스트 노드로 렌더링한다.
-     5. **Booleans or null:** 아무것도 렌더링하지 않지만, 조건부로 콘텐츠를 렌더링하는 데 사용된다.
+     5. **Booleans or null:** 아무것도 렌더링하지 않지만, 조건부로 콘텐츠를 렌더링할 때 사용된다.
 
 35.  ### What is the main purpose of constructor?
      The constructor is mainly used for two purposes,
