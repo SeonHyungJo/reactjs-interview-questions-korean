@@ -267,7 +267,7 @@
 |239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
 |240| [constructor의 주요 목적은?](#constructor의-주요-목적은)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
-|242| [What are default props?](#what-are-default-props)|
+|242| [default props란?](#default-props란)|
 |243| [Why should not call setState in componentWillUnmount?](#why-should-not-call-setstate-in-componentwillunmount)|
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
 |245| [What is the methods order when component re-rendered?](#what-is-the-methods-order-when-component-re-rendered)|
@@ -4250,8 +4250,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-242. ### What are default props?
-     The defaultProps are defined as a property on the component class to set the default props for the class. This is used for undefined props, but not for null props. For example, let us create color default prop for the button component,
+242. ### default props란?
+
+     defaultProps는 컴포넌트 클래스의 속성이며 클래스의 기본 props를 설정한다. undefined props에 사용되지만, null props에는 사용되지 않는다. 예를 들어, 버튼 컴포넌트의 색상 default prop 만들어보자.
+
      ```javascript
      class MyButton extends React.Component {
        // ...
@@ -4263,13 +4265,14 @@
 
      ```
 
-     If props.color is not provided then it will set the default value to 'red'. i.e, Whenever you try to access the color prop it uses default value
+     props.color가 없다면 기본값은 '빨간색'으로 설정된다. 즉, color props에 접근하려고 할 때마다 기본값이 사용된다.
+
      ```javascript
      render() {
         return <MyButton /> ; // props.color will be set to red
       }
      ```
-     **Note:** If you provide null value then it remains null value.
+     **Note:** null 값을 제공하면 null 값이 유지된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
