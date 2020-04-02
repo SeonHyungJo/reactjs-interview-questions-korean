@@ -272,7 +272,7 @@
 |244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
 |245| [리렌더링할 때 메서드의 순서는?](#리렌더링할-때-메서드의-순서는)|
 |246| [에러 핸들링 중 호출되는 메서드는?](#에러-핸들링-중-호출되는-메서드는)|
-|247| [What is the purpose of displayName class property?](#what-is-the-purpose-of-displayname-class-property)|
+|247| [displayName 클래스 속성의 목적은?](#displayName-클래스-속성의-목적은)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
 |249| [What is the purpose of unmountComponentAtNode method?](#what-is-the-purpose-of-unmountcomponentatnode-method)|
 |250| [What is code-splitting?](#what-is-code-splitting)|
@@ -4343,15 +4343,18 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-247. ### What is the purpose of displayName class property?
-     The displayName string is used in debugging messages. Usually, you don’t need to set it explicitly because it’s inferred from the name of the function or class that defines the component. You might want to set it explicitly if you want to display a different name for debugging purposes or when you create a higher-order component.
-     For example, To ease debugging, choose a display name that communicates that it’s the result of a withSubscription HOC.
+247. ### displayName 클래스 속성의 목적은?
+
+     displayName 문자열은 메시지 디버깅에 사용된다. 일반적으로 컴포넌트를 정의하는 함수 또는 클래스 이름에서 유추되므로 명시적으로 설정할 필요 없다. 디버깅 목적으로 다른 이름을 표시하거나 HOC를 작성할 때 명시적으로 설정할 수 있다.
+     예를 들어, 디버깅을 쉽게 하려면 withSubscription HOC의 결과임을 알리는 displayName을 선택한다.
+
      ```javascript
      function withSubscription(WrappedComponent) {
        class WithSubscription extends React.Component {/* ... */}
        WithSubscription.displayName = `WithSubscription(${getDisplayName(WrappedComponent)})`;
        return WithSubscription;
      }
+
      function getDisplayName(WrappedComponent) {
        return WrappedComponent.displayName || WrappedComponent.name || 'Component';
      }
