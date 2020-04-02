@@ -264,7 +264,7 @@
 |236| [에러 바운더리의 적절한 위치는?](#에러-바운더리의-적절한-위치는)|
 |237| [에러 바운더리에서 컴포넌트 스택 추적의 장점은?](#에러-바운더리에서-컴포넌트-스택-추적의-장점은)|
 |238| [클래스 컴포넌트에 정의해야 하는 메서드는 무엇인가?](#클래스-컴포넌트에-정의해야-하는-메서드는-무엇인가)|
-|239| [What are the possible return types of render method?](#what-are-the-possible-return-types-of-render-method)|
+|239| [render 메서드의 return 가능한 타입은?](#render-메서드의-return-가능한-타입은)|
 |240| [constructor의 주요 목적은?](#constructor의-주요-목적은)|
 |241| [Is it mandatory to define constructor for React component?](#is-it-mandatory-to-define-constructor-for-react-component)|
 |242| [default props란?](#default-props란)|
@@ -4224,13 +4224,15 @@
 
      render() 메서드는 클래스 컴포넌트에서 유일하게 필요한 메서드이다. 즉, render 메서드를 제외한 모든 메서드는 클래스 컴포넌트에서 선택사항이다.
 
-34.  ### What are the possible return types of render method?
-     Below are the list of following types used and return from render method,
-     1. **React elements:** Elements that instruct React to render a DOM node. It includes html elements such as `<div/>` and user defined elements.
-     2. **Arrays and fragments:** Return multiple elements to render as Arrays and Fragments to wrap multiple elements
-     3. **Portals:** Render children into a different DOM subtree.
-     4. **String and numbers:** Render both Strings and Numbers as text nodes in the DOM
-     5. **Booleans or null:** Doesn't render anything but these types are used to conditionally render content.
+34.  ### render 메서드의 return 가능한 타입은?
+
+     아래는 render 메서드에서 사용되거나 return 되는 리스트입니다.
+
+     1. **React elements:** React가 DOM 노드를 렌더링하도록 지시하는 Elements다. `<div/>` 와 같은 html elements와 사용자 정의 elements가 포함된다.
+     2. **Arrays and fragments:** 여러 elements를 렌더링하기 위해 이를 감싼 배열과 Fragments를 반환한다.
+     3. **Portals:** 자식은 다른 DOM 하위 트리로 렌더링한다.
+     4. **String and numbers:** DOM에서 문자열과 숫자를 모두 텍스트 노드로 렌더링한다.
+     5. **Booleans or null:** 아무것도 렌더링하지 않지만, 조건부로 콘텐츠를 렌더링할 때 사용된다.
 
 35.  ### constructor의 주요 목적은?
 
