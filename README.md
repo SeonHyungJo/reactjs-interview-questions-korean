@@ -275,7 +275,7 @@
 |247| [displayName 클래스 속성의 목적은?](#displayName-클래스-속성의-목적은)|
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
 |249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
-|250| [What is code-splitting?](#what-is-code-splitting)|
+|250| [code-splitting이란?](#code-splitting이란)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
@@ -4377,15 +4377,18 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-250. ### What is code-splitting?
-     Code-Splitting is a feature supported by bundlers like Webpack and Browserify which can create multiple bundles that can be dynamically loaded at runtime. The react project supports code splitting via dynamic import() feature.
-     For example, in the below code snippets, it will make moduleA.js and all its unique dependencies as a separate chunk that only loads after the user clicks the 'Load' button.
+250. ### code-splitting이란?
+
+     Code-Splitting은 Webpack과 Browserify와 같은 번들러에서 지원하는 기능으로 런타임에 동적으로 로드할 수 있는 여러 번들을 만들 수 있다. react 프로젝트는 동적 import() 기능을 통해 code splitting을 지원한다.
+     예를 들어, 아래와 같은 스니핏 코드에서는 moduleA.js와 모든 고유한 종속성을 사용자가 '로드' 버튼을 클릭했을 때 로드하는 별도의 chuck로 만든다. 
+     
      **moduleA.js**
      ```javascript
      const moduleA = 'Hello';
 
      export { moduleA };
      ```
+
      **App.js**
      ```javascript
      import React, { Component } from 'react';
