@@ -283,7 +283,7 @@
 |255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
 |256| [When component props defaults to true?](#when-component-props-defaults-to-true)|
 |257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
-|258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
+|258| [이벤트 핸들러를 컴포넌트에 어떻게 전달하나?](#이벤트-핸들러를-컴포넌트에-어떻게-전달하나)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
 |260| [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)|
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
@@ -4562,8 +4562,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-258. ### How do you pass an event handler to a component?
-     You can pass event handlers and other functions as props to child components. It can be used in child component as  below,
+258. ### 이벤트 핸들러를 컴포넌트에 어떻게 전달하나?
+     
+     이벤트 핸들러 및 함수를 하위 컴포넌트에 props로 전달할 수 있다. 아래와 같이 자식 컴포넌트에서 사용할 수 있다.
+
      ```
      <button onClick={this.handleClick}>
      ```
