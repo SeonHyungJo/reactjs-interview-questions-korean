@@ -277,7 +277,7 @@
 |249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
 |250| [code-splitting이란?](#code-splitting이란)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
-|252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
+|252| [Keyed Fragments란?](#Keyed-Fragments란)|
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
 |254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
 |255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
@@ -4430,8 +4430,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-252. ### What are Keyed Fragments?
-     The Fragments declared with the explicit <React.Fragment> syntax may have keys. The general usecase is mapping a collection to an array of fragments as below,
+252. ### Keyed Fragments란?
+
+     명시적 `<React.Fragment>` 구문으로 선언된 Fragments에는 key가 있을 수 있다. 일반적으로 사용하는 경우는 아래와 같이 컬렉션을 배열에 매핑한다.
+
      ```javascript
      function Glossary(props) {
        return (
@@ -4447,7 +4449,8 @@
        );
      }
      ```
-     **Note:** key is the only attribute that can be passed to Fragment. In the future, there might be a support for additional attributes, such as event handlers.
+
+     **Note:** key는 Fragment에 전달할 수 있는 유일한 속성이다. 앞으로는, 이벤트 핸들러와 같은 추가 속성이 지원될 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
