@@ -280,7 +280,7 @@
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
 |254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
-|255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
+|255| [개발자 도구에서 forwardRefs를 디버깅하는 방법은?](#개발자-도구에서-forwardRefs를-디버깅하는-방법은)|
 |256| [When component props defaults to true?](#when-component-props-defaults-to-true)|
 |257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
 |258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
@@ -4502,15 +4502,18 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-255. ### How to debug forwardRefs in DevTools?
+255. ### 개발자 도구에서 forwardRefs를 디버깅하는 방법은?
 
-     **React.forwardRef** accepts a render function as parameter and DevTools uses this function to determine what to display for the ref forwarding component. For example, If you don't name the render function or not using displayName property then it will appear as ”ForwardRef” in the DevTools,
+     **React.forwardRef** 는 렌더링 함수를 매개 변수로 받고 있으며, 개발자 도구는 이 함수를 사용하여 ref 전달 컴포넌트에 표시할 내용을 결정한다. 예를 들어, 렌더링 함수의 이름을 지정하지 않거나 displayName 속성을 사용하지 않으면 개발자 도구에서 ”ForwardRef”로 표시된다.
+
      ```javascript
      const WrappedComponent = React.forwardRef((props, ref) => {
        return <LogProps {...props} forwardedRef={ref} />;
      });
      ```
-     But If you name the render function then it will appear as **”ForwardRef(myFunction)”**
+
+     그러나 렌더링 함수의 이름을 지정하게 되면 **”ForwardRef(myFunction)”**으로 나타난다.
+
      ```javascript
      const WrappedComponent = React.forwardRef(
        function myFunction(props, ref) {
@@ -4518,7 +4521,9 @@
        }
      );
      ```
-     As an alternative, You can also set displayName property for forwardRef function,
+     
+     대안으로, forwardRef 함수에 displayName 속성을 설정할 수 있다.
+
      ```javascript
      function logProps(Component) {
        class LogProps extends React.Component {
