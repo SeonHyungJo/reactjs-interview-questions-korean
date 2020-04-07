@@ -276,7 +276,7 @@
 |248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
 |249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
 |250| [code-splitting이란?](#code-splitting이란)|
-|251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
+|251| [strict mode의 장점은?](#strict-mode의-장점은)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
 |254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
@@ -4419,14 +4419,14 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-251. ### What is the benefit of strict mode?
-     The <StrictMode> will be  helpful in the below cases
+251. ### strict mode의 장점은?
+     `<StrictMode>`는 아래와 같은 경우에 유용하다.
 
-     1. Identifying components with **unsafe lifecycle methods**.
-     2. Warning about **legacy string ref** API usage.
-     3. Detecting unexpected **side effects**.
-     4. Detecting **legacy context** API.
-     5. Warning about deprecated findDOMNode usage
+     1. **안전하지 않은 라이프사이클 메서드를 가진** 컴포넌트를 식별해준다.
+     2. **레거시 문자열 참조** API 사용에 대한 경고를 해준다.
+     3. 예상치 못한 **부작용**을 감지한다.
+     4. **레거시 컨텍스트** API를 감지한다.
+     5. 더 이상 사용되지 않는 findDOMNode 사용에 대해 경고를 해준다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
