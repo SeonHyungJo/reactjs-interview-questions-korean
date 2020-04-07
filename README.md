@@ -281,7 +281,7 @@
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
 |254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
 |255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
-|256| [When component props defaults to true?](#when-component-props-defaults-to-true)|
+|256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
 |257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
 |258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
@@ -4540,14 +4540,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-256. ### When component props defaults to true?
-     If you pass no value for a prop, it defaults to true. This behavior is available so that it matches the behavior of HTML. For example, below expressions are equivalent,
+256. ### 컴포넌트 props의 기본값은 true인가?
+     
+     prop에 아무 값도 전달하지 않는다면, 기본값은 true이다. 이 동작은 HTML의 동작과 일치하게 할 수 있다. 예를 들어 아래와 같은 표현식은 동일한 표현이다.
+
      ```javascript
      <MyInput autocomplete />
 
      <MyInput autocomplete={true} />
      ```
-     **Note:** It is not recommend using this approach because it can be confused with the ES6 object shorthand (example, {name} which is short for {name: name})
+     **Note:** 이 방법은 ES6 객체 속기 (예, {name: name}의 약자는 {name})와 혼동할 수 있으므로 사용하지 않는 것이 좋다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
