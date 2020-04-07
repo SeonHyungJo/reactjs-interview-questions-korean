@@ -285,7 +285,7 @@
 |257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
 |258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
-|260| [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)|
+|260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
 |262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
@@ -4586,11 +4586,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-260. ### How to prevent a function from being called multiple times?
-     If you use an event handler such as **onClick or onScroll** and want to prevent the callback from being fired too quickly, then you can limit the rate at which callback is executed. This can be achieved in the below possible ways,
-     1. **Throttling:** Changes based on a time based frequency. For example, it can be used using _.throttle lodash function
-     2. **Debouncing:** Publish changes after a period of inactivity. For example, it can be used using _.debounce lodash function
-     3. **RequestAnimationFrame throttling:** Changes based on requestAnimationFrame. For example, it can be used using raf-schd lodash function
+260. ### 함수가 여러 번 호출되는 것을 방지하는 방법은?
+
+     **onClick 또는 onScroll**과 같은 이벤트 핸들러를 사용하고 콜백이 너무 빨리 발생하지 않도록 하려면 콜백 실행 속도를 제한할 수 있다. 아래와 같은 방법으로 가능하다.
+
+     1. **Throttling:** 시간을 기반으로 빈도에 따라 변경이 된다. 예를 들어, lodash의 _.throttle 함수를 사용하여 사용할 수 있다.
+     2. **Debouncing:** 일정 기간 사용하지 않으면 변경 사항을 실행한다. 예를 들어, lodash의 _.debounce 함수를 사용하여 사용할 수 있다.
+     3. **RequestAnimationFrame throttling:** requestAnimationFrame에 따라 변경된다. 예를 들어, lodash의 raf-schd 함수를 사용하여 사용할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
