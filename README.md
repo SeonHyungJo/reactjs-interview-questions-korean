@@ -273,7 +273,7 @@
 |245| [리렌더링할 때 메서드의 순서는?](#리렌더링할-때-메서드의-순서는)|
 |246| [에러 핸들링 중 호출되는 메서드는?](#에러-핸들링-중-호출되는-메서드는)|
 |247| [displayName 클래스 속성의 목적은?](#displayName-클래스-속성의-목적은)|
-|248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
+|248| [react 응용프로그램의 브라우저 지원은 어디까지인가?](#react-응용프로그램의-브라우저-지원은-어디까지인가)|
 |249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
 |250| [code-splitting이란?](#code-splitting이란)|
 |251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
@@ -4366,8 +4366,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-248. ### What is the browser support for react applications?
-     React supports all popular browsers, including Internet Explorer 9 and above, although some polyfills are required for older browsers such as IE 9 and IE 10. If you use  **es5-shim and es5-sham** polyfill then it even support old browsers that doesn't support ES5 methods.
+248. ### react 응용프로그램의 브라우저 지원은 어디까지인가?
+
+     React는 Internet Explorer 9 이상을 포함하여 널리 사용되는 모든 브라우저를 지원하지만, 일부 IE 9 및 IE 10과 같은 이전 브라우저에서는 폴리필이 필요하다. **es5-shim과 es5-sham** 폴리필을 사용하면 ES5 메서드들을 지원하지 않는 이전 브라우저에서 사용 가능하다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
