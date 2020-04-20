@@ -286,7 +286,7 @@
 |258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
 |260| [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)|
-|261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
+|261| [JSX가 Injection 공격은 막는 방법은?](#JSX가-Injection-공격은-막는-방법은)|
 |262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
@@ -4599,13 +4599,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-261. ### How JSX prevents Injection Attacks?
-     React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. For example, you can embed user input as below,
+261. ### JSX가 Injection 공격은 막는 방법은?
+
+     React DOM은 렌더링하기 전에 JSX에 포함된 모든 값은 escape 처리한다. 따라서 애플리케이션에 아무것도 주입되지 않는 것을 보장한다. 모든 것이 렌더링되기 전에 문자열로 변환된다. 예를 들어 아래와 같이 사용자 입력을 포함할 수 있다.
+
      ```javascript
      const name = response.potentiallyMaliciousInput;
      const element = <h1>{name}</h1>;
      ```
-     This way you can prevent XSS(Cross-site-scripting) attacks in the application.
+
+     이렇게 하면 애플리케이션에서 XSS(Cross-site-scripting) 공격을 방지할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
