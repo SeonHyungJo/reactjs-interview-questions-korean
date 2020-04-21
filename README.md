@@ -291,7 +291,7 @@
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
-|266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
+|266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
@@ -4679,8 +4679,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-266. ### How to prevent component from rendering?
-     You can prevent component from rendering by returning null based on specific condition. This way it can conditionally render component.
+266. ### 컴포넌트 렌더링을 막는 방법은?
+     
+     특정 조건에 따라 null을 반환하여 컴포넌트가 렌더링 되지 않도록 할 수 있다. 아래와 같이 조건부로 컴포넌트를 렌더링할 수 할 수 있다.
+
      ```javascript
      function Greeting(props) {
        if (!props.loggedIn) {
@@ -4694,6 +4696,7 @@
        );
      }
      ```
+
      ```javascript
      class User extends React.Component {
        constructor(props) {
@@ -4711,7 +4714,8 @@
         );
        }
      ```
-     In the above example, the greeting component skips its rendering section by applying condition and returning null value.
+
+     위의 예제에서, greeting 컴포넌트는 조건문을 적용하고 null 값을 반환하여 렌더링 부분은 건너뛴다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
