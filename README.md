@@ -292,7 +292,7 @@
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
-|267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
+|267| [index를 키로 안전하게 사용하기 위한 조건은?](#index를-키로-안전하게-사용하기-위한-조건은)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
@@ -4715,12 +4715,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-267. ### What are the conditions to safely use the index as a key?
-     There are three conditions to make sure, it is safe use the index as a key.
-     1. The list and items are static– they are not computed and do not change
-     2. The items in the list have no ids
-     3. The list is never reordered or filtered.
+267. ### index를 키로 안전하게 사용하기 위한 조건은?
 
+     index를 키로 안전하게 사용하기 위한 3가지 조건이 있다.
+
+     1. 목록과 항목은 정적이다. 계산되지 않고 변경 않을 경우.
+     2. 목록에 있는 항목들이 id가 없을 경우.
+     3. 목록이 다시 정렬되거나 필터링 되지 않을 경우
 
    **[⬆ Back to Top](#table-of-contents)**
     
