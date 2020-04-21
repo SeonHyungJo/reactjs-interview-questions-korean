@@ -290,7 +290,7 @@
 |262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
 |264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
-|265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
+|265| [이벤트 핸들러에 인수를 어떻게 넘기나?](#이벤트-핸들러에-인수를-어떻게-넘기나)|
 |266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
@@ -4669,13 +4669,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-265. ### How do you pass arguments to an event handler?
-     During iterations or loops, it is common to pass an extra parameter to an event handler. This can be achieved through arrow functions or bind method. Let us take an example of user details updated in a grid,
+265. ### 이벤트 핸들러에 인수를 어떻게 넘기나?
+     
+     반복 또는 루프를 도는 중에 추가적인 매개 변수를 이벤트 핸들러에 전달하는 것이 일반적이다. 화살표 함수 또는 메서드 바인드로 가능하다. 그리드에서 업데이트된 사용자 정보로 예를 들어 보자.
+
      ```javascript
      <button onClick={(e) => this.updateUser(userId, e)}>Update User details</button>
      <button onClick={this.updateUser.bind(this, userId)}>Update User details</button>
      ```
-     In both the approaches, the synthetic argument e is passed as a second argument. You need to pass it explicitly for arrow functions and it forwarded automatically for bind method.
+
+     두 가지 접근방식에서, 합성 인수 e는 두 번째 인자로 전달된다. 화살표 함수의 경우에는 명시적으로 전달해 주어야 하며, 메서드 바인드는 자동으로 전달된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
