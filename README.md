@@ -295,7 +295,7 @@
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
 |268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
-|270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
+|270| [redux form 라이브러리보다 formik의 장점은?](#redux-form-라이브러리보다-formik의-장점은)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
 |272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
@@ -4767,12 +4767,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-270. ### What are the advantages of formik over redux form library?
-     Below are the main reasons to recommend formik over redux form library
-     1. The form state is inherently short-term and local, so tracking it in Redux (or any kind of Flux library) is unnecessary.
-     2. Redux-Form calls your entire top-level Redux reducer multiple times ON EVERY SINGLE KEYSTROKE. This way it increases input latency for large apps.
-     3. Redux-Form is 22.5 kB minified gzipped whereas Formik is 12.7 kB
+270. ### redux form 라이브러리보다 formik의 장점은?
 
+     다음은 redux form 라이브러리보다 formik을 권장하는 주요 이유이다.
+
+     1. form state는 본질적으로 단기적이며 로컬이므로 Redux(또는 모든 종류의 Flux 라이브러리) 에서 추적할 필요가 없다.
+     2. Redux-Form은 EVERY SINGLE KEYSTROKE에서 전체 최상위 Redux reducer를 여러 번 호출한다. 이렇게 하면 큰 앱의 입력 대기 시간이 늘어난다.
+     3. Redux-Form은 22.5 kB로 축소된 gzip인 반면 Formik은 12.7 kB이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
