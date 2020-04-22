@@ -293,7 +293,7 @@
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
-|268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
+|268| [키가 전체에서 고유해야 하나?](#키가-전체에서-고유해야-하나)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
@@ -4724,8 +4724,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-268. ### Is it keys should be globally unique?
-     Keys used within arrays should be unique among their siblings but they don’t need to be globally unique. i.e, You can use the same keys withtwo different arrays. For example, the below book component uses two arrays with different arrays,
+268. ### 키가 전체에서 고유해야 하나?
+
+     배열 내에서 사용되는 키는 형제 사이에서 고유해야 하지만 전체적으로는 고유할 필요 없다. 즉, 두 개의 다른 배열에서 동일한 키를 사용할 수 있다. 예를 들어, 아래의 Book 컴포넌트는 다른 배열 두 개를 사용하고 있다.
+
      ```javascript
      function Book(props) {
        const index = (
