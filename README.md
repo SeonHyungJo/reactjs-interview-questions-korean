@@ -298,7 +298,7 @@
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
 |272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
-|273| [What is dynamic import?](#what-is-dynamic-import)|
+|273| [dynamic import란?](#dynamic-import란)|
 |274| [What are loadable components?](#what-are-loadable-components)|
 |275| [What is suspense component?](#what-is-suspense-component)|
 |276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
@@ -4802,8 +4802,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-273. ### What is dynamic import?
-     The dynamic import() syntax is a ECMAScript proposal not currently part of the language standard. It is expected to be accepted in the near future. You can achieve code-splitting into your app using dynamic import(). Let's take an example of addition,
+273. ### dynamic import란?
+     
+     dynamic import() 문법은 현재 표준 문법이 아닌 ECMAScript 제안이다. 가까운 미래에 추가될 것이다(실제로 2020에 추가 예정). dynamic import()를 사용하여 code-splitting 할 수 있다. 덧셈 예를 들어보자.
+
      1. **Normal Import**
      ```javascript
      import { add } from './math';
