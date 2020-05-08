@@ -300,7 +300,7 @@
 |272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
 |274| [What are loadable components?](#what-are-loadable-components)|
-|275| [What is suspense component?](#what-is-suspense-component)|
+|275| [suspense 컴포넌트란?](#suspense-컴포넌트란)|
 |276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
 |278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
@@ -4837,8 +4837,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-275. ### What is suspense component?
-     If the module containing the dynamic import is not yet loaded by the time parent component renders, you must show some fallback content while you’re waiting for it to load using a loading indicator. This can be done using **Suspense** component. For example, the below code uses suspense component,
+275. ### suspense 컴포넌트란?
+
+     dynamic import가 포함된 모듈의 부모 컴포넌트가 렌더링 될 때까지 로드가 되지 않은 경우 로딩 표시기를 사용하여 로드될 때까지 대체 컨텐츠를 표시한다. 이를 **Suspense** 컴포넌트를 사용하여 수행할 수 있다. 예를 들어 아래 코드는 suspense 컴포넌트를 사용한다.
+
      ```javascript
      const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
@@ -4852,7 +4854,7 @@
        );
      }
      ```
-     As mentioned in the above code, Suspense is wrapped above the lazy component.
+     위 코드에서 언급했듯이 Suspense는 Layzy 컴포넌트로 감싸진다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
