@@ -301,7 +301,7 @@
 |273| [What is dynamic import?](#what-is-dynamic-import)|
 |274| [What are loadable components?](#what-are-loadable-components)|
 |275| [What is suspense component?](#what-is-suspense-component)|
-|276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
+|276| [라우트 기반의 코드 스플리팅이란?](#라우트-기반의-코드-스플리팅이란)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
 |278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
 |279| [How do you use contextType?](#how-do-you-use-contexttype)|
@@ -4856,8 +4856,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-276. ### What is route based code splitting?
-     One of the best place to do code splitting is with routes. The entire page is going to re-render at once so users are unlikely to interact with other elements in the page at the same time. Due to this, the user experience won't be disturbed. Let us take an example of route based website using libraries like React Router with React.lazy,
+276. ### 라우트 기반의 코드 스플리팅이란?
+
+     코드 스플리팅을 사용해 볼 좋은 장소 중 하나는 라우트다. 전체 페이지가 한 번에 렌더링 되므로 사용자가 페이지의 다른 요소와 동시에 상호 작용할 가능성이 없다. 이로 인해 사용자 경험이 방해받지 않는다. React.lazy와 함께 Reat Router 같은 라이브러리를 사용하여 경로 기반 웹 사이트를 예를 들어보자.
+
      ```javascript
      import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
      import React, { Suspense, lazy } from 'react';
@@ -4876,7 +4878,8 @@
        </Router>
      );
      ```
-     In the above code, the code splitting will happen at each route level.
+
+     위의 코드에서, 코드 스플리팅은 각 경로 수준에서 발생한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
