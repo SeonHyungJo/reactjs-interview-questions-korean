@@ -304,7 +304,7 @@
 |276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
 |278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
-|279| [How do you use contextType?](#how-do-you-use-contexttype)|
+|279| [contextType은 어떻게 사용하나?](#contextType은-어떻게-사용하나)|
 |280| [What is a consumer?](#what-is-a-consumer)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
@@ -4922,11 +4922,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-279. ### How do you use contextType?
-     ContextType is used to consume the context object. The contextType property can be used in two ways,
-     1. **contextType as property of class:**
-     The contextType property on a class can be assigned a Context object created by React.createContext(). After that, you can consume the nearest current value of that Context type using this.context in any of the lifecycle methods and render function.
-     Lets assign contextType property on MyClass as below,
+279. ### contextType은 어떻게 사용하나?
+
+     ContextType은 context 객체를 소비하는데 사용된다. contextType 속성은 2가지 방식으로 사용된다.
+
+     1. **클래스 속성으로 contextType:**
+     클래스의 contextType 속성에는 React.createContext()로 만든 Context 객체를 할당할 수 있다. 그런 다음모든 라이프 사이클 메서드와 렌더링 함수에서 this.context를 사용하여 해당 contextType의 가장 가까운 현재 값을 사용할 수 있다. 아래와 같이 MyClass에 contextType 속성을 할당 할 수 있다.
+
      ```javascript
      class MyClass extends React.Component {
        componentDidMount() {
@@ -4948,8 +4950,9 @@
      }
      MyClass.contextType = MyContext;
      ```
-     2. **Static field**
-     You can use a static class field to initialize your contextType using public class field syntax.
+
+     2. **Static field** 정적 클래스 필드를 사용하여 공용 클래스 필드 구문을 사용하는 contextType을 초기화할 수 있다.
+
      ```javascript
      class MyClass extends React.Component {
        static contextType = MyContext;
