@@ -278,7 +278,7 @@
 |250| [code-splitting이란?](#code-splitting이란)|
 |251| [strict mode의 장점은?](#strict-mode의-장점은)|
 |252| [Keyed Fragments란?](#Keyed-Fragments란)|
-|253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
+|253| [React는 모든 HTML 속성을 지원하나?](#React는-모든-HTML-속성을-지원하나)|
 |254| [HOC의 한계는?](#HOC의-한계는)|
 |255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
 |256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
@@ -4459,14 +4459,17 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-253. ### Does React support all HTML attributes?
-     As of React 16, both standard or custom DOM attributes are fully supported. Since React components often take both custom and DOM-related props, React uses the camelCase convention just like the DOM APIs. Let us take few props with respect to standard HTML attributes,
+253. ### React는 모든 HTML 속성을 지원하나?
+
+     React 16 버전에서, 표준과 사용자 정의 DOM 속성 모두 지원한다. React 컴포넌트는 종종 사용자 정의와 DOM 관련 props를 모두 사용하므로, React는 DOM API와 마찬가지로 camelCase 규칙을 사용한다. 표준 HTML 속성을 사용하고 props를 사용하지 않은 예시이다.
+
      ```javascript
      <div tabIndex="-1" />      // Just like node.tabIndex DOM API
      <div className="Button" /> // Just like node.className DOM API
      <input readOnly={true} />  // Just like node.readOnly DOM API
      ```
-     These props work similarly to the corresponding HTML attributes, with the exception of the special cases. It also support all SVG attributes.
+
+     props는 특별한 경우는 제외하고 해당 HTML 속성과 유사하게 작동한다. 또한 모든 SVG 속성을 지원한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
