@@ -299,7 +299,7 @@
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
 |272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
-|274| [What are loadable components?](#what-are-loadable-components)|
+|274| [loadable 컴포넌트란?](#loadable-컴포넌트란)|
 |275| [What is suspense component?](#what-is-suspense-component)|
 |276| [라우트 기반의 코드 스플리팅이란?](#라우트-기반의-코드-스플리팅이란)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
@@ -4818,8 +4818,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-274. ### What are loadable components?
-     If you want to do code-splitting in a server rendered app, it is recommend to use Loadable Components because React.lazy and Suspense is not yet available for server-side rendering. Loadable lets you render a dynamic import as a regular component. Lets take an example,
+274. ### loadable 컴포넌트란?
+
+     서버 렌더링 앱에서 code-splitting을 하는 경우, React.lazy와 Suspense를 아직 서버 측 렌더링에 사용할 수 없으므로 Loadable 컴포넌트를 사용하는 것이 좋다. Loadable을 사용하면 dynamic import를 일반 컴포넌트로 렌더링할 수 있다. 예를 들어보면,
+
      ```javascript
      import loadable from '@loadable/component'
 
@@ -4833,7 +4835,8 @@
        )
      }
      ```
-     Now OtherComponent will be loaded in a separated bundle
+
+     이제 OtherComponent는 별도의 번들로 로드된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
