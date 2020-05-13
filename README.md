@@ -287,7 +287,7 @@
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
 |260| [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)|
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
-|262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
+|262| [렌더링 된 요소는 어떻게 업데이트하나?](#렌더링-된-요소는-어떻게-업데이트하나)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
 |264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
@@ -4609,8 +4609,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-262. ### How do you update rendered elements?
-     You can update UI(represented by rendered element) by passing the newly created element to ReactDOM's render method. For example, lets take a ticking clock example, where it updates the time by calling render method multiple times,
+262. ### 렌더링 된 요소는 어떻게 업데이트하나?
+
+     새로 작성된 요소를 ReactDOM의 render 메서드에 전달하여 UI(렌더링 된 요소로 표시)를 업데이트 할 수 있다. 예를 들어, 똑딱거리는 시계를 예로 들자면, render 메서드를 여러 번 호출하여 시간을 업데이트한다.
+
      ```javascript
      function tick() {
        const element = (
