@@ -269,43 +269,43 @@
 |241| [React 컴포넌트의 생성자를 정의해야 하나?](#React-컴포넌트의-생성자를-정의해야-하나)|
 |242| [default props란?](#default-props란)|
 |243| [componentWillUnmount에서 setState를 호출하면 안되는 이유는?](#componentWillUnmount에서-setState를-호출하면-안되는-이유는)|
-|244| [What is the purpose of getDerivedStateFromError?](#what-is-the-purpose-of-getderivedstatefromerror)|
+|244| [getDerivedStateFromError의 목적은?](#getDerivedStateFromError의-목적은)|
 |245| [리렌더링할 때 메서드의 순서는?](#리렌더링할-때-메서드의-순서는)|
 |246| [에러 핸들링 중 호출되는 메서드는?](#에러-핸들링-중-호출되는-메서드는)|
 |247| [displayName 클래스 속성의 목적은?](#displayName-클래스-속성의-목적은)|
-|248| [What is the browser support for react applications?](#what-is-the-browser-support-for-react-applications)|
+|248| [react 응용프로그램의 브라우저 지원은 어디까지인가?](#react-응용프로그램의-브라우저-지원은-어디까지인가)|
 |249| [unmountComponentAtNode 메서드의 목적은?](#unmountComponentAtNode-메서드의-목적은)|
 |250| [code-splitting이란?](#code-splitting이란)|
-|251| [What is the benefit of strict mode?](#what-is-the-benefit-of-strict-mode)|
-|252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
-|253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
-|254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
-|255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
-|256| [When component props defaults to true?](#when-component-props-defaults-to-true)|
+|251| [strict mode의 장점은?](#strict-mode의-장점은)|
+|252| [Keyed Fragments란?](#Keyed-Fragments란)|
+|253| [React는 모든 HTML 속성을 지원하나?](#React는-모든-HTML-속성을-지원하나)|
+|254| [HOC의 한계는?](#HOC의-한계는)|
+|255| [개발자 도구에서 forwardRefs를 디버깅하는 방법은?](#개발자-도구에서-forwardRefs를-디버깅하는-방법은)|
+|256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
 |257| [NextJS는 무엇이며, 주요한 기능은?](#NextJS는-무엇이며,-주요한-기능은)|
-|258| [How do you pass an event handler to a component?](#how-do-you-pass-an-event-handler-to-a-component)|
+|258| [이벤트 핸들러를 컴포넌트에 어떻게 전달하나?](#이벤트-핸들러를-컴포넌트에-어떻게-전달하나)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
-|260| [How to prevent a function from being called multiple times?](#how-to-prevent-a-function-from-being-called-multiple-times)|
+|260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
-|262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
+|262| [렌더링 된 요소는 어떻게 업데이트하나?](#렌더링-된-요소는-어떻게-업데이트하나)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
-|264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
+|264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
-|266| [How to prevent component from rendering?](#how-to-prevent-component-from-rendering)|
+|266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
-|268| [Is it keys should be globally unique?](#is-it-keys-should-be-globally-unique)|
+|268| [키가 전체에서 고유해야 하나?](#키가-전체에서-고유해야-하나)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
-|270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
+|270| [redux form 라이브러리보다 formik의 장점은?](#redux-form-라이브러리보다-formik의-장점은)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
-|272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
+|272| [react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?](#react-애플리케이션에서-웹-컴포넌트를-사용할-수-있나)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
-|274| [What are loadable components?](#what-are-loadable-components)|
+|274| [loadable 컴포넌트란?](#loadable-컴포넌트란)|
 |275| [What is suspense component?](#what-is-suspense-component)|
-|276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
+|276| [라우트 기반의 코드 스플리팅이란?](#라우트-기반의-코드-스플리팅이란)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
-|278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
+|278| [context에서 기본값의 목적은?](#context에서-기본값의-목적은)|
 |279| [How do you use contextType?](#how-do-you-use-contexttype)|
-|280| [What is a consumer?](#what-is-a-consumer)|
+|280| [consumer란?](#consumer란)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
@@ -4290,12 +4290,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-244. ### What is the purpose of getDerivedStateFromError?
-     This lifecycle method is invoked after an error has been thrown by a descendant component. It receives the error that was thrown as a parameter and should return a value to update state. The signature of the lifecycle method is as follows,
+244. ### getDerivedStateFromError의 목적은?
+
+     이 라이프사이클 메서드는 하위 컴포넌트가 오류를 발생한 후 호출된다. 매개 변수로 오류를 수신하고 state를 업데이트하기 위한 값을 반환한다. 라이프사이클 메서드의 사용법은 아래와 같다.
+
      ```javascript
      static getDerivedStateFromError(error)
      ```
-     Let us take error boundary use case with the above lifecycle method for demonistration purpose,
+
+     위의 라이프사이클 메서드를 사용하여 오류 바운더리 사용 예시는 아래와 같습니다.
+
      ```javascript
      class ErrorBoundary extends React.Component {
        constructor(props) {
@@ -4362,8 +4366,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-248. ### What is the browser support for react applications?
-     React supports all popular browsers, including Internet Explorer 9 and above, although some polyfills are required for older browsers such as IE 9 and IE 10. If you use  **es5-shim and es5-sham** polyfill then it even support old browsers that doesn't support ES5 methods.
+248. ### react 응용프로그램의 브라우저 지원은 어디까지인가?
+
+     React는 Internet Explorer 9 이상을 포함하여 널리 사용되는 모든 브라우저를 지원하지만, 일부 IE 9 및 IE 10과 같은 이전 브라우저에서는 폴리필이 필요하다. **es5-shim과 es5-sham** 폴리필을 사용하면 ES5 메서드들을 지원하지 않는 이전 브라우저에서 사용 가능하다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4419,19 +4424,21 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-251. ### What is the benefit of strict mode?
-     The <StrictMode> will be  helpful in the below cases
+251. ### strict mode의 장점은?
+     `<StrictMode>`는 아래와 같은 경우에 유용하다.
 
-     1. Identifying components with **unsafe lifecycle methods**.
-     2. Warning about **legacy string ref** API usage.
-     3. Detecting unexpected **side effects**.
-     4. Detecting **legacy context** API.
-     5. Warning about deprecated findDOMNode usage
+     1. **안전하지 않은 라이프사이클 메서드를 가진** 컴포넌트를 식별해준다.
+     2. **레거시 문자열 참조** API 사용에 대한 경고를 해준다.
+     3. 예상치 못한 **부작용**을 감지한다.
+     4. **레거시 컨텍스트** API를 감지한다.
+     5. 더 이상 사용되지 않는 findDOMNode 사용에 대해 경고를 해준다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-252. ### What are Keyed Fragments?
-     The Fragments declared with the explicit <React.Fragment> syntax may have keys. The general usecase is mapping a collection to an array of fragments as below,
+252. ### Keyed Fragments란?
+
+     명시적 `<React.Fragment>` 구문으로 선언된 Fragments에는 key가 있을 수 있다. 일반적으로 사용하는 경우는 아래와 같이 컬렉션을 배열에 매핑한다.
+
      ```javascript
      function Glossary(props) {
        return (
@@ -4447,48 +4454,56 @@
        );
      }
      ```
-     **Note:** key is the only attribute that can be passed to Fragment. In the future, there might be a support for additional attributes, such as event handlers.
+
+     **Note:** key는 Fragment에 전달할 수 있는 유일한 속성이다. 앞으로는, 이벤트 핸들러와 같은 추가 속성이 지원될 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-253. ### Does React support all HTML attributes?
-     As of React 16, both standard or custom DOM attributes are fully supported. Since React components often take both custom and DOM-related props, React uses the camelCase convention just like the DOM APIs. Let us take few props with respect to standard HTML attributes,
+253. ### React는 모든 HTML 속성을 지원하나?
+
+     React 16 버전에서, 표준과 사용자 정의 DOM 속성 모두 지원한다. React 컴포넌트는 종종 사용자 정의와 DOM 관련 props를 모두 사용하므로, React는 DOM API와 마찬가지로 camelCase 규칙을 사용한다. 표준 HTML 속성을 사용하고 props를 사용하지 않은 예시이다.
+
      ```javascript
      <div tabIndex="-1" />      // Just like node.tabIndex DOM API
      <div className="Button" /> // Just like node.className DOM API
      <input readOnly={true} />  // Just like node.readOnly DOM API
      ```
-     These props work similarly to the corresponding HTML attributes, with the exception of the special cases. It also support all SVG attributes.
+
+     props는 특별한 경우는 제외하고 해당 HTML 속성과 유사하게 작동한다. 또한 모든 SVG 속성을 지원한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-254. ### What are the limitations with HOCs?
+254. ### HOC의 한계는?
 
-     Higher-order components come with a few caveats apart from its benefits. Below are the few listed in an order
-     1. **Don’t Use HOCs Inside the render Method:**
-        It is not recommended to apply a HOC to a component within the render method of a component.
+     고차 컴포넌트는 장점과는 무관하게 몇 가지 경고 사항이 있습니다.
+
+     1. **render 메서드 안에서 사용해서는 안 된다. :** 컴포넌트의 redner 메서드 내에서 HOC를 적용하는 것은 좋지 않다.
+
         ```javascript
         render() {
-          // A new version of EnhancedComponent is created on every render
+          // 새로운 버전의 EnhancedComponent가 렌더링할 때마다 생성된다.
           // EnhancedComponent1 !== EnhancedComponent2
           const EnhancedComponent = enhance(MyComponent);
           // That causes the entire subtree to unmount/remount each time!
           return <EnhancedComponent />;
         }
         ```
-        The above code impact performance by remounting a component that causes the state of that component and all of its children to be lost. Instead, apply HOCs outside the component definition so that the resulting component is created only once
-     2. **Static Methods Must Be Copied Over:**
-        When you apply a HOC to a component the new component does not have any of the static methods of the original component
+
+        위의 코드는 컴포넌트를 다시 마운트하면 해당 컴포넌트 및 모든 하위 컴포넌트의 state를 잃어버려 성능에 영향을 미친다. 대신 컴포넌트가 한 번만 작성되도록 컴포넌트 정의 외부에서 HOC를 적용하면 된다.
+     2. **static 메서드를 복사해야 한다. :** HOC를 새로운 컴포넌트에 적용할 때 새로운 컴포넌트에는 원본 컴포넌트의 static 메서드가 없다.
+
         ```javascript
-        // Define a static method
+        // staic 메서드 정의
         WrappedComponent.staticMethod = function() {/*...*/}
-        // Now apply a HOC
+        // HOC 적용
         const EnhancedComponent = enhance(WrappedComponent);
 
-        // The enhanced component has no static method
+        // enhanced component는 static 메서드를 가지고 있지 않다.
         typeof EnhancedComponent.staticMethod === 'undefined' // true
         ```
-        You can overcome this by copying the methods onto the container before returning it
+
+        반환하기 전에 메서드를 컨테이너에 복사하여 해결할 수 있다.
+
         ```javascript
         function enhance(WrappedComponent) {
           class Enhance extends React.Component {/*...*/}
@@ -4497,20 +4512,22 @@
           return Enhance;
         }
         ```
-     3. **Refs Aren’t Passed Through:**
-        For HOCs you need to pass through all props to the wrapped component but this does not work for refs. This is because ref is not really a prop similar to key. In this case you need to use the React.forwardRef API
+     3. **Refs가 전달되지 않는다. :** HOC의 경우 모든 props를 래핑 된 컴포넌트로 전달해야 하지만 refs는 적용되지 않는다. ref는 실제로 key와 비슷한 props이 아니기 때문이다. 이 경우에는 React.forwardRef API 사용하면 된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-255. ### How to debug forwardRefs in DevTools?
+255. ### 개발자 도구에서 forwardRefs를 디버깅하는 방법은?
 
-     **React.forwardRef** accepts a render function as parameter and DevTools uses this function to determine what to display for the ref forwarding component. For example, If you don't name the render function or not using displayName property then it will appear as ”ForwardRef” in the DevTools,
+     **React.forwardRef** 는 렌더링 함수를 매개 변수로 받고 있으며, 개발자 도구는 이 함수를 사용하여 ref 전달 컴포넌트에 표시할 내용을 결정한다. 예를 들어, 렌더링 함수의 이름을 지정하지 않거나 displayName 속성을 사용하지 않으면 개발자 도구에서 ”ForwardRef”로 표시된다.
+
      ```javascript
      const WrappedComponent = React.forwardRef((props, ref) => {
        return <LogProps {...props} forwardedRef={ref} />;
      });
      ```
-     But If you name the render function then it will appear as **”ForwardRef(myFunction)”**
+
+     그러나 렌더링 함수의 이름을 지정하게 되면 **”ForwardRef(myFunction)”**으로 나타난다.
+
      ```javascript
      const WrappedComponent = React.forwardRef(
        function myFunction(props, ref) {
@@ -4518,7 +4535,9 @@
        }
      );
      ```
-     As an alternative, You can also set displayName property for forwardRef function,
+     
+     대안으로, forwardRef 함수에 displayName 속성을 설정할 수 있다.
+
      ```javascript
      function logProps(Component) {
        class LogProps extends React.Component {
@@ -4540,14 +4559,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-256. ### When component props defaults to true?
-     If you pass no value for a prop, it defaults to true. This behavior is available so that it matches the behavior of HTML. For example, below expressions are equivalent,
+256. ### 컴포넌트 props의 기본값은 true인가?
+     
+     prop에 아무 값도 전달하지 않는다면, 기본값은 true이다. 이 동작은 HTML의 동작과 일치하게 할 수 있다. 예를 들어 아래와 같은 표현식은 동일한 표현이다.
+
      ```javascript
      <MyInput autocomplete />
 
      <MyInput autocomplete={true} />
      ```
-     **Note:** It is not recommend using this approach because it can be confused with the ES6 object shorthand (example, {name} which is short for {name: name})
+     **Note:** 이 방법은 ES6 객체 속기 (예, {name: name}의 약자는 {name})와 혼동할 수 있으므로 사용하지 않는 것이 좋다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4564,8 +4585,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-258. ### How do you pass an event handler to a component?
-     You can pass event handlers and other functions as props to child components. It can be used in child component as  below,
+258. ### 이벤트 핸들러를 컴포넌트에 어떻게 전달하나?
+     
+     이벤트 핸들러 및 함수를 하위 컴포넌트에 props로 전달할 수 있다. 아래와 같이 자식 컴포넌트에서 사용할 수 있다.
+
      ```
      <button onClick={this.handleClick}>
      ```
@@ -4588,11 +4611,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-260. ### How to prevent a function from being called multiple times?
-     If you use an event handler such as **onClick or onScroll** and want to prevent the callback from being fired too quickly, then you can limit the rate at which callback is executed. This can be achieved in the below possible ways,
-     1. **Throttling:** Changes based on a time based frequency. For example, it can be used using _.throttle lodash function
-     2. **Debouncing:** Publish changes after a period of inactivity. For example, it can be used using _.debounce lodash function
-     3. **RequestAnimationFrame throttling:** Changes based on requestAnimationFrame. For example, it can be used using raf-schd lodash function
+260. ### 함수가 여러 번 호출되는 것을 방지하는 방법은?
+
+     **onClick 또는 onScroll**과 같은 이벤트 핸들러를 사용하고 콜백이 너무 빨리 발생하지 않도록 하려면 콜백 실행 속도를 제한할 수 있다. 아래와 같은 방법으로 가능하다.
+
+     1. **Throttling:** 시간을 기반으로 빈도에 따라 변경이 된다. 예를 들어, lodash의 _.throttle 함수를 사용하여 사용할 수 있다.
+     2. **Debouncing:** 일정 기간 사용하지 않으면 변경 사항을 실행한다. 예를 들어, lodash의 _.debounce 함수를 사용하여 사용할 수 있다.
+     3. **RequestAnimationFrame throttling:** requestAnimationFrame에 따라 변경된다. 예를 들어, lodash의 raf-schd 함수를 사용하여 사용할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4606,8 +4631,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-262. ### How do you update rendered elements?
-     You can update UI(represented by rendered element) by passing the newly created element to ReactDOM's render method. For example, lets take a ticking clock example, where it updates the time by calling render method multiple times,
+262. ### 렌더링 된 요소는 어떻게 업데이트하나?
+
+     새로 작성된 요소를 ReactDOM의 render 메서드에 전달하여 UI(렌더링 된 요소로 표시)를 업데이트 할 수 있다. 예를 들어, 똑딱거리는 시계를 예로 들자면, render 메서드를 여러 번 호출하여 시간을 업데이트한다.
+
      ```javascript
      function tick() {
        const element = (
@@ -4635,8 +4662,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-264. ### How do you say that state updates are merged?
-     When you call setState() in the component, React merges the object you provide into the current state. For example, let us take a facebook user with posts and comments details as state variables,
+264. ### state updates가 어떻게 병합되나?
+
+     컴포넌트에서 setState()를 실행하면, React 사용자가 제공한 object를 현재 state로 병합한다. 예를 들어, 게시물 및 댓글 세부 정보를 state 변수로 사용하는 페이스북 사용자를 살펴보자.
+
      ```javascript
        constructor(props) {
          super(props);
@@ -4646,7 +4675,9 @@
          };
        }
      ```
-     Now you can update them independently with separate setState() calls as below,
+
+     아래와 같이 별도의 setState()를 호출하여 독립적으로 업데이트할 수 있다.
+
      ```javascript
       componentDidMount() {
          fetchPosts().then(response => {
@@ -4662,7 +4693,8 @@
          });
        }
      ```
-     As mentioned in the above code snippets, this.setState({comments}) updates only comments variable without modifying or replacing posts variable.
+
+     위의 코드 스니핏에서 언급했듯이 this.setState({comments})는 게시물 변수를 수정하거나 바꾸지 않고 comments 변수만 업데이트한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4676,8 +4708,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-266. ### How to prevent component from rendering?
-     You can prevent component from rendering by returning null based on specific condition. This way it can conditionally render component.
+266. ### 컴포넌트 렌더링을 막는 방법은?
+     
+     특정 조건에 따라 null을 반환하여 컴포넌트가 렌더링 되지 않도록 할 수 있다. 아래와 같이 조건부로 컴포넌트를 렌더링할 수 할 수 있다.
+
      ```javascript
      function Greeting(props) {
        if (!props.loggedIn) {
@@ -4691,6 +4725,7 @@
        );
      }
      ```
+
      ```javascript
      class User extends React.Component {
        constructor(props) {
@@ -4708,7 +4743,8 @@
         );
        }
      ```
-     In the above example, the greeting component skips its rendering section by applying condition and returning null value.
+
+     위의 예제에서, greeting 컴포넌트는 조건문을 적용하고 null 값을 반환하여 렌더링 부분은 건너뛴다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4721,8 +4757,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-268. ### Is it keys should be globally unique?
-     Keys used within arrays should be unique among their siblings but they don’t need to be globally unique. i.e, You can use the same keys withtwo different arrays. For example, the below book component uses two arrays with different arrays,
+268. ### 키가 전체에서 고유해야 하나?
+
+     배열 내에서 사용되는 키는 형제 사이에서 고유해야 하지만 전체적으로는 고유할 필요 없다. 즉, 두 개의 다른 배열에서 동일한 키를 사용할 수 있다. 예를 들어, 아래의 Book 컴포넌트는 다른 배열 두 개를 사용하고 있다.
+
      ```javascript
      function Book(props) {
        const index = (
@@ -4764,12 +4802,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-270. ### What are the advantages of formik over redux form library?
-     Below are the main reasons to recommend formik over redux form library
-     1. The form state is inherently short-term and local, so tracking it in Redux (or any kind of Flux library) is unnecessary.
-     2. Redux-Form calls your entire top-level Redux reducer multiple times ON EVERY SINGLE KEYSTROKE. This way it increases input latency for large apps.
-     3. Redux-Form is 22.5 kB minified gzipped whereas Formik is 12.7 kB
+270. ### redux form 라이브러리보다 formik의 장점은?
 
+     다음은 redux form 라이브러리보다 formik을 권장하는 주요 이유이다.
+
+     1. form state는 본질적으로 단기적이며 로컬이므로 Redux(또는 모든 종류의 Flux 라이브러리) 에서 추적할 필요가 없다.
+     2. Redux-Form은 EVERY SINGLE KEYSTROKE에서 전체 최상위 Redux reducer를 여러 번 호출한다. 이렇게 하면 큰 앱의 입력 대기 시간이 늘어난다.
+     3. Redux-Form은 22.5 kB로 축소된 gzip인 반면 Formik은 12.7 kB이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4779,8 +4818,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-272. ### Can I use web components in react application?
-     Yes, you can use web components in a react application. Even though many developers won't use this combination, it may require especially if you are using third-party UI components that are written using Web Components. For example, let us  use Vaadin date picker web component as below,
+272. ### react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?
+
+     react 애플리케이션에서 웹 컴포넌트를 사용할 수 있다. 많은 개발자가 이 조합을 사용하지 않더라도 웹 컴포넌트로 만들어진 다른 UI 컴포넌트를 사용하는 경우 특히 필요할 수 있다. 예를 들어 Vaadin 날짜 선택기 웹 컴포넌트를 사용하는 것을 보자.
+
      ```javascript
      import React, { Component } from 'react';
      import './App.css';
@@ -4815,8 +4856,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-274. ### What are loadable components?
-     If you want to do code-splitting in a server rendered app, it is recommend to use Loadable Components because React.lazy and Suspense is not yet available for server-side rendering. Loadable lets you render a dynamic import as a regular component. Lets take an example,
+274. ### loadable 컴포넌트란?
+
+     서버 렌더링 앱에서 code-splitting을 하는 경우, React.lazy와 Suspense를 아직 서버 측 렌더링에 사용할 수 없으므로 Loadable 컴포넌트를 사용하는 것이 좋다. Loadable을 사용하면 dynamic import를 일반 컴포넌트로 렌더링할 수 있다. 예를 들어보면,
+
      ```javascript
      import loadable from '@loadable/component'
 
@@ -4830,7 +4873,8 @@
        )
      }
      ```
-     Now OtherComponent will be loaded in a separated bundle
+
+     이제 OtherComponent는 별도의 번들로 로드된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4853,8 +4897,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-276. ### What is route based code splitting?
-     One of the best place to do code splitting is with routes. The entire page is going to re-render at once so users are unlikely to interact with other elements in the page at the same time. Due to this, the user experience won't be disturbed. Let us take an example of route based website using libraries like React Router with React.lazy,
+276. ### 라우트 기반의 코드 스플리팅이란?
+
+     코드 스플리팅을 사용해 볼 좋은 장소 중 하나는 라우트다. 전체 페이지가 한 번에 렌더링 되므로 사용자가 페이지의 다른 요소와 동시에 상호 작용할 가능성이 없다. 이로 인해 사용자 경험이 방해받지 않는다. React.lazy와 함께 Reat Router 같은 라이브러리를 사용하여 경로 기반 웹 사이트를 예를 들어보자.
+
      ```javascript
      import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
      import React, { Suspense, lazy } from 'react';
@@ -4873,7 +4919,8 @@
        </Router>
      );
      ```
-     In the above code, the code splitting will happen at each route level.
+
+     위의 코드에서, 코드 스플리팅은 각 경로 수준에서 발생한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -4911,8 +4958,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-278. ### What is the purpose of default value in context?
-     The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This can be helpful for testing components in isolation without wrapping them. Below code snippet provides default theme value as Luna.
+278. ### context에서 기본값의 목적은?
+
+     defaultValue 인수는 컴포넌트에 트리에서 일치하는 Provider가 없는 경우에 사용된다. 이는 컴포넌트를 감싸지 않고 분리하여 테스트하는데 도움이 될 수 있다. 아래 코드는 테마 기본값을 Luna로 제공한다.
+
      ```javascript
      const MyContext = React.createContext(defaultValue);
      ```
@@ -4959,8 +5008,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-280. ### What is a consumer?
-     A Consumer is a React component that subscribes to context changes. It requires a function as a child which receives current context value as argument and returns a react node. The value argument passed to the function will be equal to the value prop of the closest Provider for this context above in the tree. Lets take a simple example,
+280. ### consumer란?
+
+     Consumer란 context 변경을 구독하는 React 컴포넌트이다. 현재 context 값을 인수로 받고 react node를 반환하는 자식 함수가 필요하다. 함수에 전달된 value 인수는 트리에서 context에서 가장 가까운 Provider의 prop 값과 동일하다. 간단한 예를 보자.
+
      ```javascript
      <MyContext.Consumer>
        {value => /* render something based on the context value */}
