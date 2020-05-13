@@ -288,7 +288,7 @@
 |260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
 |261| [JSX가 Injection 공격은 막는 방법은?](#JSX가-Injection-공격은-막는-방법은)|
 |262| [렌더링 된 요소는 어떻게 업데이트하나?](#렌더링-된-요소는-어떻게-업데이트하나)|
-|263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
+|263| [props가 읽기 전용이어야 하는 이유는?](#props가-읽기-전용이어야-하는-이유는)|
 |264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
@@ -4656,14 +4656,17 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-263. ### How do you say that props are read only?
-     When you declare a component as a function or a class, it must never modify its own props. Let us take a below capital function,
+263. ### props가 읽기 전용이어야 하는 이유는?
+
+     컴포넌트를 함수나 클래스로 선언할 때 자신의 props를 수정해서는 안 된다. 아래의 capital 함수를 예로 들어보자.
+
      ```javascript
      function capital(amount, interest) {
         return amount + interest;
      }
      ```
-     The above function is called “pure” because it does not attempt to change their inputs, and always return the same result for the same inputs. Hence, React has a single rule saying "All React components must act like pure functions with respect to their props."
+     
+     위의 함수는 입력을 변경하지 않으면서 항상 동일한 입력에 대해 동일한 결과를 반환하기 때문에 "순수"하다고 한다. 따라서, React에는 "모든 React 컴포넌트는 props와 관련된 것은 순수함수처럼 작동해야 한다." 라는 단일 규칙을 가지고 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
