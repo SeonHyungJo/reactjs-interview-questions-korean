@@ -282,7 +282,7 @@
 |254| [HOC의 한계는?](#HOC의-한계는)|
 |255| [개발자 도구에서 forwardRefs를 디버깅하는 방법은?](#개발자-도구에서-forwardRefs를-디버깅하는-방법은)|
 |256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
-|257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
+|257| [NextJS는 무엇이며, 주요한 기능은?](#NextJS는-무엇이며,-주요한-기능은)|
 |258| [이벤트 핸들러를 컴포넌트에 어떻게 전달하나?](#이벤트-핸들러를-컴포넌트에-어떻게-전달하나)|
 |259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
 |260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
@@ -4572,14 +4572,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-257. ### What is NextJS and major features of it?
-     Next.js is a popular and lightweight framework for static and server‑rendered applications built with React. It also provides styling and routing solutions. Below are the major features provided by NextJS,
-     1. Server-rendered by default
-     2. Automatic code splitting for faster page loads
-     3. Simple client-side routing (page based)
-     4. Webpack-based dev environment which supports (HMR)
-     5. Able to implement with Express or any other Node.js HTTP server
-     6. Customizable with your own Babel and Webpack configurations
+257. ### NextJS는 무엇이며, 주요한 기능은?
+     
+     Next.js는 React로 만들어진 정적, 서버 렌더링 응용프로그램을 위한 대중적이고 가벼운 프레임 워크이다. 또한 스타일링과 라우팅 솔루션을 제공한다. 아래는 NextJS가 제공하는 주요 기능이다.
+
+     1. 기본적으로 서버 렌더링
+     2. 빠른 페이지 로딩을 위한 자동 코드 분할
+     3. 간단한 클라이언트 사이드 라우팅(page기반)
+     4. HMR을 지원하는 웹팩 기반 개발 환경
+     5. Express 또는 다른 Node.js HTTP 서버로 구현할 수 있다.
+     6. 고유한 Babel 및 Webpack 구성으로 사용자 정의가 가능하다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
