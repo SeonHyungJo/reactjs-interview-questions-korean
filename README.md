@@ -286,7 +286,7 @@
 |258| [이벤트 핸들러를 컴포넌트에 어떻게 전달하나?](#이벤트-핸들러를-컴포넌트에-어떻게-전달하나)|
 |259| [render 메서드에서 화살표 함수를 사용하는 것이 좋은가?](#render-메서드에서-화살표-함수를-사용하는-것이-좋은가)|
 |260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
-|261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
+|261| [JSX가 Injection 공격은 막는 방법은?](#JSX가-Injection-공격은-막는-방법은)|
 |262| [렌더링 된 요소는 어떻게 업데이트하나?](#렌더링-된-요소는-어떻게-업데이트하나)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
 |264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
@@ -4623,13 +4623,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-261. ### How JSX prevents Injection Attacks?
-     React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. For example, you can embed user input as below,
+261. ### JSX가 Injection 공격은 막는 방법은?
+
+     React DOM은 렌더링하기 전에 JSX에 포함된 모든 값은 escape 처리한다. 따라서 애플리케이션에 아무것도 주입되지 않는 것을 보장한다. 모든 것이 렌더링되기 전에 문자열로 변환된다. 예를 들어 아래와 같이 사용자 입력을 포함할 수 있다.
+
      ```javascript
      const name = response.potentiallyMaliciousInput;
      const element = <h1>{name}</h1>;
      ```
-     This way you can prevent XSS(Cross-site-scripting) attacks in the application.
+
+     이렇게 하면 애플리케이션에서 XSS(Cross-site-scripting) 공격을 방지할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
