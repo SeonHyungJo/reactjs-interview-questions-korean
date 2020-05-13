@@ -296,7 +296,7 @@
 |268| [키가 전체에서 고유해야 하나?](#키가-전체에서-고유해야-하나)|
 |269| [Form 처리에 가장 많이 사용되는 선택지는?](#Form-처리에-가장-많이-사용되는-선택지는)|
 |270| [redux form 라이브러리보다 formik의 장점은?](#redux-form-라이브러리보다-formik의-장점은)|
-|271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
+|271| [상속할 필요가 없는 이유는?](#상속할-필요가-없는-이유는)|
 |272| [react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?](#react-애플리케이션에서-웹-컴포넌트를-사용할-수-있나)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
 |274| [loadable 컴포넌트란?](#loadable-컴포넌트란)|
@@ -4825,9 +4825,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-271. ### Why do you not required to use inheritance?
-     In React, it is recommend using composition instead of inheritance to reuse code between components. Both Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way.
-     Whereas, If you want to reuse non-UI functionality between components, it is suggested to extracting it into a separate JavaScript module. Later components import it and use that function, object, or a class, without extending it.
+271. ### 상속할 필요가 없는 이유는?
+
+     React에서 컴포넌트 간 코드를 재사용하려면 상속 대신 composition을 사용하는 것이 좋다. Props와 composition 모두 명시적이고 안전한 방식으로 컴포넌트의 형태와 기능을 커스텀하는데 필요한 모든 유연성을 보장한다. 반면, 컴포넌트 간 UI가 아닌 기능을 재사용하려면, 별도의 JavaScript 모듈로 구분하는 것이 좋다. 이후 컴포넌트를 가져와 확장하지 않고 함수, 개체, 클래스를 사용한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
