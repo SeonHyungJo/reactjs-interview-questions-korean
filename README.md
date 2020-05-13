@@ -297,7 +297,7 @@
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [What are the advantages of formik over redux form library?](#what-are-the-advantages-of-formik-over-redux-form-library)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
-|272| [Can I use web components in react application?](#can-i-use-web-components-in-react-application)|
+|272| [react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?](#react-애플리케이션에서-웹-컴포넌트를-사용할-수-있나)|
 |273| [What is dynamic import?](#what-is-dynamic-import)|
 |274| [loadable 컴포넌트란?](#loadable-컴포넌트란)|
 |275| [What is suspense component?](#what-is-suspense-component)|
@@ -4782,8 +4782,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-272. ### Can I use web components in react application?
-     Yes, you can use web components in a react application. Even though many developers won't use this combination, it may require especially if you are using third-party UI components that are written using Web Components. For example, let us  use Vaadin date picker web component as below,
+272. ### react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?
+
+     react 애플리케이션에서 웹 컴포넌트를 사용할 수 있다. 많은 개발자가 이 조합을 사용하지 않더라도 웹 컴포넌트로 만들어진 다른 UI 컴포넌트를 사용하는 경우 특히 필요할 수 있다. 예를 들어 Vaadin 날짜 선택기 웹 컴포넌트를 사용하는 것을 보자.
+
      ```javascript
      import React, { Component } from 'react';
      import './App.css';
