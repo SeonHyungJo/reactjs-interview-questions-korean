@@ -294,7 +294,7 @@
 |266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
 |267| [index를 키로 안전하게 사용하기 위한 조건은?](#index를-키로-안전하게-사용하기-위한-조건은)|
 |268| [키가 전체에서 고유해야 하나?](#키가-전체에서-고유해야-하나)|
-|269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
+|269| [Form 처리에 가장 많이 사용되는 선택지는?](#Form-처리에-가장-많이-사용되는-선택지는)|
 |270| [redux form 라이브러리보다 formik의 장점은?](#redux-form-라이브러리보다-formik의-장점은)|
 |271| [Why do you not required to use inheritance?](#why-do-you-not-required-to-use-inheritance)|
 |272| [react 애플리케이션에서 웹 컴포넌트를 사용할 수 있나?](#react-애플리케이션에서-웹-컴포넌트를-사용할-수-있나)|
@@ -4803,14 +4803,15 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-269. ### What is the popular choice for form handling?
-     Formik is a form library for react which provides solutions such as validation, keeping track of the visited fields, and handling form submission. In detail, You can categorize them as follows,
+269. ### Form 처리에 가장 많이 사용되는 선택지는?
 
-     1. Getting values in and out of form state
-     2. Validation and error messages
-     3. Handling form submission
+     Formik은 유효성 검사, 방문 페이지 추적, form 제출 처리와 같은 솔루션을 제공하는 react 라이브러리다. 구체적으로 다름과 같이 분류할 수 있다.
 
-     It is used to create a scalable, performant, form helper with a minimal API to solve annoying stuff.
+     1. form state 값 가져오기
+     2. 유효성 검사와 오류 메시지
+     3. form 제출 처리
+
+     최소한의 API로 확장할 수 있고 성능이 뛰어난 form 헬퍼를 생성하여 귀찮은 것을 해결하는 데 사용된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
