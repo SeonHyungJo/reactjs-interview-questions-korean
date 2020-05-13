@@ -284,7 +284,7 @@
 |256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
 |257| [NextJS는 무엇이며, 주요한 기능은?](#NextJS는-무엇이며,-주요한-기능은)|
 |258| [이벤트 핸들러를 컴포넌트에 어떻게 전달하나?](#이벤트-핸들러를-컴포넌트에-어떻게-전달하나)|
-|259| [Is it good to use arrow functions in render methods?](#is-it-good-to-use-arrow-functions-in-render-methods)|
+|259| [render 메서드에서 화살표 함수를 사용하는 것이 좋은가?](#render-메서드에서-화살표-함수를-사용하는-것이-좋은가)|
 |260| [함수가 여러 번 호출되는 것을 방지하는 방법은?](#함수가-여러-번-호출되는-것을-방지하는-방법은)|
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
 |262| [렌더링 된 요소는 어떻게 업데이트하나?](#렌더링-된-요소는-어떻게-업데이트하나)|
@@ -4595,8 +4595,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-259. ### Is it good to use arrow functions in render methods?
-     Yes, You can use. It is often the easiest way to pass parameters to callback functions. But you need to optimize the performance while using it.
+259. ### render 메서드에서 화살표 함수를 사용하는 것이 좋은가?
+
+     예, 사용할 수 있다. 콜백 함수에 매개 변수를 전달하는 가장 쉬운 방법이다. 그러나 사용하는 동안 성능을 최적화해야 한다.
+
      ```javascript
      class Foo extends Component {
        handleClick() {
@@ -4607,7 +4609,7 @@
        }
      }
      ```
-     **Note:** Using an arrow function in render method creates a new function each time the component renders, which may have performance implications
+     **Note:** render 메서드에서 화살표 함수를 사용하면 컴포넌트가 렌더링 될 때마다 새로운 기능이 생성되어 성능에 영향을 줄 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
