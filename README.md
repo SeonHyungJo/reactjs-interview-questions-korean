@@ -305,7 +305,7 @@
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
 |278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
 |279| [How do you use contextType?](#how-do-you-use-contexttype)|
-|280| [What is a consumer?](#what-is-a-consumer)|
+|280| [consumer란?](#consumer란)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
@@ -4962,8 +4962,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-280. ### What is a consumer?
-     A Consumer is a React component that subscribes to context changes. It requires a function as a child which receives current context value as argument and returns a react node. The value argument passed to the function will be equal to the value prop of the closest Provider for this context above in the tree. Lets take a simple example,
+280. ### consumer란?
+
+     Consumer란 context 변경을 구독하는 React 컴포넌트이다. 현재 context 값을 인수로 받고 react node를 반환하는 자식 함수가 필요하다. 함수에 전달된 value 인수는 트리에서 context에서 가장 가까운 Provider의 prop 값과 동일하다. 간단한 예를 보자.
+
      ```javascript
      <MyContext.Consumer>
        {value => /* render something based on the context value */}
