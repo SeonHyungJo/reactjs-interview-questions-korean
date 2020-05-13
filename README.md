@@ -303,7 +303,7 @@
 |275| [What is suspense component?](#what-is-suspense-component)|
 |276| [What is route based code splitting?](#what-is-route-based-code-splitting)|
 |277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
-|278| [What is the purpose of default value in context?](#what-is-the-purpose-of-default-value-in-context)|
+|278| [context에서 기본값의 목적은?](#context에서-기본값의-목적은)|
 |279| [How do you use contextType?](#how-do-you-use-contexttype)|
 |280| [consumer란?](#consumer란)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
@@ -4914,8 +4914,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-278. ### What is the purpose of default value in context?
-     The defaultValue argument is only used when a component does not have a matching Provider above it in the tree. This can be helpful for testing components in isolation without wrapping them. Below code snippet provides default theme value as Luna.
+278. ### context에서 기본값의 목적은?
+
+     defaultValue 인수는 컴포넌트에 트리에서 일치하는 Provider가 없는 경우에 사용된다. 이는 컴포넌트를 감싸지 않고 분리하여 테스트하는데 도움이 될 수 있다. 아래 코드는 테마 기본값을 Luna로 제공한다.
+
      ```javascript
      const MyContext = React.createContext(defaultValue);
      ```
