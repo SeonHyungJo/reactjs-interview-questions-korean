@@ -292,7 +292,7 @@
 |264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
 |265| [이벤트 핸들러에 인수를 어떻게 넘기나?](#이벤트-핸들러에-인수를-어떻게-넘기나)|
 |266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
-|267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
+|267| [index를 키로 안전하게 사용하기 위한 조건은?](#index를-키로-안전하게-사용하기-위한-조건은)|
 |268| [키가 전체에서 고유해야 하나?](#키가-전체에서-고유해야-하나)|
 |269| [What is the popular choice for form handling?](#what-is-the-popular-choice-for-form-handling)|
 |270| [redux form 라이브러리보다 formik의 장점은?](#redux-form-라이브러리보다-formik의-장점은)|
@@ -4759,12 +4759,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-267. ### What are the conditions to safely use the index as a key?
-     There are three conditions to make sure, it is safe use the index as a key.
-     1. The list and items are static– they are not computed and do not change
-     2. The items in the list have no ids
-     3. The list is never reordered or filtered.
+267. ### index를 키로 안전하게 사용하기 위한 조건은?
 
+     index를 키로 안전하게 사용하기 위한 3가지 조건이 있다.
+
+     1. 목록과 항목은 정적이다. 계산되지 않고 변경 않을 경우.
+     2. 목록에 있는 항목들이 id가 없을 경우.
+     3. 목록이 다시 정렬되거나 필터링 되지 않을 경우
 
    **[⬆ Back to Top](#table-of-contents)**
     
