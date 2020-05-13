@@ -302,7 +302,7 @@
 |274| [loadable 컴포넌트란?](#loadable-컴포넌트란)|
 |275| [suspense 컴포넌트란?](#suspense-컴포넌트란)|
 |276| [라우트 기반의 코드 스플리팅이란?](#라우트-기반의-코드-스플리팅이란)|
-|277| [Give an example on How to use context?](#give-an-example-on-how-to-use-context)|
+|277| [context를 어떻게 사용하는지에 대한 예제](#context를-어떻게-사용하는지에-대한-예제)|
 |278| [context에서 기본값의 목적은?](#context에서-기본값의-목적은)|
 |279| [How do you use contextType?](#how-do-you-use-contexttype)|
 |280| [consumer란?](#consumer란)|
@@ -4941,8 +4941,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-277. ### Give an example on How to use context?
-     **Context** is designed to share data that can be considered **global** for a tree of React components.  For example, in the code below lets manually thread through a “theme” prop in order to style the Button component.
+277. ### context를 어떻게 사용하는지에 대한 예제
+
+     **Context**는 React 컴포넌트 트리에서 **global**로 데이터를 공유하도록 설계되었다. 예를 들어, 아래 코드에서 Button 컴포넌트의 스타일을 지정하기 위해 "테마" prop을 수동으로 연결할 수 있다.
+
      ```javascript
      //Lets create a context with a default theme value "luna"
      const ThemeContext = React.createContext('luna');
