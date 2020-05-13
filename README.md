@@ -289,7 +289,7 @@
 |261| [How JSX prevents Injection Attacks?](#how-jsx-prevents-injection-attacks)|
 |262| [How do you update rendered elements?](#how-do-you-update-rendered-elements)|
 |263| [How do you say that props are read only?](#how-do-you-say-that-props-are-read-only)|
-|264| [How do you say that state updates are merged?](#how-do-you-say-that-state-updates-are-merged)|
+|264| [state updates가 어떻게 병합되나?](#state-updates가-어떻게-병합되나?)|
 |265| [How do you pass arguments to an event handler?](#how-do-you-pass-arguments-to-an-event-handler)|
 |266| [컴포넌트 렌더링을 막는 방법은?](#컴포넌트-렌더링을-막는-방법은)|
 |267| [What are the conditions to safely use the index as a key?](#what-are-the-conditions-to-safely-use-the-index-as-a-key)|
@@ -4638,8 +4638,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-264. ### How do you say that state updates are merged?
-     When you call setState() in the component, React merges the object you provide into the current state. For example, let us take a facebook user with posts and comments details as state variables,
+264. ### state updates가 어떻게 병합되나?
+
+     컴포넌트에서 setState()를 실행하면, React 사용자가 제공한 object를 현재 state로 병합한다. 예를 들어, 게시물 및 댓글 세부 정보를 state 변수로 사용하는 페이스북 사용자를 살펴보자.
+
      ```javascript
        constructor(props) {
          super(props);
@@ -4649,7 +4651,9 @@
          };
        }
      ```
-     Now you can update them independently with separate setState() calls as below,
+
+     아래와 같이 별도의 setState()를 호출하여 독립적으로 업데이트할 수 있다.
+
      ```javascript
       componentDidMount() {
          fetchPosts().then(response => {
@@ -4665,7 +4669,8 @@
          });
        }
      ```
-     As mentioned in the above code snippets, this.setState({comments}) updates only comments variable without modifying or replacing posts variable.
+
+     위의 코드 스니핏에서 언급했듯이 this.setState({comments})는 게시물 변수를 수정하거나 바꾸지 않고 comments 변수만 업데이트한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
