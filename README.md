@@ -279,7 +279,7 @@
 |251| [strict mode의 장점은?](#strict-mode의-장점은)|
 |252| [What are Keyed Fragments?](#what-are-keyed-fragments)|
 |253| [Is it React support all HTML attributes?](#is-it-react-support-all-html-attributes)|
-|254| [What are the limitations with HOCs?](#what-are-the-limitations-with-hocs)|
+|254| [HOC의 한계는?](#HOC의-한계는)|
 |255| [How to debug forwardRefs in DevTools?](#how-to-debug-forwardrefs-in-devtools)|
 |256| [컴포넌트 props의 기본값은 true인가?](#컴포넌트-props의-기본값은-true인가)|
 |257| [What is NextJS and major features of it?](#what-is-nextjs-and-major-features-of-it)|
@@ -4467,33 +4467,37 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-254. ### What are the limitations with HOCs?
+254. ### HOC의 한계는?
 
-     Higher-order components come with a few caveats apart from its benefits. Below are the few listed in an order
-     1. **Don’t Use HOCs Inside the render Method:**
-        It is not recommended to apply a HOC to a component within the render method of a component.
+     고차 컴포넌트는 장점과는 무관하게 몇 가지 경고 사항이 있습니다.
+
+     1. **render 메서드 안에서 사용해서는 안 된다. :** 컴포넌트의 redner 메서드 내에서 HOC를 적용하는 것은 좋지 않다.
+
         ```javascript
         render() {
-          // A new version of EnhancedComponent is created on every render
+          // 새로운 버전의 EnhancedComponent가 렌더링할 때마다 생성된다.
           // EnhancedComponent1 !== EnhancedComponent2
           const EnhancedComponent = enhance(MyComponent);
           // That causes the entire subtree to unmount/remount each time!
           return <EnhancedComponent />;
         }
         ```
-        The above code impact performance by remounting a component that causes the state of that component and all of its children to be lost. Instead, apply HOCs outside the component definition so that the resulting component is created only once
-     2. **Static Methods Must Be Copied Over:**
-        When you apply a HOC to a component the new component does not have any of the static methods of the original component
+
+        위의 코드는 컴포넌트를 다시 마운트하면 해당 컴포넌트 및 모든 하위 컴포넌트의 state를 잃어버려 성능에 영향을 미친다. 대신 컴포넌트가 한 번만 작성되도록 컴포넌트 정의 외부에서 HOC를 적용하면 된다.
+     2. **static 메서드를 복사해야 한다. :** HOC를 새로운 컴포넌트에 적용할 때 새로운 컴포넌트에는 원본 컴포넌트의 static 메서드가 없다.
+
         ```javascript
-        // Define a static method
+        // staic 메서드 정의
         WrappedComponent.staticMethod = function() {/*...*/}
-        // Now apply a HOC
+        // HOC 적용
         const EnhancedComponent = enhance(WrappedComponent);
 
-        // The enhanced component has no static method
+        // enhanced component는 static 메서드를 가지고 있지 않다.
         typeof EnhancedComponent.staticMethod === 'undefined' // true
         ```
-        You can overcome this by copying the methods onto the container before returning it
+
+        반환하기 전에 메서드를 컨테이너에 복사하여 해결할 수 있다.
+
         ```javascript
         function enhance(WrappedComponent) {
           class Enhance extends React.Component {/*...*/}
@@ -4502,8 +4506,7 @@
           return Enhance;
         }
         ```
-     3. **Refs Aren’t Passed Through:**
-        For HOCs you need to pass through all props to the wrapped component but this does not work for refs. This is because ref is not really a prop similar to key. In this case you need to use the React.forwardRef API
+     3. **Refs가 전달되지 않는다. :** HOC의 경우 모든 props를 래핑 된 컴포넌트로 전달해야 하지만 refs는 적용되지 않는다. ref는 실제로 key와 비슷한 props이 아니기 때문이다. 이 경우에는 React.forwardRef API 사용하면 된다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
