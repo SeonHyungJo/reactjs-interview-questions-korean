@@ -306,7 +306,7 @@
 |278| [context에서 기본값의 목적은?](#context에서-기본값의-목적은)|
 |279| [contextType은 어떻게 사용하나?](#contextType은-어떻게-사용하나)|
 |280| [consumer란?](#consumer란)|
-|281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
+|281| [context를 사용하는 동안 성능 문제는 어떻게 해결하나?](#context를-사용하는-동안-성능-문제는-어떻게-해결하나)|
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
 |284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
@@ -5042,8 +5042,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-281. ### How do you solve performance corner cases while using context?
-     The context uses reference identity to determine when to re-render, there are some gotchas that could trigger unintentional renders in consumers when a provider’s parent re-renders. For example, the code below will re-render all consumers every time the Provider re-renders because a new object is always created for value.
+281. ### context를 사용하는 동안 성능 문제는 어떻게 해결하나?
+
+     context는 리렌더링헐 시기를 결정할 때 참조 ID를 사용한다. provider의 부모가 리렌더링 될 때 consumer에서 의도하지 않은 렌더링을 일으킬 수 있다. 예를 들어, 아래 코드는 새로운 객체가 항상 만들어지므로 provider가 리렌더링 될 때마다 모든 consumer를 렌더링한다.
+
      ```javascript
      class App extends React.Component {
        render() {
@@ -5055,7 +5057,9 @@
        }
      }
      ```
-     This can be solved by lifting up the value to parent state,
+
+     이는 값을 상위 state로 올리면 해결할 수 있다.
+
      ```javascript
      class App extends React.Component {
        constructor(props) {
