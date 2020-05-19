@@ -315,7 +315,7 @@
 |287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
 |288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
 |289| [When do you need to use refs?](#when-do-you-need-to-use-refs)|
-|290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
+|290| [prop을 render prop의 렌더링으로 지정해야 하나?](#prop을-render-prop의-렌더링으로-지정해야-하나)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
 |293| [What is windowing technique?](#what-is-windowing-technique)|
@@ -5252,14 +5252,14 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-290. ### Is it prop must be named as render for render props?
-     Even though the pattern named render props, you don’t have to use a prop named render to use this pattern. i.e,  Any prop that is a function that a component uses to know what to render is technically a “render prop”. Lets take an example with the children prop for render props,
+290. ### prop을 render prop의 렌더링으로 지정해야 하나?
+     render props라 불리는 패턴이 있어도, 이 패턴을 사용하기 위해 render라 불리는 prop을 사용할 필요는 없다. 예를 들어, 즉, 컴포넌트가 렌더링 대상을 알기 위해 사용되는 기능인 모든 prop은 기술적으로 “render prop”이다. render props에 대해 자식 prop을 예를 들어보자.
      ```javascript
      <Mouse children={mouse => (
        <p>The mouse position is {mouse.x}, {mouse.y}</p>
      )}/>
      ```
-     Actually children prop doesn’t need to be named in the list of “attributes” in JSX element. Instead, you can keep it directly inside element,
+     실제로 자식 prop은 JSX element의 “속성” 목록에 이름을 지정할 필요가 없다. 대신에, element 내부에 직접 유지할 수 있다.
      ```javascript
      <Mouse>
        {mouse => (
@@ -5267,7 +5267,7 @@
        )}
      </Mouse>
      ```
-     While using this above technique(without any name), explicitly state that children should be a function in your propTypes.
+     위의 기술을 사용하는 동안(이름 없이), 자식은 propTypes의 함수여야 한다고 명시적으로 작성해야 한다.
      ```javascript
      Mouse.propTypes = {
        children: PropTypes.func.isRequired
