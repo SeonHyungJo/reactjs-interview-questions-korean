@@ -310,7 +310,7 @@
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
 |284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
-|285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
+|285| [ES6 없이 react 클래스 컴포넌트를 만드는 방법은?](#ES6-없이-react-클래스-컴포넌트를-만드는-방법은)|
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
 |287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
 |288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
@@ -5137,8 +5137,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-285. ### How to create react class components without ES6?
-     If you don’t use ES6 then you may need to use the create-react-class module instead. For default props, you need to define getDefaultProps() as a function on the passed object. Whereas for initial state, you have to provide a separate getInitialState method that returns the initial state.
+285. ### ES6 없이 react 클래스 컴포넌트를 만드는 방법은?
+
+     ES6를 사용하지 않는 대신 create-react-class 모듈을 사용해야 할 수 있다. 기본 props의 경우, 전달된 객체의 함수로 getDefaultProps()를 정의해야 한다. 초기 state인 경우, 초기 state를 반환하는 별도의 getInitialState 메서드를 제공해야 한다.
+
      ```javascript
      var Greeting = createReactClass({
        getDefaultProps: function() {
@@ -5157,7 +5159,7 @@
        }
      });
      ```
-     **Note:** If you use createReactClass then autobinding is available for all methods. i.e, You don't need to use .bind(this) with in constructor for event handlers.
+     **Note:** createReactClass를 사용하면 모든 메서드에 자동 바인딩을 사용할 수 있다. 즉, 이벤트 핸들러의 생성자에 .bind(this)를 사용할 필요가 없다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
