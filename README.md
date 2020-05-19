@@ -312,7 +312,7 @@
 |284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
 |285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
-|287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
+|287| [diffing 알고리즘이란?](#diffing-알고리즘이란)|
 |288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
 |289| [When do you need to use refs?](#when-do-you-need-to-use-refs)|
 |290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
@@ -5191,11 +5191,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-287. ### What is diffing algorithm?
-     React needs to use algorithms to find out how to efficiently update the UI to match the most recent tree. The diffing algorithms is generating the minimum number of operations to transform one tree into another. However, the algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
-     In this case, for displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions:
-     1. Two elements of different types will produce different trees.
-     2. The developer can hint at which child elements may be stable across different renders with a key prop.
+287. ### diffing 알고리즘이란?
+
+     React는 최신 트리와 일치하도록 UI를 효율적으로 업데이트하는 방법을 찾기위해서 알고리즘을 사용한다. diffing 알고리즘이란 하나의 트리를 다른 트리로 변환하기 위해 최소한의 수 연산을 한다. 그러나, 이 알고리즘은 O(n3)의 복잡성을 가지며, 여기서 n은 트리의 element의 수이다. 이 경우, 1000개의 element를 표시하려면 10억 개의 비교 순서가 필요하다. 이것은 너무 비싸다. 대신 React는 다음 두 가지 가정을 기반으로 휴리스틱 O(n) 알고리즘을 구현한다.
+
+     1. 다른 유형의 두 element는 다른 트리를 생성할 것이다.
+     2. 개발자는 key prop를 사용하여 다른 렌더링에서 어떤 하위 element가 변경되지 않는지 암시한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
