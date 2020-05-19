@@ -309,7 +309,7 @@
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
 |282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
-|284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
+|284| [forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?](#forward-ref를-사용하는-동안-컴포넌트-라이브러리를-추가로-관리해야하는-이유는)|
 |285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
 |287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
@@ -5132,8 +5132,8 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-284. ### Why do you need additional care for component libraries while using forward refs?
-     When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has a different behavior such as what refs get assigned to, and what types are exported. These changes can break apps and other libraries that depend on the old behavior.
+284. ### forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?
+     컴포넌트 라이브러리에서 forwardRef를 사용하기 시작하면, 주요 변경사항으로 취급하고 라이브러리의 새 주요 버전을 릴리즈 해야 한다. 라이브러리에 ref가 지정되고 내보내는 유형과 같은 다른 동작이 있을 수 있다. 이러한 변경으로 인해 이전 동작에 의존하는 앱 및 기타 라이브러리가 손상될 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
