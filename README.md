@@ -313,7 +313,7 @@
 |285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
 |287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
-|288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
+|288| [diffing 알고리즘에 적용되는 규칙은?](#diffing-알고리즘에-적용되는-규칙은)|
 |289| [When do you need to use refs?](#when-do-you-need-to-use-refs)|
 |290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
@@ -5199,21 +5199,23 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-288. ### What are the rules covered by diffing algorithm?
-     When diffing two trees, React first compares the two root elements. The behavior is different depending on the types of the root elements. It covers the below rules during reconciliation algorithm,
-     1. **Elements Of Different Types:**
-        Whenever the root elements have different types, React will tear down the old tree and build the new tree from scratch. For example,  elements <a> to <img>, or from <Article> to <Comment> of different types lead a full rebuild.
-     2. **DOM Elements Of The Same Type:**
-        When comparing two React DOM elements of the same type, React looks at the attributes of both, keeps the same underlying DOM node, and only updates the changed attributes. Lets take an example with same DOM elements except className attribute,
+288. ### diffing 알고리즘에 적용되는 규칙은?
+
+     서로 다른 트리를 비교할 때, React는 먼저 두 개의 root element를 비교한다. root element의 타입에 따라 동작이 다르다. reconciliation 알고리즘 중 아래의 규칙을 따른다.
+
+     1. **다른 타입의 Elements:**
+        root element가 다른 타입을 가질 때마다 React는 이전 트리를 분해하고 처음부터 새로운 트리를 만든다. 예를 들어, elements `<a>`는 `<img>`로, 또는 `<Article>`에서 `<Comment>`로 다른 타입의 element는 전체를 다시 작성한다.
+     2. **동일한 타입의 DOM Elements:**
+        동일한 타입의 두 React DOM element를 비교할 때 React는 두 속성을 모두 보고 동일한 기본 DOM 노드를 유지하며 변경된 속성만 업데이트한다. className 속성을 제외한 속성이 동일한 DOM element로 예제를 보자.
         ```javascript
         <div className="show" title="ReactJS" />
 
         <div className="hide" title="ReactJS" />
         ```
-     3. **Component Elements Of The Same Type:**
-        When a component updates, the instance stays the same, so that state is maintained across renders. React updates the props of the underlying component instance to match the new element, and calls componentWillReceiveProps() and componentWillUpdate() on the underlying instance. After that, the render() method is called and the diff algorithm recurses on the previous result and the new result.
-     4. **Recursing On Children:**
-        when recursing on the children of a DOM node, React just iterates over both lists of children at the same time and generates a mutation whenever there’s a difference. For example, when adding an element at the end of the children, converting between these two trees works well.
+     3. **동일한 타입의 컴포넌트 Elements:**
+        컴포넌트가 업데이트 되면, 인스턴스는 동일하게 유지되므로 렌더링에서 state는 유지된다. React는 하위 element 인스턴스의 prop을 새 element와 일치하도록 업데이트하고 하위 인스턴스에서 componentWillReceiveProps()와 componentWillUpdate()를 호출한다. 그런 다음, render() 메서드가 호출되고 이전 결과와 새 결과에서 재귀적으로 diff 알고리즘이 이루어진다.
+     4. **Children 재귀:**
+        DOM 노드의 자식에 대해 재귀가 이루어질 때, React는 두 개의 자식 목록을 동시에 반복하고 차이가 있을 때마다 변이를 일으킨다. 예를 들어, 자식의 끝에 element를 추가할 때 두 트리를 변경시키는 게 유리하다.
         ```javascript
         <ul>
           <li>first</li>
@@ -5227,8 +5229,8 @@
         </ul>
 
         ```
-     5. **Handling keys:**
-     React supports a key attribute. When children have keys, React uses the key to match children in the original tree with children in the subsequent tree. For example, adding a key can make the tree conversion efficient,
+     5. **keys 핸들링:**
+     React는 key 속성을 지원한다. 자식에 키가 있으면, React는 이 키를 사용하여 원래 트리의 자식을 다음 트리의 자식과 일치시킨다. 예를 들어, key를 추가하면 트리 변환이 효율적이다.
      ```javascript
      <ul>
        <li key="2015">Duke</li>
