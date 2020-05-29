@@ -318,7 +318,7 @@
 |290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
-|293| [What is windowing technique?](#what-is-windowing-technique)|
+|293| [windowing technique이란?](#windowing-technique이란)|
 |294| [How do you print falsy values in JSX?](#how-do-you-print-falsy-values-in-jsx)|
 |295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
@@ -5300,8 +5300,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-293. ### What is windowing technique?
-     Windowing is a technique that only renders a small subset of your rows at any given time, and can dramatically reduce the time it takes to re-render the components as well as the number of DOM nodes created. If your application renders long lists of data then this technique is recommended. Both react-window and react-virtualized are popular windowing libraries which provides several reusable components for displaying lists, grids, and tabular data.
+293. ### windowing technique이란?
+
+     Windowing은 주어진 시간에 행의 작은 부분 집합만 렌더링 기술로, 컴포넌트를 다시 렌더링하는 데 걸리는 시간과 생성된 DOM 노드의 수를 크게 줄일 수 있다. 애플리케이션이 긴 데이터 목록을 렌더링하는 경우 이 기술이 권장된다. react-window와 react-virtualized는 모두 목록, 그리드 및 테이블 형식 데이터를 표시하기 위해 재사용 가능한 여러 컴포넌트를 제공하는 windowing 라이브러리이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
