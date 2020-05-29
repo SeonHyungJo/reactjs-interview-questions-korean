@@ -319,7 +319,7 @@
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
 |293| [What is windowing technique?](#what-is-windowing-technique)|
-|294| [How do you print falsy values in JSX?](#how-do-you-print-falsy-values-in-jsx)|
+|294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
 |295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
@@ -5305,8 +5305,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-294. ### How do you print falsy values in JSX?
-     The falsy values such as false, null, undefined, and true are valid children but they don't render anything. If you still want to display them then you need to convert it to string. Let's take an example on how to convert to a string,
+294. ### JSX에서 잘못된 값은 어떻게 출력하나?
+
+     false, null, undefined 및 true 같은 허위값은 유효한 자식이지만, 아무것도 렌더링하지 않는다. 표시하려면 문자열로 변환해야 한다. 문자열로 변환하는 방법에 대한 예제를 보자.
+
      ```javascript
      <div>
        My JavaScript variable is {String(myVariable)}.
