@@ -5281,8 +5281,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-292. ### How do you create HOC using render props?
-     You can implement most higher-order components (HOC) using a regular component with a render prop. For example, if you would prefer to have a withMouse HOC instead of a <Mouse> component, you could easily create one using a regular <Mouse> with a render prop.
+292. ### 어떻게 render props를 사용해서 HOC를 만드나?
+
+     render prop과 일반적인 컴포넌트를 사용해서 higher-order components (HOC)를 만들 수 있다. 예를 들어, `<Mouse>` 컴포넌트 대신 withMouse HOC를 사용하려면 render prop과 함께 `<Mouse>`를 사용하여 쉽게 만들 수 있다.
+
      ```javascript
      function withMouse(Component) {
        return class extends React.Component {
@@ -5296,7 +5298,8 @@
        }
      }
      ```
-     This way render props gives the flexibility of using either pattern.
+     
+     이 방법으로 render prop는 두 패턴 중 하나를 사용하도록 해준다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
