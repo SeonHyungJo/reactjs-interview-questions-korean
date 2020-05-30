@@ -324,7 +324,7 @@
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
-|299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
+|299| [react 애플리케이션에 부트스트랩을 추가하는 방법은?](#react-애플리케이션에-부트-스트랩을-추가하는-방법은)|
 |300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
@@ -5362,17 +5362,18 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-299. ### How to add Bootstrap to a react application?
-     Bootstrap can be added to your React app in a three possible ways
-     1. Using the Bootstrap CDN:
-        This is the easiest way to add bootstrap. Add both bootstrap CSS and JS resources in a head tag.
-     2. Bootstrap as Dependency:
-        If you are using a build tool or a module bundler such as Webpack, then this is the preferred option for adding Bootstrap to your React application
+299. ### react 애플리케이션에 부트스트랩을 추가하는 방법은?
+
+     부트스트랩은 세 가지 방법으로 React 앱에 추가할 수 있다.
+
+     1. 부트스트랩 CDN 사용: 부트스트랩을 추가하는 가장 쉬운 방법이다. 부트스트랩 CSS 및 JS 자원을 헤드 태그에 추가한다.
+     2. 부트스트랩 Dependency 추가하기: 빌드 도구나 Webpack과 같은 모듈 번들러를 사용하는 경우 React 애플리케이션에 부트스트랩을 추가하는 게 좋다.
+
         ```javascript
         npm install bootstrap
         ``
-     3. React Bootstrap Package:
-        In this case, you can add Bootstrap to our React app is by using a package that has rebuilt Bootstrap components to work particularly as React components. Below packages are popular in this category,
+
+     3. React 부트스트랩 패키지 : 이 경우, 부트스트랩 컴포넌트를 재빌드한 패키지를 사용하여 특히 React 컴포넌트로 작동하는 React 앱에 부트스트랩을 추가할 수 있다. 아래 패키지는 인기있는 패키지 중 하나이다.
         1. react-bootstrap
         2. reactstrap
 
