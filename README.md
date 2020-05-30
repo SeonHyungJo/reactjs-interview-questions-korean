@@ -323,7 +323,7 @@
 |295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
 |296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
-|298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
+|298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
 |299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
 |300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
@@ -5348,16 +5348,17 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-298. ### What is the difference between Real DOM and Virtual DOM?
-     Below are the main differences between Real DOM and Virtual DOM,
+298. ### Real DOM과 Virtual DOM의 차이점은?
+     
+     아래에 Real DOM과 Virtual DOM의 주요 차이점을 살펴보자,
 
      | Real DOM | Virtual DOM |
      | ----- | ------- |
-     | Updates are slow | Updates are fast |
-     | DOM manipulation is very expensive. | DOM manipulation is very easy |
-     | You can update HTML directly. | You Can’t directly update HTML |
-     | It causes too much of memory wastage | 	There is no memory wastage|
-     | Creates a new DOM if element updates | It updates the JSX if element update|
+     | 업데이트가 느리다 | 업데이트가 빠르다 |
+     | DOM 조작이 저렴하다 | DOM 조작이 매우 쉽다. |
+     | HTML을 직접 업데이트한다. | HTML을 직접 업데이트 할 수 없다. |
+     | 너무 많은 메모리 낭비가 발생한다. | 메모리 낭비가 없다. |
+     | element가 업데이트 되면 새 DOM을 만든다. | element가 업데이트 되면 JSX를 업데이트한다. |
 
 
    **[⬆ Back to Top](#table-of-contents)**
