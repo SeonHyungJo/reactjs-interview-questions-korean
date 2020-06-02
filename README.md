@@ -320,7 +320,7 @@
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
 |293| [What is windowing technique?](#what-is-windowing-technique)|
 |294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
-|295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
+|295| [portals를 사용하는 사례는?](#portals를-사용하는-사례는?)|
 |296| [제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?](#제어되지-않는-컴포넌트의-기본값을-설정하는-방법은)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
@@ -5332,8 +5332,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-295. ### What is the typical use case of portals?
-     React portals are very useful when a parent component has overflow: hidden or has properties that affect the stacking context(z-index,position,opacity etc styles) and you need to visually “break out” of its container. For example, dialogs, global message notifications, hovercards, and tooltips.
+295. ### portals를 사용하는 사례는?
+
+     React portals는 상위 컴포넌트가 overflow: hidden이거나 stacking context(z- 색인, 위치, 불투명도 등 스타일)에 영향을 주는 특성에 영향을 준다면, 컨테이너에서 시각적으로 "분리"하는데 도움을 준다. 예를 들어, dialogs, global message notifications, hovercards, 툴팁이 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
