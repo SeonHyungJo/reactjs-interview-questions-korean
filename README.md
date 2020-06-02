@@ -322,7 +322,7 @@
 |294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
 |295| [portals를 사용하는 사례는?](#portals를-사용하는-사례는?)|
 |296| [제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?](#제어되지-않는-컴포넌트의-기본값을-설정하는-방법은)|
-|297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
+|297| [가장 좋아하는 React stack은?](#가장-좋아하는-React-stack은)|
 |298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
 |299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
 |300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
@@ -5362,9 +5362,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-297. ### What is your favorite React stack?
-     Even though the tech stack varies from developer to developer, the most popular stack is used in react boilerplate project code. It mainly uses Redux and redux-saga for state management and asynchronous side-effects, react-router for routing purpose, styled-components for styling react components, axios for invoking REST api, and other supported stack such as webpack, reselect, ESNext, Babel.
-     You can clone the project https://github.com/react-boilerplate/react-boilerplate and start working on any new react project.
+297. ### 가장 좋아하는 React stack은?
+
+     기술 스택은 개발자마다 다르지만 가장 인기 있는 스택은 react 보일러 플레이트 프로젝트 코드에 사용된다. 주로 상태 관리 및 비동기 부작용을 위해 Redux 및 redux-saga, 라우팅 목적을 위한 react-router, react 컴포넌트를 스타일링하기 위한 styled-component, REST api를 호출하기 위한 axios, 그리고 다른 스택들로는 webpack, reselect, ESNext, Babel이 있다. https://github.com/react-boilerplate/react-boilerplate를 clone 받아서 새로운 react 프로젝트 작업을 시작할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
