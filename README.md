@@ -325,7 +325,7 @@
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
 |299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
-|300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
+|300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
@@ -5393,8 +5393,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-300. ### Can you list down top websites or applications using react as front end framework?
-     Below are the `top 10 websites` using React as their front-end framework,
+300. ### 프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?
+
+     아래는 React를 프론트엔드 프레임워크로 사용하는 `top 10 websites`이다.
 
      1. Facebook
      2. Uber
