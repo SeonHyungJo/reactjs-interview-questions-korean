@@ -321,7 +321,7 @@
 |293| [What is windowing technique?](#what-is-windowing-technique)|
 |294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
 |295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
-|296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
+|296| [제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?](#제어되지-않는-컴포넌트의-기본값을-설정하는-방법은)|
 |297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
 |298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
 |299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
@@ -5332,8 +5332,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-296. ### How do you set default value for uncontrolled component?
-     In React, the value attribute on form elements will override the value in the DOM. With an uncontrolled component, you might want React to specify the initial value, but leave subsequent updates uncontrolled. To handle this case, you can specify a **defaultValue** attribute instead of **value**.
+296. ### 제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?
+
+     React에서, form 요소에서 value 속성은 DOM의 값을 대체한다. 제어되지 않는 컴포넌트를 사용하면 React가 초기값을 지정하지만, 업데이트는 제어되지 않는 상태로 두게 된다. 이 경우를 처리하기 위해 **value** 대신 **defaultValue** 속성을 지정할 수 있다.
+
      ```javascript
      render() {
        return (
@@ -5350,7 +5352,7 @@
        );
      }
      ```
-     The same applies for `select` and `textArea` inputs. But you need to use **defaultChecked** for `checkbox` and `radio` inputs.
+     `select`과 `textArea` 입력에도 동일하게 적용된다. 그러나 `checkbox` 및 `radio` 입력에는 **defaultChecked** 를 사용해야 한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
