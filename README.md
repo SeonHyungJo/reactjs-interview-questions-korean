@@ -307,7 +307,7 @@
 |279| [contextType은 어떻게 사용하나?](#contextType은-어떻게-사용하나)|
 |280| [consumer란?](#consumer란)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
-|282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
+|282| [HOC에서 forward ref의 목적은?](#HOC에서-forward-ref의-목적은)|
 |283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
 |284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
 |285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
@@ -5077,9 +5077,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-282. ### What is the purpose of forward ref in HOCs?
-     Refs will not get passed through because ref is not a prop. It handled differently by React just like **key**. If you add a ref to a HOC, the ref will refer to the outermost container component, not the wrapped component. In this case, you can use Forward Ref API. For example, we can explicitly forward refs to the inner FancyButton component using the React.forwardRef API.
-     The below HOC logs all props,
+282. ### HOC에서 forward ref의 목적은?
+
+     Refs는 prop이 아니기 때문에 넘기질 못한다. **key**와 비슷하게 React에서는 다르게 처리했다. HOC에 ref를 추가하면 해당 ref는 감싸진 컴포넌트가 아닌 가장 바깥쪽 컨테이너 컴포넌트를 참조한다. 이 경우, Forward Ref API를 사용할 수 있다. 예를 들어, React.forwardRef API를 사용하여 내부 FancyButton 컴포넌트에 ref를 명시적으로 전달할 수 있다.
+
+     아래 HOC는 모든 props를 기록한다.
+
      ```javascript
      function logProps(Component) {
        class LogProps extends React.Component {
@@ -5101,7 +5104,9 @@
        });
      }
      ```
-     Let's use this HOC to log all props that get passed to our “fancy button” component,
+
+     이 HOC를 사용하여 “fancy button” 컴포넌트에 전달되는 모든 props를 기록해보자.
+     
      ```javascript
      class FancyButton extends React.Component {
        focus() {
@@ -5112,7 +5117,9 @@
      }
      export default logProps(FancyButton);
      ```
-     Now lets create a ref and pass it to FancyButton component. In this case, you can set focus to button element.
+
+     이제 ref를 만들어 FancyButton 컴포넌트에 전달하고 있다. 이 경우, 버튼 엘리먼트에 포커스를 설정할 수 있다.
+
      ```javascript
      import FancyButton from './FancyButton';
 
