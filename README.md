@@ -5163,7 +5163,7 @@
     
 286. ### react에서 JSX 없이 가능한가?
      
-     네, JSX는 React를 사용하는 데 필수가 아니다. 실제로 빌드 환경에서 컴파일을 설정하지 않을 때 편리하다. 각 JSX 요소는 React.createElement(component, props, ...children)를 호출하기 위한 synctatic sugar이다. 예를 들어 JSX로 인사를 만들어 보자.
+     네, JSX는 React를 사용하는 데 필수가 아니다. 실제로 빌드 환경에서 컴파일을 설정하지 않을 때 편리하다. 각 JSX 요소는 React.createElement(component, props, ...children)를 호출하기 위한 syntactic sugar이다. 예를 들어 JSX로 인사(Greeting)를 만들어 보자.
 
      ```javascript
      class Greeting extends React.Component {
