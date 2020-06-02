@@ -308,7 +308,7 @@
 |280| [consumer란?](#consumer란)|
 |281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
 |282| [HOC에서 forward ref의 목적은?](#HOC에서-forward-ref의-목적은)|
-|283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
+|283| [ref는 모든 함수 또는 클래스 컴포넌트에서 사용가능한가?](#ref는-모든-함수-또는-클래스-컴포넌트에서-사용가능한가)|
 |284| [forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?](#forward-ref를-사용하는-동안-컴포넌트-라이브러리를-추가로-관리해야하는-이유는)|
 |285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
@@ -5134,8 +5134,8 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-283. ### Is it ref argument available for all functions or class components?
-     Regular function or class components don’t receive the ref argument, and ref is not available in props either. The second ref argument only exists when you define a component with React.forwardRef call.
+283. ### ref는 모든 함수 또는 클래스 컴포넌트에서 사용가능한가?
+     일반적인 함수 또는 클래스 컴포넌트는 ref 인수로 받지 않으며, ref는 props에서도 사용할 수 없다. 두 번째 ref 인수는 React.forwardRef 호출로 컴포넌트를 정의할 때만 존재한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
