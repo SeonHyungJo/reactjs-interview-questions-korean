@@ -5205,7 +5205,7 @@
 
      1. **다른 타입의 Elements:**
         root element가 다른 타입을 가질 때마다 React는 이전 트리를 분해하고 처음부터 새로운 트리를 만든다. 예를 들어, elements `<a>`는 `<img>`로, 또는 `<Article>`에서 `<Comment>`로 다른 타입의 element는 전체를 다시 작성한다.
-     2. **동일한 타입의 DOM Elements:**
+     2. **동일한 타입의 DOM Elements**
         동일한 타입의 두 React DOM element를 비교할 때 React는 두 속성을 모두 보고 동일한 기본 DOM 노드를 유지하며 변경된 속성만 업데이트한다. className 속성을 제외한 속성이 동일한 DOM element로 예제를 보자.
         ```javascript
         <div className="show" title="ReactJS" />
