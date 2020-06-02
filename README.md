@@ -314,7 +314,7 @@
 |286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
 |287| [diffing 알고리즘이란?](#diffing-알고리즘이란)|
 |288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
-|289| [When do you need to use refs?](#when-do-you-need-to-use-refs)|
+|289| [언제 ref를 사용해야 하나?](#언제-ref를-사용해야-하나)|
 |290| [prop을 render prop의 렌더링으로 지정해야 하나?](#prop을-render-prop의-렌더링으로-지정해야-하나)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
@@ -5254,11 +5254,13 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-289. ### When do you need to use refs?
-     There are few use cases to go for refs
-     1. Managing focus, text selection, or media playback.
-     2. Triggering imperative animations.
-     3. Integrating with third-party DOM libraries.
+289. ### 언제 ref를 사용해야 하나?
+     
+     ref 사용 케이스는 거의 없다.
+
+     1. 초점, 텍스트 선택, 미디어 재생 관리
+     2. 명령형 애니메이션 트리거
+     3. 타사 DOM 라이브러리와 통합
 
    **[⬆ Back to Top](#table-of-contents)**
     
