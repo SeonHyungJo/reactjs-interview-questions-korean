@@ -5212,7 +5212,7 @@
 
         <div className="hide" title="ReactJS" />
         ```
-     3. **동일한 타입의 컴포넌트 Elements:**
+     3. **동일한 타입의 컴포넌트 Elements**
         컴포넌트가 업데이트 되면, 인스턴스는 동일하게 유지되므로 렌더링에서 state는 유지된다. React는 하위 element 인스턴스의 prop을 새 element와 일치하도록 업데이트하고 하위 인스턴스에서 componentWillReceiveProps()와 componentWillUpdate()를 호출한다. 그런 다음, render() 메서드가 호출되고 이전 결과와 새 결과에서 재귀적으로 diff 알고리즘이 이루어진다.
      4. **Children 재귀:**
         DOM 노드의 자식에 대해 재귀가 이루어질 때, React는 두 개의 자식 목록을 동시에 반복하고 차이가 있을 때마다 변이를 일으킨다. 예를 들어, 자식의 끝에 element를 추가할 때 두 트리를 변경시키는 게 유리하다.
