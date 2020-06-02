@@ -5044,7 +5044,7 @@
     
 281. ### context를 사용하는 동안 성능 문제는 어떻게 해결하나?
 
-     context는 리렌더링헐 시기를 결정할 때 참조 ID를 사용한다. provider의 부모가 리렌더링 될 때 consumer에서 의도하지 않은 렌더링을 일으킬 수 있다. 예를 들어, 아래 코드는 새로운 객체가 항상 만들어지므로 provider가 리렌더링 될 때마다 모든 consumer를 렌더링한다.
+     context는 리렌더링할 시기를 결정할 때 참조 ID를 사용한다. provider의 부모가 리렌더링 될 때 consumer에서 의도하지 않은 렌더링을 일으킬 수 있다. 예를 들어, 아래 코드는 새로운 객체가 항상 만들어지므로 provider가 리렌더링 될 때마다 모든 consumer를 렌더링한다.
 
      ```javascript
      class App extends React.Component {
