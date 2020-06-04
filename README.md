@@ -306,26 +306,26 @@
 |278| [context에서 기본값의 목적은?](#context에서-기본값의-목적은)|
 |279| [contextType은 어떻게 사용하나?](#contextType은-어떻게-사용하나)|
 |280| [consumer란?](#consumer란)|
-|281| [How do you solve performance corner cases while using context?](#how-do-you-solve-performance-corner-cases-while-using-context)|
-|282| [What is the purpose of forward ref in HOCs?](#what-is-the-purpose-of-forward-ref-in-hocs)|
-|283| [Is it ref argument available for all functions or class components?](#is-it-ref-argument-available-for-all-functions-or-class-components)|
-|284| [Why do you need additional care for component libraries while using forward refs?](#why-do-you-need-additional-care-for-component-libraries-while-using-forward-refs)|
-|285| [How to create react class components without ES6?](#how-to-create-react-class-components-without-es6)|
-|286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
-|287| [What is diffing algorithm?](#what-is-diffing-algorithm)|
+|281| [context를 사용하는 동안 성능 문제는 어떻게 해결하나?](#context를-사용하는-동안-성능-문제는-어떻게-해결하나)|
+|282| [HOC에서 forward ref의 목적은?](#HOC에서-forward-ref의-목적은)|
+|283| [ref는 모든 함수 또는 클래스 컴포넌트에서 사용가능한가?](#ref는-모든-함수-또는-클래스-컴포넌트에서-사용가능한가)|
+|284| [forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?](#forward-ref를-사용하는-동안-컴포넌트-라이브러리를-추가로-관리해야하는-이유는)|
+|285| [ES6 없이 react 클래스 컴포넌트를 만드는 방법은?](#ES6-없이-react-클래스-컴포넌트를-만드는-방법은)|
+|286| [react에서 JSX 없이 가능한가?](#react에서-JSX-없이-가능한가)|
+|287| [diffing 알고리즘이란?](#diffing-알고리즘이란)|
 |288| [diffing 알고리즘에 적용되는 규칙은?](#diffing-알고리즘에-적용되는-규칙은)|
-|289| [When do you need to use refs?](#when-do-you-need-to-use-refs)|
-|290| [Is it prop must be named as render for render props?](#is-it-prop-must-be-named-as-render-for-render-props)|
+|289| [언제 ref를 사용해야 하나?](#언제-ref를-사용해야-하나)|
+|290| [prop을 render prop의 렌더링으로 지정해야 하나?](#prop을-render-prop의-렌더링으로-지정해야-하나)|
 |291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
 |293| [What is windowing technique?](#what-is-windowing-technique)|
-|294| [How do you print falsy values in JSX?](#how-do-you-print-falsy-values-in-jsx)|
-|295| [What is the typical use case of portals?](#what-is-the-typical-use-case-of-portals?)|
-|296| [How do you set default value for uncontrolled component?](#how-do-you-set-default-value-for-uncontrolled-component)|
-|297| [What is your favorite React stack?](#what-is-your-favorite-react-stack)|
-|298| [What is the difference between Real DOM and Virtual DOM?](#what-is-the-difference-between-real-dom-and-virtual-dom)|
-|299| [How to add Bootstrap to a react application?](#how-to-add-bootstrap-to-react-application)|
-|300| [Can you list down top websites or applications using react as front end framework?](#can-you-list-down-top-websites-or-applications-using-react-as-front-end-framework)|
+|294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
+|295| [portals를 사용하는 사례는?](#portals를-사용하는-사례는?)|
+|296| [제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?](#제어되지-않는-컴포넌트의-기본값을-설정하는-방법은)|
+|297| [가장 좋아하는 React stack은?](#가장-좋아하는-React-stack은)|
+|298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
+|299| [react 애플리케이션에 부트스트랩을 추가하는 방법은?](#react-애플리케이션에-부트-스트랩을-추가하는-방법은)|
+|300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
 |301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
@@ -5042,8 +5042,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-281. ### How do you solve performance corner cases while using context?
-     The context uses reference identity to determine when to re-render, there are some gotchas that could trigger unintentional renders in consumers when a provider’s parent re-renders. For example, the code below will re-render all consumers every time the Provider re-renders because a new object is always created for value.
+281. ### context를 사용하는 동안 성능 문제는 어떻게 해결하나?
+
+     context는 리렌더링할 시기를 결정할 때 참조 ID를 사용한다. provider의 부모가 리렌더링 될 때 consumer에서 의도하지 않은 렌더링을 일으킬 수 있다. 예를 들어, 아래 코드는 새로운 객체가 항상 만들어지므로 provider가 리렌더링 될 때마다 모든 consumer를 렌더링한다.
+
      ```javascript
      class App extends React.Component {
        render() {
@@ -5055,7 +5057,9 @@
        }
      }
      ```
-     This can be solved by lifting up the value to parent state,
+
+     이는 값을 상위 state로 올리면 해결할 수 있다.
+
      ```javascript
      class App extends React.Component {
        constructor(props) {
@@ -5077,9 +5081,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-282. ### What is the purpose of forward ref in HOCs?
-     Refs will not get passed through because ref is not a prop. It handled differently by React just like **key**. If you add a ref to a HOC, the ref will refer to the outermost container component, not the wrapped component. In this case, you can use Forward Ref API. For example, we can explicitly forward refs to the inner FancyButton component using the React.forwardRef API.
-     The below HOC logs all props,
+282. ### HOC에서 forward ref의 목적은?
+
+     Refs는 prop이 아니기 때문에 넘기질 못한다. **key**와 비슷하게 React에서는 다르게 처리했다. HOC에 ref를 추가하면 해당 ref는 감싸진 컴포넌트가 아닌 가장 바깥쪽 컨테이너 컴포넌트를 참조한다. 이 경우, Forward Ref API를 사용할 수 있다. 예를 들어, React.forwardRef API를 사용하여 내부 FancyButton 컴포넌트에 ref를 명시적으로 전달할 수 있다.
+
+     아래 HOC는 모든 props를 기록한다.
+
      ```javascript
      function logProps(Component) {
        class LogProps extends React.Component {
@@ -5101,7 +5108,9 @@
        });
      }
      ```
-     Let's use this HOC to log all props that get passed to our “fancy button” component,
+
+     이 HOC를 사용하여 “fancy button” 컴포넌트에 전달되는 모든 props를 기록해보자.
+     
      ```javascript
      class FancyButton extends React.Component {
        focus() {
@@ -5112,7 +5121,9 @@
      }
      export default logProps(FancyButton);
      ```
-     Now lets create a ref and pass it to FancyButton component. In this case, you can set focus to button element.
+
+     이제 ref를 만들어 FancyButton 컴포넌트에 전달하고 있다. 이 경우, 버튼 엘리먼트에 포커스를 설정할 수 있다.
+
      ```javascript
      import FancyButton from './FancyButton';
 
@@ -5127,18 +5138,20 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-283. ### Is it ref argument available for all functions or class components?
-     Regular function or class components don’t receive the ref argument, and ref is not available in props either. The second ref argument only exists when you define a component with React.forwardRef call.
+283. ### ref는 모든 함수 또는 클래스 컴포넌트에서 사용가능한가?
+     일반적인 함수 또는 클래스 컴포넌트는 ref 인수로 받지 않으며, ref는 props에서도 사용할 수 없다. 두 번째 ref 인수는 React.forwardRef 호출로 컴포넌트를 정의할 때만 존재한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-284. ### Why do you need additional care for component libraries while using forward refs?
-     When you start using forwardRef in a component library, you should treat it as a breaking change and release a new major version of your library. This is because your library likely has a different behavior such as what refs get assigned to, and what types are exported. These changes can break apps and other libraries that depend on the old behavior.
+284. ### forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?
+     컴포넌트 라이브러리에서 forwardRef를 사용하기 시작하면, 주요 변경사항으로 취급하고 라이브러리의 새 주요 버전을 릴리즈 해야 한다. 라이브러리에 ref가 지정되고 내보내는 유형과 같은 다른 동작이 있을 수 있다. 이러한 변경으로 인해 이전 동작에 의존하는 앱 및 기타 라이브러리가 손상될 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-285. ### How to create react class components without ES6?
-     If you don’t use ES6 then you may need to use the create-react-class module instead. For default props, you need to define getDefaultProps() as a function on the passed object. Whereas for initial state, you have to provide a separate getInitialState method that returns the initial state.
+285. ### ES6 없이 react 클래스 컴포넌트를 만드는 방법은?
+
+     ES6를 사용하지 않는 대신 create-react-class 모듈을 사용해야 할 수 있다. 기본 props의 경우, 전달된 객체의 함수로 getDefaultProps()를 정의해야 한다. 초기 state인 경우, 초기 state를 반환하는 별도의 getInitialState 메서드를 제공해야 한다.
+
      ```javascript
      var Greeting = createReactClass({
        getDefaultProps: function() {
@@ -5157,12 +5170,14 @@
        }
      });
      ```
-     **Note:** If you use createReactClass then autobinding is available for all methods. i.e, You don't need to use .bind(this) with in constructor for event handlers.
+     **Note:** createReactClass를 사용하면 모든 메서드에 자동 바인딩을 사용할 수 있다. 즉, 이벤트 핸들러의 생성자에 .bind(this)를 사용할 필요가 없다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-286. ### Is it possible to use react without JSX?
-     Yes, JSX is not mandatory for using React. Actually it is convenient when you don’t want to set up compilation in your build environment. Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). For example, let us take a greeting example with JSX,
+286. ### react에서 JSX 없이 가능한가?
+     
+     네, JSX는 React를 사용하는 데 필수가 아니다. 실제로 빌드 환경에서 컴파일을 설정하지 않을 때 편리하다. 각 JSX 요소는 React.createElement(component, props, ...children)를 호출하기 위한 syntactic sugar이다. 예를 들어 JSX로 인사(Greeting)를 만들어 보자.
+
      ```javascript
      class Greeting extends React.Component {
        render() {
@@ -5175,7 +5190,7 @@
        document.getElementById('root')
      );
      ```
-     You can write the same code without JSX as below,
+     아래와 같이 JSX 없이 동일한 코드를 작성할 수 있다.
      ```javascript
      class Greeting extends React.Component {
        render() {
@@ -5191,11 +5206,12 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-287. ### What is diffing algorithm?
-     React needs to use algorithms to find out how to efficiently update the UI to match the most recent tree. The diffing algorithms is generating the minimum number of operations to transform one tree into another. However, the algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
-     In this case, for displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm based on two assumptions:
-     1. Two elements of different types will produce different trees.
-     2. The developer can hint at which child elements may be stable across different renders with a key prop.
+287. ### diffing 알고리즘이란?
+
+     React는 최신 트리와 일치하도록 UI를 효율적으로 업데이트하는 방법을 찾기 위해서 알고리즘을 사용한다. diffing 알고리즘이란 하나의 트리를 다른 트리로 변환하기 위해 최소한의 수 연산을 한다. 그러나, 이 알고리즘은 O(n3)의 복잡성을 가지며, 여기서 n은 트리의 element의 수이다. 이 경우, 1000개의 element를 표시하려면 10억 개의 비교 순서가 필요하다. 이것은 너무 비싸다. 대신 React는 다음 두 가지 가정을 기반으로 휴리스틱 O(n) 알고리즘을 구현한다.
+
+     1. 다른 유형의 두 element는 다른 트리를 생성할 것이다.
+     2. 개발자는 key prop를 사용하여 다른 렌더링에서 어떤 하위 element가 변경되지 않는지 암시한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5246,22 +5262,24 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-289. ### When do you need to use refs?
-     There are few use cases to go for refs
-     1. Managing focus, text selection, or media playback.
-     2. Triggering imperative animations.
-     3. Integrating with third-party DOM libraries.
+289. ### 언제 ref를 사용해야 하나?
+     
+     ref 사용 케이스는 거의 없다.
+
+     1. 초점, 텍스트 선택, 미디어 재생 관리
+     2. 명령형 애니메이션 트리거
+     3. 타사 DOM 라이브러리와 통합
 
    **[⬆ Back to Top](#table-of-contents)**
     
-290. ### Is it prop must be named as render for render props?
-     Even though the pattern named render props, you don’t have to use a prop named render to use this pattern. i.e,  Any prop that is a function that a component uses to know what to render is technically a “render prop”. Lets take an example with the children prop for render props,
+290. ### prop을 render prop의 렌더링으로 지정해야 하나?
+     render props라 불리는 패턴이 있어도, 이 패턴을 사용하기 위해 render라 불리는 prop을 사용할 필요는 없다. 예를 들어, 즉, 컴포넌트가 렌더링 대상을 알기 위해 사용되는 기능인 모든 prop은 기술적으로 “render prop”이다. render props에 대해 자식 prop을 예를 들어보자.
      ```javascript
      <Mouse children={mouse => (
        <p>The mouse position is {mouse.x}, {mouse.y}</p>
      )}/>
      ```
-     Actually children prop doesn’t need to be named in the list of “attributes” in JSX element. Instead, you can keep it directly inside element,
+     실제로 자식 prop은 JSX element의 “속성” 목록에 이름을 지정할 필요가 없다. 대신에, element 내부에 직접 유지할 수 있다.
      ```javascript
      <Mouse>
        {mouse => (
@@ -5269,7 +5287,7 @@
        )}
      </Mouse>
      ```
-     While using this above technique(without any name), explicitly state that children should be a function in your propTypes.
+     위의 기술을 사용하는 동안(이름 없이), 자식은 propTypes의 함수여야 한다고 명시적으로 작성해야 한다.
      ```javascript
      Mouse.propTypes = {
        children: PropTypes.func.isRequired
@@ -5283,8 +5301,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-292. ### How do you create HOC using render props?
-     You can implement most higher-order components (HOC) using a regular component with a render prop. For example, if you would prefer to have a withMouse HOC instead of a <Mouse> component, you could easily create one using a regular <Mouse> with a render prop.
+292. ### 어떻게 render props를 사용해서 HOC를 만드나?
+
+     render prop과 일반적인 컴포넌트를 사용해서 higher-order components (HOC)를 만들 수 있다. 예를 들어, `<Mouse>` 컴포넌트 대신 withMouse HOC를 사용하려면 render prop과 함께 `<Mouse>`를 사용하여 쉽게 만들 수 있다.
+
      ```javascript
      function withMouse(Component) {
        return class extends React.Component {
@@ -5298,7 +5318,8 @@
        }
      }
      ```
-     This way render props gives the flexibility of using either pattern.
+     
+     이 방법으로 render prop는 두 패턴 중 하나를 사용하도록 해준다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5307,8 +5328,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-294. ### How do you print falsy values in JSX?
-     The falsy values such as false, null, undefined, and true are valid children but they don't render anything. If you still want to display them then you need to convert it to string. Let's take an example on how to convert to a string,
+294. ### JSX에서 잘못된 값은 어떻게 출력하나?
+
+     false, null, undefined 및 true 같은 허위값은 유효한 자식이지만, 아무것도 렌더링하지 않는다. 표시하려면 문자열로 변환해야 한다. 문자열로 변환하는 방법에 대한 예제를 보자.
+
      ```javascript
      <div>
        My JavaScript variable is {String(myVariable)}.
@@ -5317,13 +5340,16 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-295. ### What is the typical use case of portals?
-     React portals are very useful when a parent component has overflow: hidden or has properties that affect the stacking context(z-index,position,opacity etc styles) and you need to visually “break out” of its container. For example, dialogs, global message notifications, hovercards, and tooltips.
+295. ### portals를 사용하는 사례는?
+
+     React portals는 상위 컴포넌트가 overflow: hidden이거나 stacking context(z- 색인, 위치, 불투명도 등 스타일)에 영향을 주는 특성에 영향을 준다면, 컨테이너에서 시각적으로 "분리"하는데 도움을 준다. 예를 들어, dialogs, global message notifications, hovercards, 툴팁이 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-296. ### How do you set default value for uncontrolled component?
-     In React, the value attribute on form elements will override the value in the DOM. With an uncontrolled component, you might want React to specify the initial value, but leave subsequent updates uncontrolled. To handle this case, you can specify a **defaultValue** attribute instead of **value**.
+296. ### 제어되지 않는 컴포넌트의 기본값을 설정하는 방법은?
+
+     React에서, form 요소에서 value 속성은 DOM의 값을 대체한다. 제어되지 않는 컴포넌트를 사용하면 React가 초기값을 지정하지만, 업데이트는 제어되지 않는 상태로 두게 된다. 이 경우를 처리하기 위해 **value** 대신 **defaultValue** 속성을 지정할 수 있다.
+
      ```javascript
      render() {
        return (
@@ -5340,48 +5366,51 @@
        );
      }
      ```
-     The same applies for `select` and `textArea` inputs. But you need to use **defaultChecked** for `checkbox` and `radio` inputs.
+     `select`과 `textArea` 입력에도 동일하게 적용된다. 그러나 `checkbox` 및 `radio` 입력에는 **defaultChecked** 를 사용해야 한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-297. ### What is your favorite React stack?
-     Even though the tech stack varies from developer to developer, the most popular stack is used in react boilerplate project code. It mainly uses Redux and redux-saga for state management and asynchronous side-effects, react-router for routing purpose, styled-components for styling react components, axios for invoking REST api, and other supported stack such as webpack, reselect, ESNext, Babel.
-     You can clone the project https://github.com/react-boilerplate/react-boilerplate and start working on any new react project.
+297. ### 가장 좋아하는 React stack은?
+
+     기술 스택은 개발자마다 다르지만 가장 인기 있는 스택은 react 보일러 플레이트 프로젝트 코드에 사용된다. 주로 상태 관리 및 비동기 부작용을 위해 Redux 및 redux-saga, 라우팅 목적을 위한 react-router, react 컴포넌트를 스타일링하기 위한 styled-component, REST api를 호출하기 위한 axios, 그리고 다른 스택들로는 webpack, reselect, ESNext, Babel이 있다. https://github.com/react-boilerplate/react-boilerplate를 clone 받아서 새로운 react 프로젝트 작업을 시작할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
-298. ### What is the difference between Real DOM and Virtual DOM?
-     Below are the main differences between Real DOM and Virtual DOM,
+298. ### Real DOM과 Virtual DOM의 차이점은?
+     
+     아래에 Real DOM과 Virtual DOM의 주요 차이점을 살펴보자,
 
      | Real DOM | Virtual DOM |
      | ----- | ------- |
-     | Updates are slow | Updates are fast |
-     | DOM manipulation is very expensive. | DOM manipulation is very easy |
-     | You can update HTML directly. | You Can’t directly update HTML |
-     | It causes too much of memory wastage | 	There is no memory wastage|
-     | Creates a new DOM if element updates | It updates the JSX if element update|
+     | 업데이트가 느리다 | 업데이트가 빠르다 |
+     | DOM 조작이 저렴하다 | DOM 조작이 매우 쉽다. |
+     | HTML을 직접 업데이트한다. | HTML을 직접 업데이트 할 수 없다. |
+     | 너무 많은 메모리 낭비가 발생한다. | 메모리 낭비가 없다. |
+     | element가 업데이트 되면 새 DOM을 만든다. | element가 업데이트 되면 JSX를 업데이트한다. |
 
 
    **[⬆ Back to Top](#table-of-contents)**
     
-299. ### How to add Bootstrap to a react application?
-     Bootstrap can be added to your React app in a three possible ways
-     1. Using the Bootstrap CDN:
-        This is the easiest way to add bootstrap. Add both bootstrap CSS and JS resources in a head tag.
-     2. Bootstrap as Dependency:
-        If you are using a build tool or a module bundler such as Webpack, then this is the preferred option for adding Bootstrap to your React application
+299. ### react 애플리케이션에 부트스트랩을 추가하는 방법은?
+
+     부트스트랩은 세 가지 방법으로 React 앱에 추가할 수 있다.
+
+     1. 부트스트랩 CDN 사용: 부트스트랩을 추가하는 가장 쉬운 방법이다. 부트스트랩 CSS 및 JS 자원을 헤드 태그에 추가한다.
+     2. 부트스트랩 Dependency 추가하기: 빌드 도구나 Webpack과 같은 모듈 번들러를 사용하는 경우 React 애플리케이션에 부트스트랩을 추가하는 게 좋다.
+
         ```javascript
         npm install bootstrap
         ``
-     3. React Bootstrap Package:
-        In this case, you can add Bootstrap to our React app is by using a package that has rebuilt Bootstrap components to work particularly as React components. Below packages are popular in this category,
+
+     3. React 부트스트랩 패키지 : 이 경우, 부트스트랩 컴포넌트를 재빌드한 패키지를 사용하여 특히 React 컴포넌트로 작동하는 React 앱에 부트스트랩을 추가할 수 있다. 아래 패키지는 인기있는 패키지 중 하나이다.
         1. react-bootstrap
         2. reactstrap
 
    **[⬆ Back to Top](#table-of-contents)**
     
-300. ### Can you list down top websites or applications using react as front end framework?
-     Below are the `top 10 websites` using React as their front-end framework,
+300. ### 프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?
+
+     아래는 React를 프론트엔드 프레임워크로 사용하는 `top 10 websites`이다.
 
      1. Facebook
      2. Uber
