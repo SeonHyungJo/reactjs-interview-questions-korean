@@ -316,7 +316,7 @@
 |288| [diffing 알고리즘에 적용되는 규칙은?](#diffing-알고리즘에-적용되는-규칙은)|
 |289| [언제 ref를 사용해야 하나?](#언제-ref를-사용해야-하나)|
 |290| [prop을 render prop의 렌더링으로 지정해야 하나?](#prop을-render-prop의-렌더링으로-지정해야-하나)|
-|291| [What are the problems of using render props with pure components?](#what-are-the-problems-of-using-render-props-with-pure-components)|
+|291| [순수 컴포넌트와 render props를 같이 사용하면 문제가 있나?](#순수-컴포넌트와-render-props를-같이-사용하면-문제가-있나)|
 |292| [How do you create HOC using render props?](#how-do-you-create-hoc-using-render-props)|
 |293| [What is windowing technique?](#what-is-windowing-technique)|
 |294| [JSX에서 잘못된 값은 어떻게 출력하나?](#JSX에서-잘못된-값은-어떻게-출력하나)|
@@ -5296,8 +5296,9 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-291. ### What are the problems of using render props with pure components?
-     If you create a function inside a render method, it negates the purpose of pure component. Because the shallow prop comparison will always return false for new props, and each render in this case will generate a new value for the render prop. You can solve this issue by defining the render function as instance method.
+291. ### 순수 컴포넌트와 render props를 같이 사용하면 문제가 있나?
+     
+     render 메서드 안에서 함수를 만드는 경우, 순수 컴포넌트의 목적에 맞지 않는다. 얕은 prop 비교는 항상 새로운 props에 대해 false를 반환하며 각 렌더링은 렌더링 prop에 대해 새로운 값을 생성한다. 렌더링 함수를 인스턴스 메서드로 정의하여 해결할 수 있다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
