@@ -311,7 +311,7 @@
 |283| [ref는 모든 함수 또는 클래스 컴포넌트에서 사용가능한가?](#ref는-모든-함수-또는-클래스-컴포넌트에서-사용가능한가)|
 |284| [forward ref를 사용하는 동안 컴포넌트 라이브러리를 추가로 관리해야하는 이유는?](#forward-ref를-사용하는-동안-컴포넌트-라이브러리를-추가로-관리해야하는-이유는)|
 |285| [ES6 없이 react 클래스 컴포넌트를 만드는 방법은?](#ES6-없이-react-클래스-컴포넌트를-만드는-방법은)|
-|286| [Is it possible to use react without JSX?](#is-it-possible-to-use-react-without-jsx)|
+|286| [react에서 JSX 없이 가능한가?](#react에서-JSX-없이-가능한가)|
 |287| [diffing 알고리즘이란?](#diffing-알고리즘이란)|
 |288| [What are the rules covered by diffing algorithm?](#what-are-the-rules-covered-by-diffing-algorithm)|
 |289| [언제 ref를 사용해야 하나?](#언제-ref를-사용해야-하나)|
@@ -5170,8 +5170,10 @@
 
    **[⬆ Back to Top](#table-of-contents)**
     
-286. ### Is it possible to use react without JSX?
-     Yes, JSX is not mandatory for using React. Actually it is convenient when you don’t want to set up compilation in your build environment. Each JSX element is just syntactic sugar for calling React.createElement(component, props, ...children). For example, let us take a greeting example with JSX,
+286. ### react에서 JSX 없이 가능한가?
+     
+     네, JSX는 React를 사용하는 데 필수가 아니다. 실제로 빌드 환경에서 컴파일을 설정하지 않을 때 편리하다. 각 JSX 요소는 React.createElement(component, props, ...children)를 호출하기 위한 syntactic sugar이다. 예를 들어 JSX로 인사(Greeting)를 만들어 보자.
+
      ```javascript
      class Greeting extends React.Component {
        render() {
@@ -5184,7 +5186,7 @@
        document.getElementById('root')
      );
      ```
-     You can write the same code without JSX as below,
+     아래와 같이 JSX 없이 동일한 코드를 작성할 수 있다.
      ```javascript
      class Greeting extends React.Component {
        render() {
