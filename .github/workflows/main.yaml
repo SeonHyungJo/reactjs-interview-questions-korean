@@ -20,7 +20,7 @@ jobs:
       - name: Create PDF
         uses: docker://pandoc/latex:2.9              
         with:
-          args: --pdf-engine=xelatex --output=output/${{env.FILE_NAME}}.pdf README.md
+          args: --pdf-engine=xelatex -V mainfont='NanumMyeongjoOTF' --output=output/${{env.FILE_NAME}}.pdf README.md
 
       - name: Create epub
         uses: docker://pandoc/latex:2.9      
