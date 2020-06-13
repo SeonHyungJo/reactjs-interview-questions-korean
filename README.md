@@ -353,7 +353,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
-|306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
+|306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
 |308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
 |309| [What is formik?](#what-is-formik)|
@@ -5508,15 +5508,20 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-306. ### Why do we use array destructuring (square brackets notation) in `useState`?
-     When we declare a state variable with `useState`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that updates the value. Using [0] and [1] to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
-     For example, the array index access would look as follows:
+306. ### `useState`에서는 왜 destructuring(대괄호 표기법)을 사용하나?
+
+     `useState`로 state 변수를 선언하면 두 항목이 있는 배열인 쌍을 반환한다. 첫 번째 항목은 현재 값이고, 두 번째 항목은 값을 업데이트하는 함수이다. [0]과 [1]을 사용하여 액세스하는 것은 특정한 의미를 가지기 때문에 약간 혼동된다. 우리가 대신 destructuring을 사용하는 이유이다. 
+     
+     예를 들어, 배열 인덱스 액세스는 다음과 같다.
+
      ```javascript
       var userStateVariable = useState('userProfile'); // Returns an array pair
       var user = userStateVariable[0]; // Access first item
       var setUser = userStateVariable[1]; // Access second item
      ```
-     Whereas with array destructuring the variables can be accessed as follows:
+
+     배열 destructuring을 사용하면 다음과 같이 액세스할 수 있다.
+     
      ```javascript
      const [user, setUser] = useState('userProfile');
      ```
