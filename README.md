@@ -352,7 +352,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
-|305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
+|305| [hook 지원을 위한 안정적인 릴리즈는?](#hook-지원을-위한-안정적인-릴리즈는)|
 |306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
 |308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
@@ -5499,8 +5499,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-305. ### What is the stable release for hooks support?
-     React includes a stable implementation of React Hooks in 16.8 release for below packages
+305. ### hook 지원을 위한 안정적인 릴리즈는?
+
+     React는 16.8 릴리즈의 안정적인 패키지로 아래 패키지를 안정적으로 구현하였다.
+     
      1. React DOM
      2. React DOM Server
      3. React Test Renderer
