@@ -357,7 +357,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
 |308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
 |309| [What is formik?](#what-is-formik)|
-|310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
+|310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
 |313| [What is react scripts?](#what-is-react-scripts)|
@@ -5547,8 +5547,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-310. ### What are typical middleware choices for handling asynchronous calls in Redux?
-     Some of the popular middleware choices for handling asynchronous calls in Redux eco system are `Redux Thunk, Redux Promise, Redux Saga`.
+310. ### Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?
+
+     Redux eco system에서 비동기식 호출을 처리하기 위해 많이 사용되는 미들웨어는 `Redux Thunk, Redux Promise, Redux Saga`이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
