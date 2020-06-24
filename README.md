@@ -354,7 +354,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |304| [Hook은 클래스의 모든 사용 사례를 커버할 수 있나?](#Hook은-클래스의-모든-사용-사례를-커버할-수-있나)|
 |305| [hook 지원을 위한 안정적인 릴리즈는?](#hook-지원을-위한-안정적인-릴리즈는)|
 |306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
-|307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
+|307| [hook을 도입하는데 사용되는 소스는?](#hook을-도입하는데-사용되는-소스는)|
 |308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
 |309| [What is formik?](#what-is-formik)|
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
@@ -5536,13 +5536,15 @@ You can download the PDF and Epub version of this repository from the latest run
 
      **[⬆ Back to Top](#table-of-contents)**
     
-307. ### What are the sources used for introducing hooks?
-     Hooks got the ideas from several different sources. Below are some of them,
-     1. Previous experiments with functional APIs in the react-future repository
-     2. Community experiments with render prop APIs such as Reactions Component
-     3. State variables and state cells in DisplayScript.
-     4. Subscriptions in Rx.
-     5. Reducer components in ReasonReact.
+307. ### hook을 도입하는데 사용되는 소스는?
+
+     Hooks는 여러 다른 출처에서 아이디어를 얻었다. 아래는 그중 일부이다.
+
+     1. react-future repository에서 함수형 API를 사용한 이전의 실험.
+     2. Reactions Component와 같은 렌더링 propAPI를 사용한 커뮤니티 실험.
+     3. DisplayScript의 state 변수 및 state 셀.
+     4. Rx의 구독.
+     5. ReasonReact의 Reducer 컴포넌트.
 
    **[⬆ Back to Top](#table-of-contents)**
     
