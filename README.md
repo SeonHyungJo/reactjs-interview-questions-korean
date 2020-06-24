@@ -355,7 +355,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
 |306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
-|308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
+|308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
 |309| [What is formik?](#what-is-formik)|
 |310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
@@ -5542,8 +5542,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-308. ### How do you access imperative API of web components?
-     Web Components often expose an imperative API to implement its functions. You will need to use a **ref** to interact with the DOM node directly if you want to access imperative API of a web component. But if you are using third-party Web Components, the best solution is to write a React component that behaves as a **wrapper** for your Web Component.
+308. ### 웹 컴포넌트의 명령형 API에 접근하는 방법은?
+
+     Web 컴포넌트는 종종 기능을 구현하기 위해 명령형 API를 노출한다. 웹 컴포넌트의 명령형 API에 액세스하려면 **ref**를 사용하여 DOM 노드와 직접 상호 작용해야 한다. 그러나 타사 웹 컴포넌트를 사용하는 경우 가장 좋은 해결책은 웹 컴포넌트의 **wrapper**로 동작하는 React 컴포넌트를 작성하는 것이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
