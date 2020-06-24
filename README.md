@@ -348,7 +348,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
 |299| [react 애플리케이션에 부트스트랩을 추가하는 방법은?](#react-애플리케이션에-부트-스트랩을-추가하는-방법은)|
 |300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
-|301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
+|301| [React에서 CSS In JS 기술을 사용하는 것은 좋은가?](#React에서-CSS-In-JS-기술을-사용하는-것은-좋은가)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
 |303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
@@ -5449,8 +5449,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-301. ### Is it recommended to use CSS In JS technique in React?
-     React does not have any opinion about how styles are defined but if you are a beginner then good starting point is to define your styles in a separate *.css file as usual and refer to them using className. This functionality is not part of React but came from third-party libraries. But If you want to try a different approach(CSS-In-JS) then styled-components library is a good option.
+301. ### React에서 CSS In JS 기술을 사용하는 것은 좋은가?
+
+     React는 스타일을 어떻게 하라는 정의가 없어서, 초보자라면 스타일을 평소와 같이 별도의 *.css 파일에 정의하고 className을 사용하여 참조하는 것이 좋다. CSS In JS 기능은 React의 일부는 아니지만 타사 라이브러리에서 제공하는 것이다. 그러나 다른 접근법(CSS-In-JS)을 시도하려면 스타일 컴포넌트 라이브러리가 좋은 방안이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
