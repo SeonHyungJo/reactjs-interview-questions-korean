@@ -351,7 +351,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |301| [React에서 CSS In JS 기술을 사용하는 것은 좋은가?](#React에서-CSS-In-JS-기술을-사용하는-것은-좋은가)|
 |302| [모든 클래스 컴포넌트를 hook으로 전환해야하나?](#모든-클래스-컴포넌트를-hook으로-전환해야하나)|
 |303| [React hook으로 데이터를 가져오는 방법은?](#React-hook으로-데이터를-가져오는-방법은)|
-|304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
+|304| [Hook은 클래스의 모든 사용 사례를 커버할 수 있나?](#Hook은-클래스의-모든-사용-사례를-커버할-수-있나)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
 |306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
@@ -5499,8 +5499,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-304. ### Is Hooks cover all use cases for classes?
-     Hooks doesn't cover all use cases of classes but there is a plan to add them soon. Currently there are no Hook equivalents to the uncommon **getSnapshotBeforeUpdate** and **componentDidCatch** lifecycles yet.
+304. ### Hook은 클래스의 모든 사용 사례를 커버할 수 있나?
+
+     Hook은 클래스의 모든 사용 사례를 다루지는 못하지만, 곧 추가할 계획이 있다. 현재는 일반적이지 않은 **getSnapshotBeforeUpdate**와 **componentDidCatch** 라이프 사이클에 해당하는 Hook이 없다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
