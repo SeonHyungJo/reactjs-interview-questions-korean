@@ -349,7 +349,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |299| [react 애플리케이션에 부트스트랩을 추가하는 방법은?](#react-애플리케이션에-부트-스트랩을-추가하는-방법은)|
 |300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
 |301| [React에서 CSS In JS 기술을 사용하는 것은 좋은가?](#React에서-CSS-In-JS-기술을-사용하는-것은-좋은가)|
-|302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
+|302| [모든 클래스 컴포넌트를 hook으로 전환해야하나?](#모든-클래스-컴포넌트를-hook으로-전환해야하나)|
 |303| [React hook으로 데이터를 가져오는 방법은?](#React-hook으로-데이터를-가져오는-방법은)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
@@ -5455,8 +5455,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-302. ### Do I need to rewrite all my class components with hooks?
-     No. But you can try Hooks in a few components(or new components) without rewriting any existing code. Because there are no plans to remove classes in ReactJS.
+302. ### 모든 클래스 컴포넌트를 hook으로 전환해야하나?
+
+     아니요. 그러나 기존 코드를 다시 작성하지 않고도 일부 컴포넌트(또는 새로운 컴포넌트)에서 hook을 시도할 수 있다. ReactJS에서 클래스를 제거할 계획이 없기 때문이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
