@@ -356,7 +356,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
 |307| [hook을 도입하는데 사용되는 소스는?](#hook을-도입하는데-사용되는-소스는)|
 |308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
-|309| [What is formik?](#what-is-formik)|
+|309| [formik이란?](#formik이란)|
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
@@ -5554,12 +5554,13 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-309. ### What is formik?
-     Formik is a small react form library that helps you with the three major problems,
-     1. Getting values in and out of form state
-     2. Validation and error messages
-     3. Handling form submission
+309. ### formik이란?
 
+     Formik는 세 가지 주요 문제를 해결하는 데 도움이 되는 작은 react 라이브러리이다.
+
+     1. form state의 값 가져오기
+     2. 유효성 검사와 오류 메시지
+     3. form 제출 처리
 
    **[⬆ Back to Top](#table-of-contents)**
     
