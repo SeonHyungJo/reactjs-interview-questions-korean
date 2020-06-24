@@ -350,7 +350,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
 |301| [React에서 CSS In JS 기술을 사용하는 것은 좋은가?](#React에서-CSS-In-JS-기술을-사용하는-것은-좋은가)|
 |302| [Do I need to rewrite all my class components with hooks?](#do-i-need-to-rewrite-all-my-class-components-with-hooks)|
-|303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
+|303| [React hook으로 데이터를 가져오는 방법은?](#React-hook으로-데이터를-가져오는-방법은)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
 |306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
@@ -5460,9 +5460,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-303. ### How to fetch data with React Hooks?
-     The effect hook called `useEffect` is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function.
-     Let's take an example in which it fetches list of react articles from the API
+303. ### React hook으로 데이터를 가져오는 방법은?
+
+     `useEffect`라는 effect hook은 API에서 axios를 사용하여 데이터를 가져오고 state hook의 업데이트 기능을 사용하여 컴포넌트의 로컬 상태로 데이터를 설정하는 데 사용된다.
+     API로 기사 목록을 가져오는 예를 들어보자.
+
      ```javascript
      import React, { useState, useEffect } from 'react';
      import axios from 'axios';
@@ -5491,7 +5493,8 @@ You can download the PDF and Epub version of this repository from the latest run
 
      export default App;
      ```
-     Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
+
+     컴포넌트 업데이트 시 작동하지 않고 컴포넌트를 마운트할 때만 작동하게 하기 위해 effect hook에 두 번째 인수로 빈 배열을 제공한다. 즉 컴포넌트 마운트에 대해서만 가져온다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
