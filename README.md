@@ -348,16 +348,16 @@ You can download the PDF and Epub version of this repository from the latest run
 |298| [Real DOM과 Virtual DOM의 차이점은?](#Real-DOM과-Virtual-DOM의-차이점은)|
 |299| [react 애플리케이션에 부트스트랩을 추가하는 방법은?](#react-애플리케이션에-부트-스트랩을-추가하는-방법은)|
 |300| [프론트엔드 프레임워크로 React를 사용하는 메인 웹사이트나 애플리케이션은?](#프론트엔드-프레임워크로-React를-사용하는-메인-웹사이트나-애플리케이션은)|
-|301| [Is it recommended to use CSS In JS technique in React?](#is-it-recommended-to-use-css-in-js-technique-in-react)|
+|301| [React에서 CSS In JS 기술을 사용하는 것은 좋은가?](#React에서-CSS-In-JS-기술을-사용하는-것은-좋은가)|
 |302| [모든 클래스 컴포넌트를 hook으로 전환해야하나?](#모든-클래스-컴포넌트를-hook으로-전환해야하나)|
-|303| [How to fetch data with React Hooks?](#how-to-fetch-data-with-react-hooks)|
+|303| [React hook으로 데이터를 가져오는 방법은?](#React-hook으로-데이터를-가져오는-방법은)|
 |304| [Is Hooks cover all use cases for classes?](#is-hooks-cover-all-use-cases-for-classes)|
 |305| [What is the stable release for hooks support?](#what-is-the-stable-release-for-hooks-support)|
-|306| [Why do we use square brackets in useState?](#why-do-we-use-square-brackets-in-usestate)|
+|306| [useState에서는 왜 destructuring을 사용하나?](#useState에서는-왜-destructuring을-사용하나)|
 |307| [What are the sources used for introducing hooks?](#what-are-the-sources-used-for-introducing-hooks)|
-|308| [How do you access imperative API of web components?](#how-do-you-access-imperative-api-of-web-components)|
+|308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
 |309| [What is formik?](#what-is-formik)|
-|310| [What are typical middleware choices for handling asynchronous calls in Redux?](#what-are-typical-middleware-choices-for-handling-asynchronous-calls-in-redux)|
+|310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
 |313| [What is react scripts?](#what-is-react-scripts)|
@@ -5449,8 +5449,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-301. ### Is it recommended to use CSS In JS technique in React?
-     React does not have any opinion about how styles are defined but if you are a beginner then good starting point is to define your styles in a separate *.css file as usual and refer to them using className. This functionality is not part of React but came from third-party libraries. But If you want to try a different approach(CSS-In-JS) then styled-components library is a good option.
+301. ### React에서 CSS In JS 기술을 사용하는 것은 좋은가?
+
+     React는 스타일을 어떻게 하라는 정의가 없어서, 초보자라면 스타일을 평소와 같이 별도의 *.css 파일에 정의하고 className을 사용하여 참조하는 것이 좋다. CSS In JS 기능은 React의 일부는 아니지만 타사 라이브러리에서 제공하는 것이다. 그러나 다른 접근법(CSS-In-JS)을 시도하려면 스타일 컴포넌트 라이브러리가 좋은 방안이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5460,9 +5461,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-303. ### How to fetch data with React Hooks?
-     The effect hook called `useEffect` is used to fetch the data with axios from the API and to set the data in the local state of the component with the state hook’s update function.
-     Let's take an example in which it fetches list of react articles from the API
+303. ### React hook으로 데이터를 가져오는 방법은?
+
+     `useEffect`라는 effect hook은 API에서 axios를 사용하여 데이터를 가져오고 state hook의 업데이트 기능을 사용하여 컴포넌트의 로컬 상태로 데이터를 설정하는 데 사용된다.
+     API로 기사 목록을 가져오는 예를 들어보자.
+
      ```javascript
      import React, { useState, useEffect } from 'react';
      import axios from 'axios';
@@ -5491,7 +5494,8 @@ You can download the PDF and Epub version of this repository from the latest run
 
      export default App;
      ```
-     Remember we provided an empty array as second argument to the effect hook to avoid activating it on component updates but only for the mounting of the component. i.e, It fetches only for component mount.
+
+     컴포넌트 업데이트 시 작동하지 않고 컴포넌트를 마운트할 때만 작동하게 하기 위해 effect hook에 두 번째 인수로 빈 배열을 제공한다. 즉 컴포넌트 마운트에 대해서만 가져온다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5509,15 +5513,20 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-306. ### Why do we use array destructuring (square brackets notation) in `useState`?
-     When we declare a state variable with `useState`, it returns a pair — an array with two items. The first item is the current value, and the second is a function that updates the value. Using [0] and [1] to access them is a bit confusing because they have a specific meaning. This is why we use array destructuring instead.
-     For example, the array index access would look as follows:
+306. ### `useState`에서는 왜 destructuring(대괄호 표기법)을 사용하나?
+
+     `useState`로 state 변수를 선언하면 두 항목이 있는 배열인 쌍을 반환한다. 첫 번째 항목은 현재 값이고, 두 번째 항목은 값을 업데이트하는 함수이다. [0]과 [1]을 사용하여 액세스하는 것은 특정한 의미를 가지기 때문에 약간 혼동된다. 우리가 대신 destructuring을 사용하는 이유이다. 
+     
+     예를 들어, 배열 인덱스 액세스는 다음과 같다.
+
      ```javascript
       var userStateVariable = useState('userProfile'); // Returns an array pair
       var user = userStateVariable[0]; // Access first item
       var setUser = userStateVariable[1]; // Access second item
      ```
-     Whereas with array destructuring the variables can be accessed as follows:
+
+     배열 destructuring을 사용하면 다음과 같이 액세스할 수 있다.
+     
      ```javascript
      const [user, setUser] = useState('userProfile');
      ```
@@ -5534,8 +5543,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-308. ### How do you access imperative API of web components?
-     Web Components often expose an imperative API to implement its functions. You will need to use a **ref** to interact with the DOM node directly if you want to access imperative API of a web component. But if you are using third-party Web Components, the best solution is to write a React component that behaves as a **wrapper** for your Web Component.
+308. ### 웹 컴포넌트의 명령형 API에 접근하는 방법은?
+
+     Web 컴포넌트는 종종 기능을 구현하기 위해 명령형 API를 노출한다. 웹 컴포넌트의 명령형 API에 액세스하려면 **ref**를 사용하여 DOM 노드와 직접 상호 작용해야 한다. 그러나 타사 웹 컴포넌트를 사용하는 경우 가장 좋은 해결책은 웹 컴포넌트의 **wrapper**로 동작하는 React 컴포넌트를 작성하는 것이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5548,8 +5558,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-310. ### What are typical middleware choices for handling asynchronous calls in Redux?
-     Some of the popular middleware choices for handling asynchronous calls in Redux eco system are `Redux Thunk, Redux Promise, Redux Saga`.
+310. ### Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?
+
+     Redux eco system에서 비동기식 호출을 처리하기 위해 많이 사용되는 미들웨어는 `Redux Thunk, Redux Promise, Redux Saga`이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
