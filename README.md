@@ -358,7 +358,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
 |309| [formik이란?](#formik이란)|
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
-|311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
+|311| [브라우저가 JSX 코드를 이해하나?](#브라우저가-JSX-코드를-이해하나)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
 |313| [What is react scripts?](#what-is-react-scripts)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
@@ -5570,8 +5570,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-311. ### Is browsers understand JSX code?
-     No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+311. ### 브라우저가 JSX 코드를 이해하나?
+
+     아니요, 브라우저는 JSX 코드를 이해할 수 없다. 브라우저가 이해할 수 있는 JSX를 일반 Javascript로 변환하려면 트랜스파일러가 필요하다. 현재 가장 널리 사용되는 트랜스파일러는 Babel이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
