@@ -359,7 +359,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |309| [formik이란?](#formik이란)|
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
 |311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
-|312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
+|312| [React에서 데이터 흐름에 대해 설명하자면?](#React에서-데이터-흐름에-대해-설명하자면)|
 |313| [What is react scripts?](#what-is-react-scripts)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
 |315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
@@ -5575,8 +5575,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-312. ### Describe about data flow in react?
-     React implements one-way reactive data flow using props which reduce boilerplate and is easier to understand than traditional two-way data binding.
+312. ### React에서 데이터 흐름에 대해 설명하자면?
+
+     React는 보일러 플레이트를 줄이고 기존의 양방향 데이터 바인딩보다 이해하기 쉽도록 props를 사용하여 단방향 반응성 데이터 흐름을 구현하였다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
