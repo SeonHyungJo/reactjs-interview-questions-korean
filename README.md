@@ -363,7 +363,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |313| [What is react scripts?](#what-is-react-scripts)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
 |315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
-|316| [What is MobX?](#what-is-mobx)|
+|316| [MobX란?](#MobX란)|
 |317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
 |319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
@@ -5604,8 +5604,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-316. ### What is MobX?
-     MobX is a simple, scalable and battle tested state management solution for applying functional reactive programming (TFRP). For reactJs application, you need to install below packages,
+316. ### MobX란?
+
+     MobX는 functional reactive programming (TFRP)을 적용하기 위한 단순하며 확장성이 좋고 battle tested 상태 관리 솔루션이다. reactJs 애플리케이션의 경우, 아래 패키지를 설치해야 한다.
+
      ```bash
      npm install mobx --save
      npm install mobx-react --save
