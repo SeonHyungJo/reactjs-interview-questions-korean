@@ -5673,8 +5673,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-320. ### What is the difference between async mode and concurrent mode?
-     Both refers the same thing. Previously concurrent Mode being referred to as "Async Mode" by React team. The name has been changed to highlight React’s ability to perform work on different priority levels. So it avoids the confusion from other approaches to Async Rendering.
+320. ### async 모드와 concurrent 모드의 차이점은?
+
+     둘 다 같은 것을 뜻한다. 이전에 동시 모드는 React 팀에서 "비동기 모드"라고 했다. 이름이 다른 우선순위 수준에서 작업을 수행하는 React의 기능을 강조하도록 변경되었다. 따라서 비동기 렌더링에 대한 다른 접근 방식의 혼동을 피했다. 
 
    **[⬆ Back to Top](#table-of-contents)**
     
