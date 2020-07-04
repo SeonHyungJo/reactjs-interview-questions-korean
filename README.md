@@ -361,7 +361,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |311| [브라우저가 JSX 코드를 이해하나?](#브라우저가-JSX-코드를-이해하나)|
 |312| [React에서 데이터 흐름에 대해 설명하자면?](#React에서-데이터-흐름에-대해-설명하자면)|
 |313| [react scripts란?](#react-scripts란)|
-|314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
+|314| [create react app의 기능은?](#create-react-app의-기능은)|
 |315| [renderToNodeStream 메서드의 목적은?](#renderToNodeStream-메서드의-목적은)|
 |316| [What is MobX?](#what-is-mobx)|
 |317| [Redux와 MobX의 차이점은?](#Redux와-MobX의-차이점은)|
@@ -5588,15 +5588,17 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-314. ### What are the features of create react app?
-     Below are the list of some of the features provided by create react app.
-     1. React, JSX, ES6, Typescript and Flow syntax support.
+314. ### create react app의 기능은?
+
+     아래는 create react app에서 제공하는 일부 기능 목록이다.
+
+     1. React, JSX, ES6, Typescript와 Flow syntax 지원.
      2. Autoprefixed CSS
      3. CSS Reset/Normalize  
-     4. A live development server
-     5. A fast interactive unit test runner with built-in support for coverage reporting
-     6. A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps
-     7. An offline-first service worker and a web app manifest, meeting all the Progressive Web App criteria.
+     4. 라이브 개발 서버
+     5. 커버리지 리포팅을 지원하는 빠른 interactive unit 테스트 runner 내장
+     6. hashes와 sourcemaps를 포함한 production을 위한 JS, CSS, 이미지 번들 빌드 스크립트 제공
+     7. 모든 Progressive Web App 기준을 충족하는 오프라인 우선 서비스 워커와 웹 앱 manifest
 
 
    **[⬆ Back to Top](#table-of-contents)**
