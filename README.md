@@ -360,7 +360,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
 |311| [브라우저가 JSX 코드를 이해하나?](#브라우저가-JSX-코드를-이해하나)|
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
-|313| [What is react scripts?](#what-is-react-scripts)|
+|313| [react scripts란?](#react-scripts란)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
 |315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
 |316| [What is MobX?](#what-is-mobx)|
@@ -5581,8 +5581,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-313. ### What is react scripts?
-     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
+313. ### react scripts란?
+
+     `react-scripts` 패키지는 create-react-app starter pack의 세트로 별도의 설정을 하지 않고 프로젝트를 시작할 수 있다. `react-scripts start` 명령어는 개발 환경을 설정하고 서버와 핫 모듈 리로딩을 시작한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
