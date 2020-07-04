@@ -365,7 +365,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |315| [renderToNodeStream 메서드의 목적은?](#renderToNodeStream-메서드의-목적은)|
 |316| [MobX란?](#MobX란)|
 |317| [Redux와 MobX의 차이점은?](#Redux와-MobX의-차이점은)|
-|318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
+|318| [ReactJS를 배우기 전에 ES6를 배워야하나?](#ReactJS를-배우기-전에-ES6를-배워야하나)|
 |319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 |321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
@@ -5636,9 +5636,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-318. ### Should I learn ES6 before learning ReactJS?
-     No, you don’t have to learn es2015/es6 to learn react. But you may find many resources or React ecosystem uses ES6 extensively. Let's see some of the frequently used ES6 features,
-     1. Destructuring: To get props and use them in a component
+318. ### ReactJS를 배우기 전에 ES6를 배워야 하나?
+
+     아니요, react를 배우기 위해서 es2015/es6를 배울 필요는 없다. 그러나 많은 리소스와 React 생태계에서 ES6를 광범위하게 사용한다. 자주 사용되는 ES6 기능 중 일부를 보도록 하자.
+
+     1. Destructuring: props를 가져와서 컴포넌트에서 사용한다.
      ```javascript
      // in es 5
       var someData = this.props.someData
@@ -5647,7 +5649,7 @@ You can download the PDF and Epub version of this repository from the latest run
      // in es6
      const { someData, dispatch } = this.props
      ```
-     2. Spread operator: Helps in passing props down into a component
+     2. Spread operator: props를 컴포넌트에 전달하는데 도움이 된다.
      ```javascript
      // in es 5
      <SomeComponent someData={this.props.someData} dispatch={this.props.dispatch} />
@@ -5655,7 +5657,7 @@ You can download the PDF and Epub version of this repository from the latest run
      // in es6
      <SomeComponent {...this.props} />
      ```
-     3. Arrow functions: Makes compact syntax
+     3. Arrow functions: 간결한 구문을 만들어 준다.
      ```javascript
      // es 5
      var users = usersList.map(function (user) {
