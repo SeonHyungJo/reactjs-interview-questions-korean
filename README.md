@@ -364,7 +364,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
 |315| [renderToNodeStream 메서드의 목적은?](#renderToNodeStream-메서드의-목적은)|
 |316| [What is MobX?](#what-is-mobx)|
-|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
+|317| [Redux와 MobX의 차이점은?](#Redux와-MobX의-차이점은)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
 |319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
@@ -5615,17 +5615,18 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-317. ### What are the differences between Redux and MobX?
-     Below are the main differences between Redux and MobX,
+317. ### Redux와 MobX의 차이점은?
+
+     다음은 Redux와 MobX의 주요 차이점이다.
 
      | Topic | Redux | MobX |
      | ----- | ------- | ------- 
-     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
-     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
-     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
-     | Usage | Mainly used for large and complex applications | Used for simple applications |
-     | Performance | Need to be improved | Provides better performance |
-     | How it stores | Uses JS Object to store | Uses observable to store the data |
+     | 정의 | 애플리케이션 상태를 관리하기 위한 자바스크립트 라이브러리 | 애플리케이션 상태를 반응적으로 관리하기 위한 라이브러리 |
+     | 프로그래밍 | 주로 ES6 | 주로 JavaScript(ES5) |
+     | 데이터 저장 | 데이터 저장을 위한 하나의 큰 저장소가 존재 | 저장을 위한 두 개 이상의 스토어가 존재 |
+     | 사용성 | 주로 크고 복잡한 응용 분야에 사용 | 단순한 애플리케이션에 사용 |
+     | 성능 | 개선이 필요 | 더 나은 성능 제공 |
+     | 저장방식 | JS Object를 사용하여 저장 | observable를 사용하여 데이터 저장 |
 
 
    **[⬆ Back to Top](#table-of-contents)**
