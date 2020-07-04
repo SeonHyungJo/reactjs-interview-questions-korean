@@ -366,7 +366,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |316| [What is MobX?](#what-is-mobx)|
 |317| [Redux와 MobX의 차이점은?](#Redux와-MobX의-차이점은)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
-|319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
+|319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 |321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
 |322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
@@ -5662,8 +5662,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-319. ### What is Concurrent Rendering?
-     The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there's something with a higher priority it will pause what it is currently rendering and let the other task finish first. You can enable this in two ways,
+319. ### Concurrent Rendering이란?
+
+     Concurrent rendering은 기본 UI 스레드를 차단하지 않고 컴포넌트 트리를 렌더링하여 React 앱의 응답성을 향상한다. React가 우선순위가 높은 이벤트를 처리하기 위해 장시간 걸리는 렌더링을 중단할 수 있다. 즉, 동시 모드를 활성화 화면 React는 수행해야 하는 다른 작업을 주시하고 우선순위가 높은 것이 있으면 현재 렌더링 중인 것을 일시 중지하고 다른 작업을 먼저 완료한다. 이를 두 가지 방법으로 활성화 할 수 있다.
+
      ```javascript
      // 1. Part of an app by wrapping with ConcurrentMode
      <React.unstable_ConcurrentMode>
