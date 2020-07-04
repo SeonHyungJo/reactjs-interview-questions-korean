@@ -362,7 +362,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |312| [Describe about data flow in react?](#describe-about-data-flow-in-react)|
 |313| [react scripts란?](#react-scripts란)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
-|315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
+|315| [renderToNodeStream 메서드의 목적은?](#renderToNodeStream-메서드의-목적은)|
 |316| [What is MobX?](#what-is-mobx)|
 |317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
@@ -5600,9 +5600,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-315. ### What is the purpose of renderToNodeStream method?
-     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
-     **Note:** Remember this method is not available in the browser but only server.
+315. ### renderToNodeStream 메서드의 목적은?
+
+     `ReactDOMServer#renderToNodeStream` 메서드는 서버에서 초기 요청에 더 빠른 페이지 로드를 위해 HTML을 생성하는 데 사용한다. 또한, 검색엔진이 SEO 목적으로 페이지를 쉽게 크롤링하는 데 도움을 준다. **참고** : 이 방법은 브라우저에서는 사용할 수 없으며 서버에서만 사용 가능하다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
