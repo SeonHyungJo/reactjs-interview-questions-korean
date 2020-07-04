@@ -358,15 +358,15 @@ You can download the PDF and Epub version of this repository from the latest run
 |308| [웹 컴포넌트의 명령형 API에 접근하는 방법은?](#웹-컴포넌트의-명령형-API에-접근하는-방법은)|
 |309| [formik이란?](#formik이란)|
 |310| [Redux에서 비동기 호출을 처리하기 위한 일반적인 미들웨어는?](#Redux에서-비동기-호출을-처리하기-위한-일반적인-미들웨어는)|
-|311| [Is browsers understand JSX code?](#is-browsers-understand-jsx-code)|
+|311| [브라우저가 JSX 코드를 이해하나?](#브라우저가-JSX-코드를-이해하나)|
 |312| [React에서 데이터 흐름에 대해 설명하자면?](#React에서-데이터-흐름에-대해-설명하자면)|
-|313| [What is react scripts?](#what-is-react-scripts)|
+|313| [react scripts란?](#react-scripts란)|
 |314| [What are the features of create react app?](#what-are-the-features-of-create-react-app)|
-|315| [What is the purpose of renderToNodeStream method?](#what-is-the-purpose-of-rendertonodestream-method)|
+|315| [renderToNodeStream 메서드의 목적은?](#renderToNodeStream-메서드의-목적은)|
 |316| [What is MobX?](#what-is-mobx)|
-|317| [What are the differences between Redux and MobX?](#what-are-the-differences-between-redux-and-mobx)|
+|317| [Redux와 MobX의 차이점은?](#Redux와-MobX의-차이점은)|
 |318| [Should I learn ES6 before learning ReactJS?](#should-i-learn-es6-before-learning-reactjs)|
-|319| [What is Concurrent Rendering?](#what-is-concurrent-rendering)|
+|319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 |321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
 |322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
@@ -5570,8 +5570,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-311. ### Is browsers understand JSX code?
-     No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+311. ### 브라우저가 JSX 코드를 이해하나?
+
+     아니요, 브라우저는 JSX 코드를 이해할 수 없다. 브라우저가 이해할 수 있는 JSX를 일반 Javascript로 변환하려면 트랜스파일러가 필요하다. 현재 가장 널리 사용되는 트랜스파일러는 Babel이다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5581,8 +5582,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-313. ### What is react scripts?
-     The `react-scripts` package is a set of scripts from the create-react-app starter pack which helps you kick off projects without configuring. The `react-scripts start` command sets up the development environment and starts a server, as well as hot module reloading.
+313. ### react scripts란?
+
+     `react-scripts` 패키지는 create-react-app starter pack의 세트로 별도의 설정을 하지 않고 프로젝트를 시작할 수 있다. `react-scripts start` 명령어는 개발 환경을 설정하고 서버와 핫 모듈 리로딩을 시작한다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5599,9 +5601,9 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-315. ### What is the purpose of renderToNodeStream method?
-     The `ReactDOMServer#renderToNodeStream` method is used to generate HTML on the server and send the markup down on the initial request for faster page loads. It also helps search engines to crawl your pages easily for SEO purposes.
-     **Note:** Remember this method is not available in the browser but only server.
+315. ### renderToNodeStream 메서드의 목적은?
+
+     `ReactDOMServer#renderToNodeStream` 메서드는 서버에서 초기 요청에 더 빠른 페이지 로드를 위해 HTML을 생성하는 데 사용한다. 또한, 검색엔진이 SEO 목적으로 페이지를 쉽게 크롤링하는 데 도움을 준다. **참고** : 이 방법은 브라우저에서는 사용할 수 없으며 서버에서만 사용 가능하다.
 
    **[⬆ Back to Top](#table-of-contents)**
     
@@ -5614,17 +5616,18 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-317. ### What are the differences between Redux and MobX?
-     Below are the main differences between Redux and MobX,
+317. ### Redux와 MobX의 차이점은?
+
+     다음은 Redux와 MobX의 주요 차이점이다.
 
      | Topic | Redux | MobX |
      | ----- | ------- | ------- 
-     | Definition| It is a javascript library for managing the application state | It is a library for reactively managing the state of your applications |
-     | Programming | It is mainly written in ES6 | It is written in JavaScript(ES5) |
-     | Data Store | There is only one large store exist for data storage | There is more than one store for storage |
-     | Usage | Mainly used for large and complex applications | Used for simple applications |
-     | Performance | Need to be improved | Provides better performance |
-     | How it stores | Uses JS Object to store | Uses observable to store the data |
+     | 정의 | 애플리케이션 상태를 관리하기 위한 자바스크립트 라이브러리 | 애플리케이션 상태를 반응적으로 관리하기 위한 라이브러리 |
+     | 프로그래밍 | 주로 ES6 | 주로 JavaScript(ES5) |
+     | 데이터 저장 | 데이터 저장을 위한 하나의 큰 저장소가 존재 | 저장을 위한 두 개 이상의 스토어가 존재 |
+     | 사용성 | 주로 크고 복잡한 응용 분야에 사용 | 단순한 애플리케이션에 사용 |
+     | 성능 | 개선이 필요 | 더 나은 성능 제공 |
+     | 저장방식 | JS Object를 사용하여 저장 | observable를 사용하여 데이터 저장 |
 
 
    **[⬆ Back to Top](#table-of-contents)**
@@ -5660,8 +5663,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-319. ### What is Concurrent Rendering?
-     The Concurrent rendering makes React apps to be more responsive by rendering component trees without blocking the main UI thread. It allows React to interrupt a long-running render to handle a high-priority event. i.e, When you enabled concurrent Mode, React will keep an eye on other tasks that need to be done, and if there's something with a higher priority it will pause what it is currently rendering and let the other task finish first. You can enable this in two ways,
+319. ### Concurrent Rendering이란?
+
+     Concurrent rendering은 기본 UI 스레드를 차단하지 않고 컴포넌트 트리를 렌더링하여 React 앱의 응답성을 향상한다. React가 우선순위가 높은 이벤트를 처리하기 위해 장시간 걸리는 렌더링을 중단할 수 있다. 즉, 동시 모드를 활성화 화면 React는 수행해야 하는 다른 작업을 주시하고 우선순위가 높은 것이 있으면 현재 렌더링 중인 것을 일시 중지하고 다른 작업을 먼저 완료한다. 이를 두 가지 방법으로 활성화 할 수 있다.
+
      ```javascript
      // 1. Part of an app by wrapping with ConcurrentMode
      <React.unstable_ConcurrentMode>
