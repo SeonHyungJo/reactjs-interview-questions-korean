@@ -369,7 +369,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 |321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
-|322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
+|322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
 |323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
 |324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
 
@@ -5704,10 +5704,12 @@ You can download the PDF and Epub version of this repository from the latest run
   
    **[⬆ Back to Top](#table-of-contents)**
    
-322. ### What is the purpose of eslint plugin for hooks?
-     The ESLint plugin enforces rules of Hooks to avoid bugs. It assumes that any function starting with ”use” and a capital letter right after it is a Hook. In particular, the rule enforces that,
-     1. Calls to Hooks are either inside a PascalCase function (assumed to be a component) or another useSomething function (assumed to be a custom Hook).
-     2. Hooks are called in the same order on every render.
+322. ### hooks에서 eslint 플러그인의 목적은?
+
+     ESLint 플러그인은 버그를 피하고자 Hooks의 규칙을 강조한다. 모든 함수 ”use”로 시작하며 Hook 바로 뒤에 대문자가 있어야 한다.
+
+     1. Hooks의 호출은 PascalCase 함수 내(컴포넌트로 가정) 또는 다른 useSomething 함수(커스텀 Hook으로 가정) 내에 있다.
+     2. Hooks는 모든 렌더링에서 동일한 순서로 호출된다.
 
    **[⬆ Back to Top](#table-of-contents)**
 
