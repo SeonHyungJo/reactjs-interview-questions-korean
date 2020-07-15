@@ -368,7 +368,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |318| [ReactJS를 배우기 전에 ES6를 배워야하나?](#ReactJS를-배우기-전에-ES6를-배워야하나)|
 |319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
-|321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
+|321| [react16.9에서 자바스크립트 urls를 사용할 수 있나?](#react16.9에서-자바스크립트-urls를-사용할-수-있나)|
 |322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
 |323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
 |324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
@@ -5691,8 +5691,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-321. ### Can I use javascript urls in react16.9?
-     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like <a href> and create a security hole.
+321. ### react16.9에서 자바스크립트 urls를 사용할 수 있나?
+
+     네, javascript: URL을 사용할 수 있지만, 콘솔에 경고를 기록한다. `javascript:` 로 시작하는 URL은 `<a href>`와 같은 태그에 좋지 않은 출력을 포함하여 보안 허점을 만들어 위험하다.
+
      ```javascript
      const companyProfile = {
        website: "javascript: alert('Your website is hacked')",
@@ -5700,7 +5702,8 @@ You can download the PDF and Epub version of this repository from the latest run
      // It will log a warning
      <a href={companyProfile.website}>More details</a>
      ```
-     Remember that the future versions will throw an error for javascript URLs.
+
+     향후 버전에서는 자바스크립트 URL 오류가 발생할 것이다.
   
    **[⬆ Back to Top](#table-of-contents)**
    
