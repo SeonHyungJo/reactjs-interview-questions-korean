@@ -371,7 +371,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |321| [react16.9에서 자바스크립트 urls를 사용할 수 있나?](#react16.9에서-자바스크립트-urls를-사용할-수-있나)|
 |322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
-|324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
+|324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
 
 ## Core React
 
@@ -5749,9 +5749,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
 
-324. ### What are the benefits of using typescript with reactjs?
-     Below are some of the benefits of using typescript with Reactjs,
-     1. It is possible to use latest JavaScript features
-     2. Use of interfaces for complex type definitions
-     3. IDEs such as VS Code was made for TypeScript
-     4. Avoid bugs with the ease of readability and Validation
+324. ### Reactjs와 함께 Typescript를 사용할 때 장점?
+
+     다음은 Reactjs와 함께 Typescript를 사용하면 얻을 수 있는 장점의 일부이다.
+
+     1. 최신 Javascript 기능을 사용할 수 있다.
+     2. 복잡한 타입 정의를 위한 인터페이스를 사용할 수 있다.
+     3. VS Code와 같은 IDE는 Typescript를 위해 만들어졌다.
+     4. 가독성 및 검증이 용이하여 버그 방지가 가능하다.
