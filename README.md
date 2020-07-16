@@ -368,9 +368,9 @@ You can download the PDF and Epub version of this repository from the latest run
 |318| [ReactJS를 배우기 전에 ES6를 배워야하나?](#ReactJS를-배우기-전에-ES6를-배워야하나)|
 |319| [Concurrent Rendering이란?](#Concurrent-Rendering이란)|
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
-|321| [Can I use javascript urls in react16.9?](#can-i-use-javascript-urls-in-react16.9)|
-|322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
-|323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
+|321| [react16.9에서 자바스크립트 urls를 사용할 수 있나?](#react16.9에서-자바스크립트-urls를-사용할-수-있나)|
+|322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
+|323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
 
 ## Core React
@@ -5691,8 +5691,10 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
     
-321. ### Can I use javascript urls in react16.9?
-     Yes, you can use javascript: URLs but it will log a warning in the console. Because URLs starting with javascript: are dangerous by including unsanitized output in a tag like <a href> and create a security hole.
+321. ### react16.9에서 자바스크립트 urls를 사용할 수 있나?
+
+     네, javascript: URL을 사용할 수 있지만, 콘솔에 경고를 기록한다. `javascript:` 로 시작하는 URL은 `<a href>`와 같은 태그에 좋지 않은 출력을 포함하여 보안 허점을 만들어 위험하다.
+
      ```javascript
      const companyProfile = {
        website: "javascript: alert('Your website is hacked')",
@@ -5700,21 +5702,25 @@ You can download the PDF and Epub version of this repository from the latest run
      // It will log a warning
      <a href={companyProfile.website}>More details</a>
      ```
-     Remember that the future versions will throw an error for javascript URLs.
+
+     향후 버전에서는 자바스크립트 URL 오류가 발생할 것이다.
   
    **[⬆ Back to Top](#table-of-contents)**
    
-322. ### What is the purpose of eslint plugin for hooks?
-     The ESLint plugin enforces rules of Hooks to avoid bugs. It assumes that any function starting with ”use” and a capital letter right after it is a Hook. In particular, the rule enforces that,
-     1. Calls to Hooks are either inside a PascalCase function (assumed to be a component) or another useSomething function (assumed to be a custom Hook).
-     2. Hooks are called in the same order on every render.
+322. ### hooks에서 eslint 플러그인의 목적은?
+
+     ESLint 플러그인은 버그를 피하고자 Hooks의 규칙을 강조한다. 모든 함수 ”use”로 시작하며 Hook 바로 뒤에 대문자가 있어야 한다.
+
+     1. Hooks의 호출은 PascalCase 함수 내(컴포넌트로 가정) 또는 다른 useSomething 함수(커스텀 Hook으로 가정) 내에 있다.
+     2. Hooks는 모든 렌더링에서 동일한 순서로 호출된다.
 
    **[⬆ Back to Top](#table-of-contents)**
 
-323. ### What is the difference between Imperative and Declarative in React?
-     Imagine a simple UI component, such as a "Like" button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.
+323. ### React에서 명령형과 선언형의 차이점은?
 
-     The imperative way of doing this would be:
+     "좋아요" 버튼과 같은 간단한 UI 컴포넌트를 상상해보자. 탭 하면 이전에 회색이던 것이 파란색으로 바뀌고 파란색이었으면 회색으로 바뀐다.
+
+     이를 수행하는 명령적 방법은 아래와 같다.
 
      ```javascript
      if( user.likes() ) {
@@ -5727,9 +5733,10 @@ You can download the PDF and Epub version of this repository from the latest run
          }
      }
      ```
-     Basically, you have to check what is currently on the screen and handle all the changes necessary to redraw it with the current state, including undoing the changes from the previous state. You can imagine how complex this could be in a real-world scenario.
 
-     In contrast, the declarative approach would be:
+     기본적으로 현재 화면의 내용을 확인하고 이전 상태에서 변경되는 내용을 실행 취소하는 등 현재 상태로 다시 그리는 데 필요한 모든 변경사항을 처리해야 한다. 실제 시나리오에서 이것이 얼마나 복잡한지 상상할 수 있다.
+
+     반대로, 선언적 접근 방식은 아래와 같다.
 
      ```javascript
      if( this.state.liked ) {
@@ -5738,7 +5745,7 @@ You can download the PDF and Epub version of this repository from the latest run
          return <greyLike />;
      }
      ```
-     Because the declarative approach separates concerns, this part of it only needs to handle how the UI should look in a sepecific state, and is therefore much simpler to understand.
+     선언적 접근 방식은 우려되는 사항을 구분하기 때문에 이 부분은 UI가 별개의 상태로 표시되는 방식만 처리하면 되므로 이해하기 좋다.
 
    **[⬆ Back to Top](#table-of-contents)**
 
