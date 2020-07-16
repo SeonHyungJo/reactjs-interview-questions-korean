@@ -370,7 +370,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |320| [What is the difference between async mode and concurrent mode?](#what-is-the-difference-between-async-mode-and-concurrent-mode)|
 |321| [react16.9에서 자바스크립트 urls를 사용할 수 있나?](#react16.9에서-자바스크립트-urls를-사용할-수-있나)|
 |322| [What is the purpose of eslint plugin for hooks?](#what-is-the-purpose-of-eslint-plugin-for-hooks)|
-|323| [What is the difference between Imperative and Declarative in React?](#what-is-the-difference-between-imperative-and-declarative-in-react)|
+|323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [What are the benefits of using typescript with reactjs?](#what-are-the-benefits-of-using-typescript-with-reactjs)|
 
 ## Core React
@@ -5714,10 +5714,11 @@ You can download the PDF and Epub version of this repository from the latest run
 
    **[⬆ Back to Top](#table-of-contents)**
 
-323. ### What is the difference between Imperative and Declarative in React?
-     Imagine a simple UI component, such as a "Like" button. When you tap it, it turns blue if it was previously grey, and grey if it was previously blue.
+323. ### React에서 명령형과 선언형의 차이점은?
 
-     The imperative way of doing this would be:
+     "좋아요" 버튼과 같은 간단한 UI 컴포넌트를 상상해보자. 탭 하면 이전에 회색이던 것이 파란색으로 바뀌고 파란색이었으면 회색으로 바뀐다.
+
+     이를 수행하는 명령적 방법은 아래와 같다.
 
      ```javascript
      if( user.likes() ) {
@@ -5730,9 +5731,10 @@ You can download the PDF and Epub version of this repository from the latest run
          }
      }
      ```
-     Basically, you have to check what is currently on the screen and handle all the changes necessary to redraw it with the current state, including undoing the changes from the previous state. You can imagine how complex this could be in a real-world scenario.
 
-     In contrast, the declarative approach would be:
+     기본적으로 현재 화면의 내용을 확인하고 이전 상태에서 변경되는 내용을 실행 취소하는 등 현재 상태로 다시 그리는 데 필요한 모든 변경사항을 처리해야 한다. 실제 시나리오에서 이것이 얼마나 복잡한지 상상할 수 있다.
+
+     반대로, 선언적 접근 방식은 아래와 같다.
 
      ```javascript
      if( this.state.liked ) {
@@ -5741,7 +5743,7 @@ You can download the PDF and Epub version of this repository from the latest run
          return <greyLike />;
      }
      ```
-     Because the declarative approach separates concerns, this part of it only needs to handle how the UI should look in a sepecific state, and is therefore much simpler to understand.
+     선언적 접근 방식은 우려되는 사항을 구분하기 때문에 이 부분은 UI가 별개의 상태로 표시되는 방식만 처리하면 되므로 이해하기 좋다.
 
    **[⬆ Back to Top](#table-of-contents)**
 
