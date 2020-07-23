@@ -372,6 +372,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
+|325| [How do you make sure that user remains authenticated on page refresh while using Context API State Management?](#how-do-you-make-sure-that-user-remains-authenticated-on-page-refresh-while-using-Context-API-State-Management?)|
 
 ## Core React
 
@@ -5757,3 +5758,73 @@ You can download the PDF and Epub version of this repository from the latest run
      2. 복잡한 타입 정의를 위한 인터페이스를 사용할 수 있다.
      3. VS Code와 같은 IDE는 Typescript를 위해 만들어졌다.
      4. 가독성 및 검증이 용이하여 버그 방지가 가능하다.
+
+325. ### How do you make sure that user remains authenticated on page refresh while using Context API State Management?
+When a user logs in and reload, to persist the state generally we add the load user action in the useEffect hooks in the main App.js. While using Redux, loadUser action can be easily accessed.
+
+**App.js**
+
+```js
+import {lodUser}  from '../actions/auth';
+store.dispatch(loadUser());
+```
+
+* But while using **Context API**, to access context in App.js, wrap the AuthState in index.js so that App.js can access the auth context. Now whenever the page reloads, no matter what route you are on, the user will be authenticated as **loadUser** action will be triggered on each re-render.
+
+**index.js**
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import AuthState from './context/auth/AuthState'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AuthState>
+      <App />
+    </AuthState>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+**App.js**
+
+```js
+  const authContext = useContext(AuthContext);
+
+  const { loadUser } = authContext;
+
+  useEffect(() => {
+    loadUser();
+  },[])
+```
+
+**loadUser**
+
+```js
+    const loadUser = async () => {
+        const token = sessionStorage.getItem('token');
+
+        if(!token){
+            dispatch({
+                type: ERROR
+            })
+        }
+        setAuthToken(token);
+
+        try {
+            const res = await axios('/api/auth'); 
+
+            dispatch({
+                type: USER_LOADED,
+                payload: res.data.data
+            })
+            
+        } catch (err) {
+           console.error(err); 
+        }
+    }
+```
+
+  **[⬆ Back to Top](#table-of-contents)**
