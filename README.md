@@ -372,7 +372,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
-|325| [How do you make sure that user remains authenticated on page refresh while using Context API State Management?](#how-do-you-make-sure-that-user-remains-authenticated-on-page-refresh-while-using-Context-API-State-Management?)|
+|325| [Context API State Management를 사용하는 동안 페이지 새로 고침 시 사용자가 인증된 상태를 유지하도록 하는 방법은?](#Context-API-State-Management를-사용하는-동안-페이지-새로-고침-시-사용자가-인증된-상태를-유지하도록-하는-방법은)|
 
 ## Core React
 
@@ -5759,17 +5759,17 @@ You can download the PDF and Epub version of this repository from the latest run
      3. VS Code와 같은 IDE는 Typescript를 위해 만들어졌다.
      4. 가독성 및 검증이 용이하여 버그 방지가 가능하다.
 
-325. ### How do you make sure that user remains authenticated on page refresh while using Context API State Management?
-When a user logs in and reload, to persist the state generally we add the load user action in the useEffect hooks in the main App.js. While using Redux, loadUser action can be easily accessed.
+325. ### Context API State Management를 사용하는 동안 페이지 새로 고침 시 사용자가 인증된 상태를 유지하도록 하는 방법은?
+사용자가 로그인된 상태로 새로 고침 할 때, 일반적으로 상태를 유지하기 위해 main App.js의 useEffect hooks안의 load user action을 추가한다. Redux를 사용하는 동안, loadUser action에 쉽게 접근할 수 있다.
 
 **App.js**
 
 ```js
-import {lodUser}  from '../actions/auth';
+import { loadUser }  from '../actions/auth';
 store.dispatch(loadUser());
 ```
 
-* But while using **Context API**, to access context in App.js, wrap the AuthState in index.js so that App.js can access the auth context. Now whenever the page reloads, no matter what route you are on, the user will be authenticated as **loadUser** action will be triggered on each re-render.
+* 그러나 **Context API**를 사용하여 App.js의 context에 액세스하는 동안, App.js가 auth context에 액세스할 수 있도록 index.js에서 AuthState로 감싸야 한다. 이제 페이지가 다시 로드될 때마다 어떤 경로에 있든, 사용자는  **loadUser** action이 트리거 될 경우 각각이 re-render됨으로서 인증된다.
 
 **index.js**
 
