@@ -30,6 +30,9 @@ You can download the PDF and Epub version of this repository from the latest run
 <a href="https://github.com/BKJang" target="_blank" rel="nofollow">
 	<img src="https://avatars2.githubusercontent.com/u/24209005?s=60&v=4">
 </a>
+<a href="https://github.com/dididy" target="_blank" rel="nofollow">
+	<img src="https://avatars2.githubusercontent.com/u/16266103?s=60&v=4">
+</a>
 
 > * :clipboard: 본 문서는 [sudheerj](https://github.com/sudheerj)의 [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)의 번역본입니다.
 > * :star: 이 프로젝트가 마음에 드셨다면 **STAR**를 눌러주세요.
