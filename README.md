@@ -372,7 +372,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |322| [hooks에서 eslint 플러그인의 목적은?](#hooks에서-eslint-플러그인의-목적은)|
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
-|325| [Context API State Management를 사용하는 동안 페이지 새로 고침 시 사용자가 인증된 상태를 유지하도록 하는 방법은?](#Context-API-State-Management를-사용하는-동안-페이지-새로-고침-시-사용자가-인증된-상태를-유지하도록-하는-방법은)|
+|325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
 
 ## Core React
 
@@ -5759,7 +5759,7 @@ You can download the PDF and Epub version of this repository from the latest run
      3. VS Code와 같은 IDE는 Typescript를 위해 만들어졌다.
      4. 가독성 및 검증이 용이하여 버그 방지가 가능하다.
 
-325. ### Context API State Management를 사용하는 동안 페이지 새로 고침 시 사용자가 인증된 상태를 유지하도록 하는 방법은?
+325. ### Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은??
 사용자가 로그인된 상태로 새로 고침 할 때, 일반적으로 상태를 유지하기 위해 main App.js의 useEffect hooks안의 load user action을 추가한다. Redux를 사용하는 동안, loadUser action에 쉽게 접근할 수 있다.
 
 **App.js**
