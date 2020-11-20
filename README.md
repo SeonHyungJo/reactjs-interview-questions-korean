@@ -376,6 +376,8 @@ You can download the PDF and Epub version of this repository from the latest run
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
 |325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
+|326| [What are the benefits of new JSX transform?](#what-are-the-benefits-of-new-jsx-transform)
+|327| [How does new JSX transform different from old transform?](#how-does-new-jsx-transform-different-from-old-transform)
 
 ## Core React
 
@@ -5794,40 +5796,100 @@ ReactDOM.render(
 **App.js**
 
 ```js
-  const authContext = useContext(AuthContext);
+const authContext = useContext(AuthContext);
 
-  const { loadUser } = authContext;
+const { loadUser } = authContext;
 
-  useEffect(() => {
-    loadUser();
-  },[])
+useEffect(() => {
+  loadUser();
+},[])
 ```
 
 **loadUser**
 
 ```js
-    const loadUser = async () => {
-        const token = sessionStorage.getItem('token');
+const loadUser = async () => {
+  const token = sessionStorage.getItem('token');
 
-        if(!token){
-            dispatch({
-                type: ERROR
-            })
-        }
-        setAuthToken(token);
+  if(!token){
+    dispatch({
+      type: ERROR
+    })
+  }
+  setAuthToken(token);
 
-        try {
-            const res = await axios('/api/auth'); 
+  try {
+    const res = await axios('/api/auth'); 
 
-            dispatch({
-                type: USER_LOADED,
-                payload: res.data.data
-            })
-            
-        } catch (err) {
-           console.error(err); 
-        }
-    }
+    dispatch({
+      type: USER_LOADED,
+      payload: res.data.data
+    })
+      
+  } catch (err) {
+    console.error(err); 
+  }
+}
 ```
 
-  **[⬆ Back to Top](#table-of-contents)**
+**[⬆ Back to Top](#table-of-contents)**
+
+326. ### What are the benefits of new JSX transform?
+
+There are three major benefits of new JSX transform,
+
+1. It is possible to use JSX without importing React packages
+2. The compiled output might improve the bundle size in a small amount
+3. The future improvements provides the flexibility to reduce the number of concepts to learn React.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+327. ### How does new JSX transform different from old transform?
+
+The new JSX transform doesn’t require React to be in scope. i.e, You don't need to import React package for simple scenarios.
+
+Let's take an example to look at the main differences between the old and the new transform,
+
+**Old Transform:**
+
+```js
+import React from 'react';
+
+function App() {
+  return <h1>Good morning!!</h1>;
+}
+```
+
+Now JSX transform convert the above code into regular JavaScript as below,
+
+```js
+import React from 'react';
+
+function App() {
+  return React.createElement('h1', null, 'Good morning!!');
+}
+```
+
+**New Transform:**
+
+The new JSX transform doesn't require any React imports
+
+```js
+function App() {
+  return <h1>Good morning!!</h1>;
+}
+```
+
+Under the hood JSX transform compiles to below code
+
+```js
+import {jsx as _jsx} from 'react/jsx-runtime';
+
+function App() {
+  return _jsx('h1', { children: 'Good morning!!' });
+}
+```
+
+**Note:** You still need to import React to use Hooks.
+
+**[⬆ Back to Top](#table-of-contents)**
