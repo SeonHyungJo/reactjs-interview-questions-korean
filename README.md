@@ -5844,7 +5844,7 @@ const loadUser = async () => {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-1.   ### How does new JSX transform different from old transform?
+327.   ### How does new JSX transform different from old transform?
 
 The new JSX transform doesn’t require React to be in scope. i.e, You don't need to import React package for simple scenarios.
 
