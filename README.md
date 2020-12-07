@@ -376,7 +376,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |323| [React에서 명령형과 선언형의 차이점은](#React에서-명령형과-선언형의-차이점은)|
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
 |325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
-|326| [What are the benefits of new JSX transform?](#what-are-the-benefits-of-new-jsx-transform)
+|326| [새로운 JSX transform의 장점은?](#새로운-JSX-transform의-장점은)
 |327| [How does new JSX transform different from old transform?](#how-does-new-jsx-transform-different-from-old-transform)
 
 ## Core React
@@ -5834,17 +5834,17 @@ const loadUser = async () => {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-326. ### What are the benefits of new JSX transform?
+326. ### 새로운 JSX transform의 장점은?
 
-There are three major benefits of new JSX transform,
+3가지의 새로운 JSX transform 주요 장점이 있다.
 
-1. It is possible to use JSX without importing React packages
-2. The compiled output might improve the bundle size in a small amount
-3. The future improvements provides the flexibility to reduce the number of concepts to learn React.
+1. React packages를 가져오지 않고 JSX를 사용할 수 있다.
+2. 더 작은 사이즈로 컴파일 결과물이 만들어지도록 개선되었다.
+3. 추후 React를 배우는데 필요한 개념을 줄일 수 있도록 유연함을 제공한다.
 
 **[⬆ Back to Top](#table-of-contents)**
 
-327. ### How does new JSX transform different from old transform?
+327.   ### How does new JSX transform different from old transform?
 
 The new JSX transform doesn’t require React to be in scope. i.e, You don't need to import React package for simple scenarios.
 
