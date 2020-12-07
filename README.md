@@ -377,7 +377,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |324| [Reactjs와 함께 Typescript를 사용할 때 장점?](#Reactjs와-함께-Typescript를-사용할-때-장점)|
 |325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
 |326| [새로운 JSX transform의 장점은?](#새로운-JSX-transform의-장점은)
-|327| [How does new JSX transform different from old transform?](#how-does-new-jsx-transform-different-from-old-transform)
+|327| [새로운 JSX transform과 예전 transform의 차이점은?](#새로운-JSX-transform과-예전-transform의-차이점은)
 
 ## Core React
 
@@ -5844,11 +5844,11 @@ const loadUser = async () => {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-327.   ### How does new JSX transform different from old transform?
+327. ### 새로운 JSX transform과 예전 transform의 차이점은?
 
-The new JSX transform doesn’t require React to be in scope. i.e, You don't need to import React package for simple scenarios.
+새로운 JSX transform은 scope 내 React가 필요 없다. 즉, 간단한 경우에는 React 패키지를 가져올 필요 없다.
 
-Let's take an example to look at the main differences between the old and the new transform,
+예전 transform과 새로운 transform의 주요 차이점을 살펴보자.
 
 **Old Transform:**
 
@@ -5860,7 +5860,7 @@ function App() {
 }
 ```
 
-Now JSX transform convert the above code into regular JavaScript as below,
+이제 JSX transform은 아래와 같이 일반적인 JavaScript로 변환한다.
 
 ```js
 import React from 'react';
@@ -5872,7 +5872,7 @@ function App() {
 
 **New Transform:**
 
-The new JSX transform doesn't require any React imports
+새로운 JSX transform에는 React가 필요하지 않다.
 
 ```js
 function App() {
@@ -5880,7 +5880,7 @@ function App() {
 }
 ```
 
-Under the hood JSX transform compiles to below code
+위의 코드는 JSX transform시 아래의 코드로 컴파일된다.
 
 ```js
 import {jsx as _jsx} from 'react/jsx-runtime';
@@ -5890,6 +5890,6 @@ function App() {
 }
 ```
 
-**Note:** You still need to import React to use Hooks.
+**Note:** Hook을 사용하려면 여전히 React를 가져와야 한다.
 
 **[⬆ Back to Top](#table-of-contents)**
