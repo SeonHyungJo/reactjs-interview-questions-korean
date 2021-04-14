@@ -378,6 +378,8 @@ You can download the PDF and Epub version of this repository from the latest run
 |325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
 |326| [새로운 JSX transform의 장점은?](#새로운-JSX-transform의-장점은)
 |327| [새로운 JSX transform과 예전 transform의 차이점은?](#새로운-JSX-transform과-예전-transform의-차이점은)
+|328| [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)|
+|329| [What are React Server components?](#what-are-react-server-components)
 
 ## Core React
 
@@ -5891,5 +5893,40 @@ function App() {
 ```
 
 **Note:** Hook을 사용하려면 여전히 React를 가져와야 한다.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+328. ### How do you get redux scaffolding using create-react-app?
+     Redux team has provided official redux+js or redux+typescript templates for create-react-app project. The generated project setup includes,
+     
+     1. Redux Toolkit and React-Redux dependencies
+     2. Create and configure Redux store
+     3. React-Redux `<Provider>` passing the store to React components
+     4. Small "counter" example to demo how to add redux logic and React-Redux hooks API to interact with the store from components
+     
+     The below commands need to be executed along with template option as below,
+     
+     1. **Javascript template:**
+     ```js
+     npx create-react-app my-app --template redux
+     ```
+     2. **Typescript template:**
+     ```js
+     npx create-react-app my-app --template redux-typescript
+     ````
+
+**[⬆ Back to Top](#table-of-contents)**
+
+329. ### What are React Server components?
+     React Server Component is a way to write React component that gets rendered in the server-side with the purpose of improving React app performance. These components allow us to load components from the backend. 
+    
+     **Note:** React Server Components is still under development and not recommended for production yet.
+
+**[⬆ Back to Top](#table-of-contents)**
+
+330. ### What is prop drilling?
+     Prop Drilling is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
+     
+331. ### What are the different ways to prevent state mutation?
 
 **[⬆ Back to Top](#table-of-contents)**
