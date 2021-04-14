@@ -380,6 +380,8 @@ You can download the PDF and Epub version of this repository from the latest run
 |327| [새로운 JSX transform과 예전 transform의 차이점은?](#새로운-JSX-transform과-예전-transform의-차이점은)
 |328| [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)|
 |329| [What are React Server components?](#what-are-react-server-components)
+|330| [What is prop drilling?](#what-is-prop-drilling)
+|331| [What are the different ways to prevent state mutation?](#what-are-the-different-ways-to-prevent-state-mutation)
 
 ## Core React
 
