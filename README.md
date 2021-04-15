@@ -5926,9 +5926,9 @@ function App() {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-330. ### What is prop drilling?
-     Prop Drilling is the process by which you pass data from one component of the React Component tree to another by going through other components that do not need the data but only help in passing it around.
-     
+330. ### prop drilling 이란 무엇인가?
+Prop Drilling은 data가 필요하지 않지만, 오직 전달하는 데 도움이 되는 컴포넌트를 통해 React Component tree의 component에서 다른 component로 data를 전달하는 프로세스입니다.
+
 331. ### What are the different ways to prevent state mutation?
 
 **[⬆ Back to Top](#table-of-contents)**
