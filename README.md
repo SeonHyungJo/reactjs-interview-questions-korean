@@ -378,7 +378,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |325| [Context API State Management 사용 시 페이지 새로 고침을 해도 사용자가 인증된 상태를 유지하는 방법은?](#Context-API-State-Management-사용-시-페이지-새로-고침을-해도-사용자가-인증된-상태를-유지하는-방법은)|
 |326| [새로운 JSX transform의 장점은?](#새로운-JSX-transform의-장점은)
 |327| [새로운 JSX transform과 예전 transform의 차이점은?](#새로운-JSX-transform과-예전-transform의-차이점은)
-|328| [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)|
+|328| [어떻게 create-react-app를 사용해서 redux scaffolding을 하나?](#어떻게-create-react-app를-사용해서-redux-scaffolding을-하나)|
 |329| [React Server components란?](#React-Server-components란)
 |330| [What is prop drilling?](#what-is-prop-drilling)
 |331| [What are the different ways to prevent state mutation?](#what-are-the-different-ways-to-prevent-state-mutation)
@@ -5898,24 +5898,25 @@ function App() {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-328. ### How do you get redux scaffolding using create-react-app?
-     Redux team has provided official redux+js or redux+typescript templates for create-react-app project. The generated project setup includes,
-     
-     1. Redux Toolkit and React-Redux dependencies
-     2. Create and configure Redux store
-     3. React-Redux `<Provider>` passing the store to React components
-     4. Small "counter" example to demo how to add redux logic and React-Redux hooks API to interact with the store from components
-     
-     The below commands need to be executed along with template option as below,
-     
-     1. **Javascript template:**
-     ```js
-     npx create-react-app my-app --template redux
-     ```
-     2. **Typescript template:**
-     ```js
-     npx create-react-app my-app --template redux-typescript
-     ````
+328. ### 어떻게 create-react-app를 사용해서 redux scaffolding을 하나?
+
+  Redux 팀은 create-react-app 프로젝트를 위해 공식으로 redux+js, redux+typescript 탬플릿을 제공한다. 생성된 프로젝트에는 아래의 항목이 포함된다.
+  
+  1. Redux Toolkit과 React-Redux 의존성.
+  2. Redux store 생성 및 설정.
+  3. React-Redux `<Provider>`가 store를 React components에 전달.
+  4. redux logic 및 React-Redux hooks API를 추가하여 components에서 store와 상호 작용하는 방법을 보여주는 작은 "counter" 예제.
+  
+  아래 명령어는 다음과 같이 템플릿 옵션과 함께 실행되어야 한다.
+  
+  1. **Javascript template:**
+  ```js
+  npx create-react-app my-app --template redux
+  ```
+  1. **Typescript template:**
+  ```js
+  npx create-react-app my-app --template redux-typescript
+  ````
 
 **[⬆ Back to Top](#table-of-contents)**
 
