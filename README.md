@@ -379,7 +379,7 @@ You can download the PDF and Epub version of this repository from the latest run
 |326| [새로운 JSX transform의 장점은?](#새로운-JSX-transform의-장점은)
 |327| [새로운 JSX transform과 예전 transform의 차이점은?](#새로운-JSX-transform과-예전-transform의-차이점은)
 |328| [How do you get redux scaffolding using create-react-app?](#how-do-you-get-redux-scaffolding-using-create-react-app)|
-|329| [What are React Server components?](#what-are-react-server-components)
+|329| [React Server components란?](#React-Server-components란)
 |330| [What is prop drilling?](#what-is-prop-drilling)
 |331| [What are the different ways to prevent state mutation?](#what-are-the-different-ways-to-prevent-state-mutation)
 
@@ -5919,10 +5919,11 @@ function App() {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-329. ### What are React Server components?
-     React Server Component is a way to write React component that gets rendered in the server-side with the purpose of improving React app performance. These components allow us to load components from the backend. 
-    
-     **Note:** React Server Components is still under development and not recommended for production yet.
+329. ### React Server components란?
+
+React Server Component는 React app 성능을 향상 시킬 목적으로 server-side에서 렌더링 된 React 컴포넌트를 작성하는 방법이다. 이러한 컴포넌트는 백엔드에서 컴포넌트를 로드할 수 있다.
+
+**Note:** React Server Components는 아직 개발 중이며 아직 프로덕션에 권장되지 않는다.
 
 **[⬆ Back to Top](#table-of-contents)**
 
