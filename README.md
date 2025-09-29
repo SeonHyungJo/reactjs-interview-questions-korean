@@ -25,13 +25,13 @@ You can download the PDF and Epub version of this repository from the latest run
 ### Contributor
 
 <a href="https://github.com/SeonHyungJo" target="_blank" rel="nofollow">
-	<img src="https://avatars2.githubusercontent.com/u/24274424?s=60&v=4">
+	<img src="https://avatars2.githubusercontent.com/u/24274424?s=60&v=4" width="48px">
 </a>
 <a href="https://github.com/BKJang" target="_blank" rel="nofollow">
-	<img src="https://avatars2.githubusercontent.com/u/24209005?s=60&v=4">
+	<img src="https://avatars2.githubusercontent.com/u/24209005?s=60&v=4" width="48px">
 </a>
 <a href="https://github.com/dididy" target="_blank" rel="nofollow">
-	<img src="https://avatars2.githubusercontent.com/u/16266103?s=60&v=4">
+	<img src="https://avatars2.githubusercontent.com/u/16266103?s=60&v=4" width="48px">
 </a>
 
 > * :clipboard: 본 문서는 [sudheerj](https://github.com/sudheerj)의 [reactjs-interview-questions](https://github.com/sudheerj/reactjs-interview-questions)의 번역본입니다.
